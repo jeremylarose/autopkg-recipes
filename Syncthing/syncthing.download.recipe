@@ -10,8 +10,8 @@
 	<string>com.github.jeremylarose.download.syncthing</string>
 	<key>Input</key>
 	<dict>
-		<key>GITHUB_REPO</key>
-		<string>syncthing/syncthing</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://github.com/syncthing/syncthing/releases/download/v0.14.16/syncthing-macosx-amd64-v0.14.16.tar.gz</string>
 		<key>NAME</key>
 		<string>syncthing</string>
 	</dict>
@@ -19,27 +19,40 @@
 	<string>0.6.1</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>github_repo</key>
-				<string>%GITHUB_REPO%</string>
-			</dict>
-			<key>Processor</key>
-			<string>GitHubReleasesInfoProvider</string>
-		</dict>
-		<dict>
+         <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%.zip</string>
+				<string>syncthing-macosx-amd64-v0.14.16.tar.gz</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
 			</dict>
-			<key>Processor</key>
+		<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/syncthing</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
