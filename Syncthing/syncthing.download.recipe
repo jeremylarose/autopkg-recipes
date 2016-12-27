@@ -19,41 +19,41 @@
 	<string>0.6.1</string>
 	<key>Process</key>
 	<array>
-         <dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>syncthing-macosx-amd64-v0.14.16.tar.gz</string>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
-			</dict>
-		        <key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
+             <dict>
+		<key>Arguments</key>
 		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
+		    <key>filename</key>
+		    <string>syncthing-macosx-amd64-v0.14.16.tar.gz</string>
+		    <key>url</key>
+		    <string>%DOWNLOAD_URL%</string>
+	        </dict>
+                <key>Processor</key>
+	        <string>URLDownloader</string>
+	     </dict>
+	     <dict>
+	         <key>Processor</key>
+	         <string>EndOfCheckPhase</string>
+	     </dict>
+	     <dict>
+		 <key>Arguments</key>
+                 <dict>
+		     <key>archive_path</key>
+		     <string>%pathname%</string>
+		     <key>destination_path</key>
+		     <string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+		     <key>purge_destination</key>
+		     <true/>
+	         </dict>
+	         <key>Processor</key>
+	         <string>Unarchiver</string>
+            </dict>
+            <dict>
+		<key>Arguments</key>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/syncthing</string>
-			</dict>
-		</dict>
-	</array>
+		    <key>input_path</key>
+	            <string>%RECIPE_CACHE_DIR%/%NAME%/Applications/syncthing</string>
+	        </dict>
+	     </dict>
+	 </array>
 </dict>
 </plist>
