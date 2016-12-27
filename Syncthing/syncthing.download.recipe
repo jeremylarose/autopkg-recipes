@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
-		    <key>Processor</key>
+		        <key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
