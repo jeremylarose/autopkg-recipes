@@ -12,6 +12,8 @@
 	<dict>
 		<key>GITHUB_REPO</key>
 		<string>duplicati/duplicati</string>
+		<key>include_prereleases</key>
+		<string>True</string>
 		<key>NAME</key>
 		<string>Duplicati</string>
 	</dict>
@@ -32,7 +34,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%_experimental_*\.dmg</string>
+				<string>%NAME%-%version%_experimental_*.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
