@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Duplicati disk image.
+    <string>Downloads the latest Duplicati disk image.</string>
     <key>Identifier</key>
     <string>com.github.jeremylarose.download.Duplicati</string>
     <key>Input</key>
