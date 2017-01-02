@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://www.duplicati.com/download</string>
                 <key>re_pattern</key>
-                <string>(*?\.dmg)</string>
+                <string>(?P&lt;url&gt;https://updates.duplicati.com/experimental/duplicati*?.dmg)</string>
             </dict>
         </dict>
         <dict>
