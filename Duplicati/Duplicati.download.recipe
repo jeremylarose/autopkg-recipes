@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://www.duplicati.com/download</string>
                 <key>re_pattern</key>
-                <string>(rotation.*?\.dmg)</string>
+                <string>*?\.dmg)</string>
             </dict>
         </dict>
         <dict>
