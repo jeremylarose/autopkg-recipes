@@ -21,9 +21,9 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Menu item horoscope displayer.</string>
+			<string>Horos is a free, open source medical image viewer.  The goal of the Horos Project is to develop a fully functional, 64-bit medical image viewer for OS X.  Horos is based upon OsiriX and other open source medical imaging libraries.  Horos is made available under the GNU Lesser General Public License, Version 3 (LGPL-3.0)</string>
 			<key>developer</key>
-			<string>Fauze Polpeta</string>
+			<string>Horos Project</string>
 			<key>display_name</key>
 			<string>Horos</string>
 			<key>name</key>
