@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://www.horosproject.org/wp-content/uploads/downloads/Horos2.1.0.dmg</string>
+		<string>http://www.horosproject.org/wp-content/uploads/downloads/Horos2.1.1.dmg</string>
 		<key>NAME</key>
 		<string>Horos</string>
 	</dict>
