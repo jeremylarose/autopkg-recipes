@@ -48,7 +48,7 @@
 				<array>
 					<dict>
 						<key>destination_path</key>
-						<string>/Applications</string>
+						<string>/usr/local/bin</string>
 						<key>source_item</key>
 						<string>syncthing</string>
 					</dict>
