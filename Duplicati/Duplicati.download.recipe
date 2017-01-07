@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://github.com/duplicati/duplicati/releases</string>
                 <key>re_pattern</key>
-                <string>href="/duplicati/duplicati/releases/download/*/duplicati-(?P&lt;full_version&gt;[\d\.]+)_experimental_(?P&lt;year&gt;[\d\.]+)-(?P&lt;month&gt;[\d\.]+)-(?P&lt;day&gt;[\d\.]+).dmg"</string>
+                <string>href="/duplicati/duplicati/releases/download/*/duplicati-(?P&lt;full_version&gt;[\d\.]+)_experimental_*?dmg"</string>
             </dict>
         </dict>
         <dict>
