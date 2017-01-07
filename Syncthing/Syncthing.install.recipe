@@ -45,7 +45,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
-				<string>%dmg_path%/syncthing-macosx-amd64-v0.14.18</string>
+				<string>%dmg_path%</string>
 				<key>items_to_copy</key>
 				<array>
 					<dict>
