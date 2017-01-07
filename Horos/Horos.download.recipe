@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://www.horosproject.org/adaa7f5d1f33cb8ddd89fe300da7c2cd/</string>
                 <key>re_pattern</key>
-                <string>(*.dmg)</string>
+                <string>(?P&lt;url&gt;http://www.horosproject.org/wp-content/uploads/downloads/Horos2.?.?.dmg)</string>
             </dict>
         </dict>
         <dict>
