@@ -41,7 +41,7 @@
 							<key>group</key>
 							<string>admin</string>
 							<key>path</key>
-							<string>Applications</string>
+							<string>syncthing-macosx-amd64-v%version%</string>
 							<key>user</key>
 							<string>root</string>
 						</dict>
