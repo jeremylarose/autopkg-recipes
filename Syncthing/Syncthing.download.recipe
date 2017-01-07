@@ -20,6 +20,17 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>asset_regex</key>
 				<string>syncthing-macosx-amd64-v[0-9.]+.tar.gz</string>
 				<key>github_repo</key>
