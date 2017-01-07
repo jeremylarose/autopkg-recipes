@@ -20,6 +20,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>asset_regex</key>
+				<string>syncthing-macosx-amd64-v+\.tar.gz</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
