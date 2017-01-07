@@ -51,6 +51,17 @@
 			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>dmg_root</key>
+					<string>%RECIPE_CACHE_DIR%/syncthing-macosx-amd64-v%version%</string>
+					<key>dmg_path</key>
+					<string>%RECIPE_CACHE_DIR%</string>
+				</dict>
+				<key>Processor</key>
+				<string>DMGCreator</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
