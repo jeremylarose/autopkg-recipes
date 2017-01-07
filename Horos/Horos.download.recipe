@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://www.horosproject.org/adaa7f5d1f33cb8ddd89fe300da7c2cd/</string>
                 <key>re_pattern</key>
-                <string>(rotation.*?\.dmg)</string>
+                <string>(*.dmg)</string>
             </dict>
         </dict>
         <dict>
