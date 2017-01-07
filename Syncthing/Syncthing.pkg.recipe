@@ -30,7 +30,7 @@
 							<key>group</key>
 							<string>admin</string>
 							<key>path</key>
-							<string>syncthing-macosx-amd64-v%version%</string>
+							<string>%RECIPE_CACHE_DIR%/syncthing-macosx-amd64-v%version%</string>
 							<key>user</key>
 							<string>root</string>
 						</dict>
