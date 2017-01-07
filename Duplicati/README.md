@@ -1,1 +1,1 @@
-this is now working, uses latest canary version
+this is not working yet
