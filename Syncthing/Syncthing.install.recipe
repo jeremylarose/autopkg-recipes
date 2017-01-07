@@ -45,14 +45,14 @@
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
-				<string>%dmg_path%</string>
+				<string>%dmg_path%/syncthing-macosx-amd64-v0.14.18</string>
 				<key>items_to_copy</key>
 				<array>
 					<dict>
 						<key>destination_path</key>
-						<string>/Applications</string>
+						<string>/usr/local/bin</string>
 						<key>source_item</key>
-						<string>syncthing-macosx-amd64-v0.14.18</string>
+						<string>syncthing</string>
 					</dict>
 				</array>
 			</dict>
