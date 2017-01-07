@@ -34,7 +34,7 @@
                 <key>filename</key>
                 <string>%NAME%%version%.dmg</string>
                 <key>url</key>
-                <string>http://www.horosproject.org/wp-content/uploads/downloads/%NAME%%version%.dmg<</string>
+                <string>http://www.horosproject.org/wp-content/uploads/downloads/%NAME%%version%.dmg</string>
             </dict>
         </dict>
         <dict>
