@@ -22,11 +22,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%</string>
 			</dict>
