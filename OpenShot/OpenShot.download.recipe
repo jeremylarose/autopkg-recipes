@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Horos disk image.</string>
+    <string>Downloads the latest OpenShot disk image.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.download.Horos</string>
+    <string>com.github.jeremylarose.download.OpenShot</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Horos</string>
+        <string>OpenShot</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.2</string>
