@@ -50,7 +50,7 @@
 				<array>
 					<dict>
 						<key>destination_path</key>
-						<string>/usr/local/bin/</string>
+						<string>/Applications</string>
 						<key>source_item</key>
 						<string>syncthing-macosx-amd64-v0.14.18/syncthing</string>
 					</dict>
