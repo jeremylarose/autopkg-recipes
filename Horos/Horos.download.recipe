@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest Horos disk image.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.download.Horos</string>
+    <string>com.github.jeremylarose.download.Horos</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
