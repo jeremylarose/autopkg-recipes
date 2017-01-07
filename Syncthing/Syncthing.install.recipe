@@ -52,7 +52,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>syncthing-macosx-amd64-v0.14.18/syncthing</string>
+						<string>syncthing-macosx-amd64-v0.14.18</string>
 					</dict>
 				</array>
 			</dict>
