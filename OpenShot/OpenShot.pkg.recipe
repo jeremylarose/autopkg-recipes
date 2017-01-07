@@ -11,7 +11,7 @@
 		<key>BUNDLE_ID</key>
 		<string>com.openshot.openshot</string>
 		<key>NAME</key>
-		<string>Horos</string>
+		<string>OpenShot</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
