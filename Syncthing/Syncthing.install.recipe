@@ -52,7 +52,7 @@
 						<key>destination_path</key>
 						<string>/usr/local/bin/</string>
 						<key>source_item</key>
-						<string>syncthing</string>
+						<string>./syncthing</string>
 					</dict>
 				</array>
 			</dict>
