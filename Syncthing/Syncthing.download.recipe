@@ -42,7 +42,6 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-			<key>Arguments</key>
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
