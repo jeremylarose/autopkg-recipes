@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>syncthing-macosx-amd64-v+\.tar.gz</string>
+				<string>^syncthing-macosx-amd64*?tar.gz$</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%.zip</string>
+				<string>%NAME%-%version%.tar.gz</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
