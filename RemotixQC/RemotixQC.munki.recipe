@@ -21,11 +21,13 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Install Remotix Quick Connect on a Mac you will connect remotely or manage via Remotix</string>
 			<key>developer</key>
 			<string>Nulana LTD</string>
 			<key>display_name</key>
 			<string>Remotix QC</string>
+			<key>minimum_os_version</key>
+			<string>10.7.0</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
