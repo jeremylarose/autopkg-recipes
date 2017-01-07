@@ -24,6 +24,8 @@
 				<string>%pathname%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
@@ -38,17 +40,6 @@
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/syncthing-%version%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
 		</dict>
 	</array>
 </dict>
