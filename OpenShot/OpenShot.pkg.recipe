@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Horos</string>
+	<string>com.github.jeremylarose.download.OpenShot</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -37,9 +37,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/Horos.app</string>
+				<string>%pkgroot%/Applications/OpenShot Video Editor.app</string>
 				<key>source_path</key>
-				<string>%pathname%/Horos.app</string>
+				<string>%pathname%/OpenShot Video Editor.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
