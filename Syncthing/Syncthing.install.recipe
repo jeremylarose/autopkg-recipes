@@ -34,7 +34,7 @@
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/syncthing</string>
 				<key>destination_path</key>
-				<string>/usr/local/bin</string>
+				<string>/usr/local/bin/syncthing</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
