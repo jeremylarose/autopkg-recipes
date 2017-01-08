@@ -20,6 +20,8 @@
 			</array>
 			<key>description</key>
 			<string>OpenShot Video Editor is a free, open-source video editor for Linux licensed under the GPL version 3.0. </string>
+			<key>category</key>
+			<string>Media</string>
 			<key>developer</key>
 			<string>OpenShot team</string>
 			<key>display_name</key>
