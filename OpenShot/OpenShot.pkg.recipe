@@ -75,6 +75,22 @@
 			<key>Processor</key>
 			<string>PkgCreator</string>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PlistEditor</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/OpenShot Video Editor.app/Contents/Info.plist</string>
+				<key>output_plist_path</key>
+				<string>%pkgroot%/OpenShot Video Editor.app/Contents/Info.plist</string>
+				<key>plist_data</key>
+						<dict>
+								<key>CFBundleIdentifier</key>
+								<string>com.openshot.openshot</string>
+						</dict>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
