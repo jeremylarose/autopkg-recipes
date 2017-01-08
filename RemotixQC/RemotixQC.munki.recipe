@@ -22,6 +22,8 @@
 			</array>
 			<key>description</key>
 			<string>Install Remotix Quick Connect on a Mac you will connect remotely or manage via Remotix</string>
+			<key>category</key>
+			<string>Support</string>
 			<key>developer</key>
 			<string>Nulana LTD</string>
 			<key>display_name</key>

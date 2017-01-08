@@ -24,6 +24,8 @@
 			<string>Remote backup with encryption.</string>
 			<key>developer</key>
 			<string>Kenneth Skovhede</string>
+			<key>category</key>
+			<string>Backup</string>
 			<key>display_name</key>
 			<string>Duplicati</string>
 			<key>name</key>
