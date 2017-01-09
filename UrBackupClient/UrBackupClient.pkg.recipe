@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5,7 +6,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of UrBackupClient and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.UrBackupClient<</string>
+	<string>com.github.jeremylarose.pkg.UrBackupClient</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
