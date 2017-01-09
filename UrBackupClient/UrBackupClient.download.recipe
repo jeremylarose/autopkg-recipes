@@ -31,6 +31,8 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
+                <key>filename</key>
+                <string>%NAME%-%version%.pkg</string>
                 <key>url</key>
                 <string>http://hndl.urbackup.org/Client/%major_version%/UrBackup%20Client%20%version%.pkg</string>
             </dict>
