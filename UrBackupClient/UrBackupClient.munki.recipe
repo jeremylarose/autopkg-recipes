@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.UrBackupClient</string>
+	<string>com.github.jeremylarose.pkg.UrBackupClient</string>
     <key>Process</key>
     <array>
         <dict>
