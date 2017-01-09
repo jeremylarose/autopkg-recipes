@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release of Syncthing
+    <string>Downloads the current release of SyncthingInotify
         and builds a package installing it to /usr/local/bin.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.pkg.Syncthing</string>
+    <string>com.github.jeremylarose.pkg.SyncthingInotify</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Syncthing</string>
+        <string>SyncthingInotify</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.3.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.jeremylarose.download.Syncthing</string>
+    <string>com.github.jeremylarose.download.SyncthingInotify</string>
     <key>Process</key>
     <array>
         <dict>
@@ -36,17 +36,19 @@
                 </dict>
             </dict>
         </dict>
-				<dict>
-					<key>Arguments</key>
-					<dict>
-						<key>source_path</key>
-						<string>%RECIPE_CACHE_DIR%/syncthing-macosx-amd64-v%version%/syncthing</string>
-						<key>destination_path</key>
-						<string>%pkgroot%/usr/local/bin</string>
-					</dict>
-					<key>Processor</key>
-					<string>Copier</string>
-				</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/usr/local/bin</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>PkgCreator</string>
@@ -59,7 +61,7 @@
                     <key>pkgdir</key>
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>id</key>
-                    <string>com.syncthing.syncthing</string>
+                    <string>com.syncthing.syncthing-inotify</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
