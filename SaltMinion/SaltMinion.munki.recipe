@@ -21,7 +21,7 @@
 			<key>description</key>
 			<string>client for the SaltStack confuration managment https://saltstack.com/</string>
 			<key>category</key>
-			<string>Tools</string>
+			<string>System</string>
 			<key>developer</key>
 			<string>SaltStack</string>
 			<key>display_name</key>
