@@ -25,7 +25,9 @@
 			<key>developer</key>
 			<string>SaltStack</string>
 			<key>display_name</key>
-			<string>SaltMinion</string>
+			<string>Salt Minion</string>
+			<key>minimum_os_version</key>
+			<string>10.11.0</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
