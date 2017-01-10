@@ -19,7 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>client for the SaltStack confuration managment https://saltstack.com/</string>
+			<string>client for the SaltStack configuration management https://saltstack.com/</string>
 			<key>category</key>
 			<string>System</string>
 			<key>developer</key>
