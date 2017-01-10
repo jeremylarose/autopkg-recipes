@@ -22,8 +22,8 @@
             <dict>
                 <key>url</key>
                 <string>http://www.mono-project.com/download/</string>
-                <string>href="https://download.mono-project.com/archive/(?P&lt;major_version&gt;[\d\.]+)/macos-10-universal/MonoFramework-MDK-(?P&lt;version&gt;[\d\.]+).macos10.xamarin.universal.pkg"</string>
                 <key>re_pattern</key>
+                <string>href="https://download.mono-project.com/archive/(?P&lt;major_version&gt;[\d\.]+)/macos-10-universal/MonoFramework-MDK-(?P&lt;version&gt;[\d\.]+).macos10.xamarin.universal.pkg"</string>
             </dict>
         </dict>
         <dict>
