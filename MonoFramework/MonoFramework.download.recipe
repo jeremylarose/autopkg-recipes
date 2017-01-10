@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest MonoFramework package.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.download.MonoFramework</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MonoFramework</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://www.mono-project.com/download/</string>
+                <string>href="https://download.mono-project.com/archive/(?P&lt;major_version&gt;[\d\.]+)/macos-10-universal/MonoFramework-MDK-(?P&lt;version&gt;[\d\.]+).macos10.xamarin.universal.pkg"</string>
+                <key>re_pattern</key>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://download.mono-project.com/archive/4.6.2/macos-10-universal/MonoFramework-MDK-4.6.2.16.macos10.xamarin.universal.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
