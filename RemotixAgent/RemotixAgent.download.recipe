@@ -35,8 +35,6 @@
 						  	<string>%NAME%-%version%.dmg</string>
 								<key>url</key>
                 <string>https://downloads.remotixcloud.com/rxagentmac/RemotixAgent.dmg</string>
-								<key>CHECK_FILESIZE_ONLY</key>
-								<string>True</string>
             </dict>
         </dict>
         <dict>
