@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://remotixcloud.com/downloads/</string>
                 <key>re_pattern</key>
-                <string>hclass="curr-vers">Current version: <span>(?P&lt;version&gt;[\d\.]+)</span>.</string>
+                <string>curr-vers[\D]+(?P&lt;version&gt;[\d\.]+)?</string>
             </dict>
         </dict>
         <dict>
