@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Installs the latest version of RetroShare.</string>
+	<string>Installs the latest version of RetroShare06.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.install.RetroShare</string>
+	<string>com.github.jeremylarose.install.RetroShare06</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>RetroShare</string>
+		<string>RetroShare06</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.RetroShare</string>
+	<string>com.github.jeremylarose.download.RetroShare06</string>
 	<key>Process</key>
 	<array>
 		<dict>

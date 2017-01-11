@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of RetroShare.</string>
+	<string>Downloads the latest version of RetroShare06.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.RetroShare</string>
+	<string>com.github.jeremylarose.download.RetroShare06</string>
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>
-		<string>RetroShare/RetroShare</string>
+		<string>RetroShare/RetroShare06</string>
 		<key>NAME</key>
-		<string>RetroShare</string>
+		<string>RetroShare06</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
