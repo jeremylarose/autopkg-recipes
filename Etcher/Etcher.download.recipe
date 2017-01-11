@@ -18,6 +18,7 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Arguments</key>
 			<dict>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
