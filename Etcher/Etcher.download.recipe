@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest version of Etcher.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.download.Etcher</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Etcher</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+  			<key>Arguments</key>
+  			<dict>
+  				<key>github_repo</key>
+  				<string>%GITHUB_REPO%</string>
+  			</dict>
+  			<key>Processor</key>
+  			<string>GitHubReleasesInfoProvider</string>
+  		  </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://resin-production-downloads.s3.amazonaws.com/etcher/%version%/Etcher-%version%-darwin-x64.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
