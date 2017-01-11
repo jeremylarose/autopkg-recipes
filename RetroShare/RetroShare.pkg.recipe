@@ -11,7 +11,7 @@
 		<key>BUNDLE_ID</key>
 		<string>com.yourcompany.RetroShare06</string>
 		<key>NAME</key>
-		<string>RetroShare</string>
+		<string>RetroShare06</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -19,15 +19,6 @@
 	<string>com.github.jeremylarose.download.RetroShare</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
