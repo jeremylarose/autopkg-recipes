@@ -32,19 +32,6 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>uninstall_method</key>
-	    <string>uninstall_script</string>
-	    <key>uninstall_script</key>
-	    <string>#!/bin/bash
-      launchctl unload /Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist
-      killall Remotix\ Agent
-			rm -rf /Applications/Remotix\ Agent.app
-			rm -rf /Library/Application\ Support/com.nulana.rxagentmac /Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist /Library/LaunchAgents/com.nulana.rxagentmac.user.plist
-			rm -rf /Library/Logs/com.nulana.rxagentmac
-			pkgutil --forget com.nulana.rxagentmac.daemon
-			pkgutil --forget com.nulana.rxagentmac</string>
-	<key>uninstallable</key>
-	<true/>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
