@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://github.com/resin-io/etcher/releases</string>
                 <key>re_pattern</key>
-                <string>href="https://resin-production-downloads.s3.amazonaws.com/etcher/(?P&lt;version&gt;[\d\.]+)/*.dmg"</string>
+                <string>href="https://resin-production-downloads.s3.amazonaws.com/etcher/(?P&lt;version&gt;[\d\.]+)/[\S]+darwin-x64.dmg"</string>
             </dict>
         </dict>
         <dict>
