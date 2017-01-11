@@ -29,20 +29,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>%RECIPE_CACHE_DIR%</string>
-						<key>source_item</key>
-						<string>Remotix Agent.pkg</string>
-					</dict>
-				</array>
+				<key>pkg_path</key>
+				<string>%pathname%/Remotix Agent.pkg</string>
+				<key>extract_root</key>
+				<string>%RECIPE_CACHE_DIR%/pkgextract</string>
 			</dict>
 			<key>Processor</key>
-			<string>InstallFromDMG</string>
+			<string>PkgExractor</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
