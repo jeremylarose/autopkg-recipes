@@ -2,45 +2,45 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
-	<string>Downloads the latest version of RemotixAgent.</string>
-	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.RemotixAgent</string>
-	<key>Input</key>
-	<dict>
-		<key>NAME</key>
-		<string>RemotixAgent</string>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>0.6.1</string>
-	<key>Process</key>
-	<array>
-		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>https://remotixcloud.com/downloads/</string>
-						<key>re_pattern</key>
-						<string>class="curr-vers">Current version: <span>(?P&lt;version&gt;[\d\.]+)</span>.</string>
-				</dict>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%-%version%.dmg</string>
-				<key>url</key>
-				<string>https://downloads.remotixcloud.com/rxagentmac/RemotixAgent.dmg</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
-	</array>
+    <key>Description</key>
+    <string>Downloads the latest RemotixAgent disk image.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.download.RemotixAgent</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>RemotixAgent</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://remotixcloud.com/downloads/</string>
+                <key>re_pattern</key>
+                <string>hclass="curr-vers">Current version: <span>(?P&lt;version&gt;[\d\.]+)</span>.</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+						  	<key>filename</key>
+						  	<string>%NAME%-%version%.dmg</string>
+								<key>url</key>
+                <string>https://downloads.remotixcloud.com/rxagentmac/RemotixAgent.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
 </dict>
 </plist>
