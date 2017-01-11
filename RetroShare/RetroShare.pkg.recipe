@@ -37,7 +37,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/RetroShare06.app</string>
+				<string>%pkgroot%/Applications/RetroShare.app</string>
 				<key>source_path</key>
 				<string>%pathname%/RetroShare06.app</string>
 			</dict>
