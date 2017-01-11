@@ -24,6 +24,8 @@
 			<string>Burn images to SD cards and USB drives, safe and easy.</string>
 			<key>developer</key>
 			<string>resin.io</string>
+			<key>category</key>
+			<string>Media</string>
 			<key>display_name</key>
 			<string>Etcher</string>
 			<key>name</key>
