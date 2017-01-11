@@ -18,31 +18,26 @@
 	<key>Process</key>
 	<array>
 		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://remotixcloud.com/downloads/</string>
+						<key>re_pattern</key>
+						<string>class="curr-vers">Current version: <span>(?P&lt;version&gt;[\d\.]+)</span>.</string>
+				</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%.dmg</string>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>%RECIPE_CACHE_DIR%</string>
-						<key>source_item</key>
-						<string>Remotix Agent.pkg</string>
-					</dict>
-				</array>
-			</dict>
-			<key>Processor</key>
-			<string>InstallFromDMG</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
