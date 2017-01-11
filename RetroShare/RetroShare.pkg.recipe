@@ -5,18 +5,18 @@
 	<key>Description</key>
 	<string>Downloads the latest version of RetroShare and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.RetroShare06</string>
+	<string>com.github.jeremylarose.pkg.RetroShare</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>com.yourcompany.RetroShare06</string>
+		<string>com.yourcompany.RetroShare</string>
 		<key>NAME</key>
-		<string>RetroShare06</string>
+		<string>RetroShare</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.RetroShare06</string>
+	<string>com.github.jeremylarose.download.RetroShare</string>
 	<key>Process</key>
 	<array>
 		<dict>
