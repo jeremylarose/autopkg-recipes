@@ -31,8 +31,6 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>filename</key>
-                <string>%NAME%-%version%.dmg</string>
                 <key>url</key>
                 <string>https://resin-production-downloads.s3.amazonaws.com/etcher/%version%/Etcher-%version%-darwin-x64.dmg</string>
             </dict>
