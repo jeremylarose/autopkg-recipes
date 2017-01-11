@@ -45,17 +45,6 @@
 			<string>InstallFromDMG</string>
 		</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/Remotix Agent.pkg</string>
-				<key>extract_root</key>
-				<string>%RECIPE_CACHE_DIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgExractor</string>
-		</dict>
-		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
