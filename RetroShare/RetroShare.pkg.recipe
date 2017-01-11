@@ -57,6 +57,8 @@
 						<dict>
 								<key>CFBundleShortVersionString</key>
 								<string>%version%</string>
+								<key>CFBundleExecutable</key>
+								<string>RetroShare</string>
 						</dict>
 			</dict>
 		</dict>
