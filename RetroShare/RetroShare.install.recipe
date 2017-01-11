@@ -28,12 +28,23 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>*.app</string>
+						<string>RetroShare06.app</string>
 					</dict>
 				</array>
 			</dict>
 			<key>Processor</key>
 			<string>InstallFromDMG</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+			    <key>source</key>
+			    <string>/Applications/RetroShare06.app</string>
+			    <key>target</key>
+		            <string>/Applications/RetroShare.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileMover</string>
 		</dict>
 	</array>
 </dict>
