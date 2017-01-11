@@ -35,17 +35,6 @@
 			<key>Processor</key>
 			<string>InstallFromDMG</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-			    <key>source</key>
-			    <string>/Applications/RetroShare06.app</string>
-			    <key>target</key>
-		            <string>/Applications/RetroShare.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>FileMover</string>
-		</dict>
 	</array>
 </dict>
 </plist>
