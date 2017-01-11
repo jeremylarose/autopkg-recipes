@@ -28,7 +28,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>RetroShare[/d]+.app</string>
+						<string>RetroShare[\d]+.app</string>
 					</dict>
 				</array>
 			</dict>
