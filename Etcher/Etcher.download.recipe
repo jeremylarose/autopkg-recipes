@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>Etcher-(?P&lt;version&gt;[\S]+)darwin-x64.dmg</string>
+				<string>Etcher[\S]+darwin-x64.dmg</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
