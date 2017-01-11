@@ -50,9 +50,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pkgroot%/Applications/RetroShare06.app/Contents/Info.plist</string>
+				<string>%pkgroot%/Applications/RetroShare.app/Contents/Info.plist</string>
 				<key>output_plist_path</key>
-				<string>%pkgroot%/Applications/RetroShare06.app/Contents/Info.plist</string>
+				<string>%pkgroot%/Applications/RetroShare.app/Contents/Info.plist</string>
 				<key>plist_data</key>
 						<dict>
 								<key>CFBundleShortVersionString</key>
