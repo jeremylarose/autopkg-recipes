@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Installs the latest version of Duplicati.</string>
 	<key>Identifier</key>
@@ -16,26 +14,17 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Duplicati</string>
+	<string>com.github.jeremylarose.pkg.Duplicati</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>/Applications</string>
-						<key>source_item</key>
-						<string>Duplicati.app</string>
-					</dict>
-				</array>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 			</dict>
 			<key>Processor</key>
-			<string>InstallFromDMG</string>
+			<string>Installer</string>
 		</dict>
 	</array>
 </dict>
