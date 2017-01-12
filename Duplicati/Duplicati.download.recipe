@@ -32,7 +32,7 @@
 				<key>filename</key>
 				<string>%NAME%-%version%.dmg</string>
 				<key>url</key>
-				<string>https://github.com/duplicati/duplicati/releases/download/v%version%-%version%_%branch_%date/duplicati-%version%_%branch%_%date%.dmg</string>
+				<string>https://github.com/duplicati/duplicati/releases/download/v%version%-%version%_%branch%_%date%/duplicati-%version%_%branch%_%date%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
