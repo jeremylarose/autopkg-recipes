@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://www.horosproject.org/adaa7f5d1f33cb8ddd89fe300da7c2cd/</string>
                 <key>re_pattern</key>
-                <string>href="http://www.horosproject.org/wp-content/uploads/downloads/Horos(?P&lt;version&gt;[\d\.]+).dmg"</string>
+                <string>Horos(?P&lt;version&gt;[\d\.]+).dmg</string>
             </dict>
         </dict>
         <dict>
@@ -34,7 +34,7 @@
                 <key>filename</key>
                 <string>%NAME%-%version%.dmg</string>
                 <key>url</key>
-                <string>http://www.horosproject.org/wp-content/uploads/downloads/%NAME%%version%.dmg</string>
+                <string>http://www.horosproject.org/wp-content/uploads/downloads/Horos%version%.dmg</string>
             </dict>
         </dict>
         <dict>
