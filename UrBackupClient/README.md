@@ -1,1 +1,3 @@
-this is working
+this is working, can't add CodeSignatureVerifier because a character in the id...
+
+Developer ID Installer: Infscape UG (haftungsbeschränkt) (3Y4WACCWC5)
