@@ -50,7 +50,7 @@
     						<string>%pathname%/Remotix Agent.pkg</string>
     						<key>expected_authority_names</key>
     						<array>
-    								<string>Developer ID Application: Nulana LTD</string>
+    								<string>Developer ID Installer: Nulana LTD</string>
     								<string>Developer ID Certification Authority</string>
     								<string>Apple Root CA</string>
     						</array>
