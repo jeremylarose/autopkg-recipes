@@ -45,17 +45,20 @@
 			<string>Copier</string>
 		</dict>
 		<dict>
-				<key>Comment</key>
-				<string>Get version from the pkg</string>
-				<key>Processor</key>
-				<string>Versioner</string>
-				<key>Arguments</key>
-				<dict>
-						<key>input_plist_path</key>
-						<string>%pathname%/Duplicati.app/Contents/Info.plist</string>
-						<key>plist_version_key</key>
-						<string>CFBundleShortVersionString</string>
-				</dict>
+			<key>Processor</key>
+			<string>PlistEditor</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/Applications/Duplicati.app/Contents/Info.plist</string>
+				<key>output_plist_path</key>
+				<string>%pkgroot%/Applications/Duplicati.app/Contents/Info.plist</string>
+				<key>plist_data</key>
+						<dict>
+								<key>CFBundleShortVersionString</key>
+								<string>%version%</string>
+						</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
