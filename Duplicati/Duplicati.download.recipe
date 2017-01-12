@@ -42,16 +42,12 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>DmgMounter</string>
-		</dict>
-		<dict>
 				<key>Processor</key>
 				<string>CodeSignatureVerifier</string>
 				<key>Arguments</key>
 				<dict>
 						<key>input_path</key>
-						<string>%pathname%</string>
+						<string>%pathname%/Duplicati.app</string>
 						<key>expected_authority_names</key>
 						<array>
 								<string>Developer ID Application: Kenneth Skovhede (2S6R28R577)</string>
