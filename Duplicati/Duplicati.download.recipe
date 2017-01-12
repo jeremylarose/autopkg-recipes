@@ -32,7 +32,7 @@
 				<key>filename</key>
 				<string>%NAME%-%version%.dmg</string>
 				<key>url</key>
-				<string>https://github.com/duplicati/duplicati/releases/download/v%version%-[\S]+duplicati-[\S]+dmg</string>
+				<string>https://github.com/duplicati/duplicati/releases/download/v2.0.1.39-2.0.1.39_canary_2017-01-08/duplicati-2.0.1.39_canary_2017-01-08.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
