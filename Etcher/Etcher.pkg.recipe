@@ -69,7 +69,7 @@
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 					<key>version</key>
-					<string>%version%</string>
+					<string>%major_version%</string>
 				</dict>
 			</dict>
 			<key>Processor</key>
