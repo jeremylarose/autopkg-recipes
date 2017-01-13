@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html</string>
 						<key>re_pattern</key>
-						<string>Version[\s]11.(?P&lt;major_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)</string>
+						<string>11.(?P&lt;major_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)</string>
 				</dict>
 		</dict>
 		<dict>
