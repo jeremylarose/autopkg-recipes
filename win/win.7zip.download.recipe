@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of 7zip 64-Bit.</string>
+	<string>Downloads the latest version of 7zip Executables.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.win.7zip</string>
 	<key>Input</key>
@@ -33,6 +33,8 @@
 				<string>%NAME%-%major_version%.%minor_version%-x64.exe</string>
 				<key>url</key>
 				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%-x64.exe</string>
+				<key>download_dir</key>
+				<string>../%RECIPE_CACHE_DIR%/win/%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -44,13 +46,11 @@
 				<string>%NAME%-%major_version%.%minor_version%.exe</string>
 				<key>url</key>
 				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%.exe</string>
+				<key>download_dir</key>
+				<string>../%RECIPE_CACHE_DIR%/win/%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
 		</dict>
 	</array>
 </dict>
