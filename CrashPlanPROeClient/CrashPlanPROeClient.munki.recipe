@@ -28,7 +28,9 @@
 			<string>CrashPlan PROe</string>
 			<key>name</key>
 			<string>%NAME%</string>
-			<key>unattended_install</key>
+			<key>version</key>
+			<string>%version%</string>
+			<key>unattended_instal</key>
 			<true/>
 		</dict>
 	</dict>
