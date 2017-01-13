@@ -43,9 +43,48 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
+				<string>%NAME%-%major_version%.%minor_version%-x64.msi</string>
+				<key>url</key>
+				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%-x64.msi</string>
+				<key>download_dir</key>
+				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
 				<string>%NAME%-%major_version%.%minor_version%.exe</string>
 				<key>url</key>
 				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%.exe</string>
+				<key>download_dir</key>
+				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%major_version%.%minor_version%.msi</string>
+				<key>url</key>
+				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%.msi</string>
+				<key>download_dir</key>
+				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%major_version%.%minor_version%-LZMA.7z</string>
+				<key>url</key>
+				<string>http://www.7-zip.org/a/lzma%major_version%%minor_version%.7z</string>
 				<key>download_dir</key>
 				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
 			</dict>
