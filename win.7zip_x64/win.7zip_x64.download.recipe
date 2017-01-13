@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>http://www.7-zip.org/download.html</string>
 						<key>re_pattern</key>
-						<string>Download[\s]7-Zip[\s](?P&lt;major_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)[\s]]</string>
+						<string>Download[\s]7-Zip[\s](?P&lt;major_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)[\s]</string>
 				</dict>
 		</dict>
 		<dict>
