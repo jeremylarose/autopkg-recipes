@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html</string>
 						<key>re_pattern</key>
-						<string>11.(?P&lt;major_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)</string>
+						<string>href="http://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/11/11.(?P&lt;major_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)</string>
 				</dict>
 		</dict>
 		<dict>
@@ -32,7 +32,7 @@
 				<key>filename</key>
 				<string>%NAME%-11.%major_version%.%minor_version%.msp</string>
 				<key>url</key>
-				<string>http://ardownload.adobe.com/pub/adobe/acrobat/win/11.x/11.0.19/misc/AcrobatUpd11019.msp</string>
+				<string>http://ardownload.adobe.com/pub/adobe/acrobat/win/11.x/11.%major_version%.%minor_version%/misc/AcrobatUpd11%major_version%%minor_version%.msp</string>
 				<key>download_dir</key>
 				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
 			</dict>
