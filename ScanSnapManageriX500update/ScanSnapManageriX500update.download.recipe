@@ -47,7 +47,7 @@
     				<key>Arguments</key>
     				<dict>
     						<key>input_path</key>
-    						<string>%pathname%/%dl_version%L%minor_version%.pkg</string>
+    						<string>%pathname%/MacScanSnapV%dl_version%L%minor_version%UpWW.pkg</string>
     						<key>expected_authority_names</key>
     						<array>
     								<string>Developer ID Installer: PFU LIMITED (XW4U7W2E9L)</string>
