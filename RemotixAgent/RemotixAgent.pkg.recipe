@@ -25,7 +25,7 @@
 				<key>target</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 				<key>source</key>
-				<string>%pathname%/Remotix Agent.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.dmg/Remotix Agent.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
