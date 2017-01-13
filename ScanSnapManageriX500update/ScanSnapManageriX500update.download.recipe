@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest ScanSnapManageriX500 disk image.</string>
+    <string>Downloads the latest ScanSnapManageriX500update disk image.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.download.ScanSnapManageriX500</string>
+    <string>com.github.jeremylarose.download.ScanSnapManageriX500update</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>ScanSnapManageriX500</string>
+        <string>ScanSnapManageriX500update</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.2</string>
