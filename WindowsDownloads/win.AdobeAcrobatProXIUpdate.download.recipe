@@ -32,7 +32,7 @@
 				<key>filename</key>
 				<string>%NAME%-11.%major_version%.%minor_version%.msp</string>
 				<key>url</key>
-				<string>http://ardownload.adobe.com/pub/adobe/acrobat/win/11.x/11.%major_version%.%minor_version%/misc/AcrobatUpd11%major_version%%minor_version%.msp</string>
+				<string>http://ardownload.adobe.com/pub/adobe/acrobat/win/11.x/11.0.19/misc/AcrobatUpd11019.msp</string>
 				<key>download_dir</key>
 				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
 			</dict>
