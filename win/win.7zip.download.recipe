@@ -34,7 +34,7 @@
 				<key>url</key>
 				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%-x64.exe</string>
 				<key>download_dir</key>
-				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads/%NAME%</string>
+				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -47,7 +47,7 @@
 				<key>url</key>
 				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%.exe</string>
 				<key>download_dir</key>
-				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads/%NAME%</string>
+				<string>%RECIPE_CACHE_DIR%/../WindowsDownloads</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
