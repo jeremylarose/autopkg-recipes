@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500m-setup.html</string>
                 <key>re_pattern</key>
-                <string>MaciX500ManagerV(?P&lt;version&gt;[0-9]+[A-Z][0-9]+)WW1.dmg</string>
+                <string>MaciX500ManagerV(?P&lt;major&gt;[0-9])(?P&lt;minor&gt;[0-9])L(?P&lt;latest&gt;[0-9]+)WW1.dmg</string>
             </dict>
         </dict>
         <dict>
@@ -32,9 +32,9 @@
             <key>Arguments</key>
             <dict>
 						  	<key>filename</key>
-						  	<string>%NAME%-%version%.dmg</string>
+						  	<string>%NAME%-%major%.%minor%.%latest%.dmg</string>
 								<key>url</key>
-                <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-ix500/MaciX500ManagerV%version%WW1.dmg</string>
+                <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-ix500/MaciX500ManagerV%major%%minor%L%latest%WW1.dmg</string>
             </dict>
         </dict>
         <dict>
