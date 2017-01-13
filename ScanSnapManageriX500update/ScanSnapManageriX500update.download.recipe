@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest ScanSnapManageriX500 disk image.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.download.ScanSnapManageriX500</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>ScanSnapManageriX500</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500.html</string>
+                <key>re_pattern</key>
+                <string>mac-mg(?P&lt;dl_version&gt;[0-9]+)*V(?P&lt;major_version&gt;[\d\.]+)L(?P&lt;minor_version&gt;[0-9]+)</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+						  	<key>filename</key>
+						  	<string>%NAME%-%major_version%.%minor_version%.dmg</string>
+								<key>url</key>
+                <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-v%dl_version%l%minor_version%/MacScanSnapV%dl_version%L%minor_version%UpWW.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
