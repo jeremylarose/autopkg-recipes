@@ -82,7 +82,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%major_version%.%minor_version%-LZMA.7z</string>
+				<string>%NAME%-%major_version%.%minor_version%-lzma.7z</string>
 				<key>url</key>
 				<string>http://www.7-zip.org/a/lzma%major_version%%minor_version%.7z</string>
 				<key>download_dir</key>
