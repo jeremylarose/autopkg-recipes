@@ -25,7 +25,7 @@
 			<key>developer</key>
 			<string>Code42</string>
 			<key>display_name</key>
-			<string>CrashPlanPROe Client</string>
+			<string>CrashPlan PROe</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
