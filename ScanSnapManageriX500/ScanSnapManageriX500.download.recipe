@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest ScanSnapManageriX500 disk image.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.download.ScanSnapManageriX500</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>ScanSnapManageriX500</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500m-setup.html</string>
+                <key>re_pattern</key>
+                <string>MaciX500ManagerV(?P&lt;version&gt;[\S]+)WW1.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+						  	<key>filename</key>
+						  	<string>%NAME%-%version%.dmg</string>
+								<key>url</key>
+                <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-ix500/MaciX500ManagerV%version%WW1.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+    				<key>Processor</key>
+    				<string>CodeSignatureVerifier</string>
+    				<key>Arguments</key>
+    				<dict>
+    						<key>input_path</key>
+    						<string>%pathname%/ScanSnap Manager.pkg</string>
+    						<key>expected_authority_names</key>
+    						<array>
+    								<string>Developer ID Installer: PFU LIMITED (XW4U7W2E9L)</string>
+    								<string>Developer ID Certification Authority</string>
+    								<string>Apple Root CA</string>
+    						</array>
+    				</dict>
+    		</dict>
+    </array>
+</dict>
+</plist>
