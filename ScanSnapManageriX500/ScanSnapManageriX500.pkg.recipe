@@ -22,40 +22,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>%RECIPE_CACHE_DIR%</string>
-						<key>source_item</key>
-						<string>ScanSnap Manager.pkg</string>
-					</dict>
-				</array>
-			</dict>
-			<key>Processor</key>
-			<string>InstallFromDMG</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>target</key>
+				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%major%.%minor%.%latest%.pkg</string>
-				<key>source</key>
-				<string>%RECIPE_CACHE_DIR%/ScanSnap Manager.pkg</string>
+				<key>source_path</key>
+				<string>%pathname%/ScanSnap Manager.pkg</string>
+				<key>overwrite</key>
+				<string>True</string>
 			</dict>
 			<key>Processor</key>
-			<string>FileMover</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
-			</dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
+			<string>Copier</string>
 		</dict>
 	</array>
 </dict>
