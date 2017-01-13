@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500m-setup.html</string>
                 <key>re_pattern</key>
-                <string>MaciX500ManagerV(?P&lt;version&gt;[\S]+)WW1.dmg</string>
+                <string>MaciX500ManagerV(?P&lt;version&gt;[0-9]+[A-Z][0-9]+)WW1.dmg</string>
             </dict>
         </dict>
         <dict>
