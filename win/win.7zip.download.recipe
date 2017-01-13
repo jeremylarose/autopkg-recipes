@@ -30,9 +30,20 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%major_version%.%minor_version%.exe</string>
+				<string>%NAME%-%major_version%.%minor_version%-x64.exe</string>
 				<key>url</key>
 				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%-x64.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%major_version%.%minor_version%.exe</string>
+				<key>url</key>
+				<string>http://www.7-zip.org/a/7z%major_version%%minor_version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
