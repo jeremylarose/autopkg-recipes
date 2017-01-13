@@ -32,6 +32,14 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>update_for</key>
+        <array>
+          	<string>ScanSnapManageriX500</string>
+        </array>
+      <key>requires</key>
+        <array>
+	          <string>ScanSnapManageriX500</string>
+        </array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
