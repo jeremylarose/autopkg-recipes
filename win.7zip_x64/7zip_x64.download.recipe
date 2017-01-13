@@ -5,11 +5,11 @@
 	<key>Description</key>
 	<string>Downloads the latest version of 7zip 64-Bit.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.7zip-x64</string>
+	<string>com.github.jeremylarose.download.win.7zip_x64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>7zip-x64</string>
+		<string>win.7zip_x64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
