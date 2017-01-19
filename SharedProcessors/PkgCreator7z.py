@@ -18,6 +18,7 @@ import os
 import subprocess
 import shutil
 import sys
+import stat
 
 from autopkglib import Processor, ProcessorError
 
@@ -105,7 +106,9 @@ class PkgCreator7z(Processor):
             for batarg in bat_append:
                 myfile.write(str(batarg))
 
-        cmd = ['/usr/local/bin/7zr', 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
+        os.chmod(PkgCreator7zr, stat.S_IEXEC)
+
+        cmd = [PkgCreator7zr, 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
 
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (stdout, stderr) = proc.communicate()
