@@ -18,6 +18,7 @@ import os
 import subprocess
 import shutil
 import sys
+import stat
 
 from autopkglib import Processor, ProcessorError
 
