@@ -9,12 +9,12 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>7zip</string>
+		<string>7zip-x64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hansen-m.download.7zip-Win64</string>
+	<string>com.github.jeremylarose.pkg.Win.7zip-x64</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/qn</string>
+				<string>/S</string>
 			</dict>
     </dict>
 	</array>
