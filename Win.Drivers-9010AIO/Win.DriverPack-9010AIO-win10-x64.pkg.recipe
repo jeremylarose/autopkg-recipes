@@ -96,7 +96,7 @@
 						<key>file_path</key>
 						<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%</string>
 						<key>file_content</key>
-						<string>cab was extracted and then deleted to save space</string>
+						<string>cab was extracted and packaged, then the extracted path was deleted to save space</string>
 				</dict>
 		</dict>
 	</array>
