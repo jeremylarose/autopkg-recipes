@@ -82,8 +82,8 @@ class PkgCreator7z(Processor):
 
         bat_path = self.env.get('input_bat_path', PkgCreator7z_bat)
 
-        if os.path.exists(pkg_path):
-            exit()
+#        if os.path.exists(pkg_path):
+#            exit()
 
         if source_filename.endswith('.msi'):
             install = 'msiexec /i ' + source_filename
@@ -93,33 +93,36 @@ class PkgCreator7z(Processor):
             install = source_filename
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
-            exit()
+#            exit()
 
-        if not os.path.exists(pkgroot):
-            os.makedirs(pkgroot)
+        if os.path.exists(pkg_path):
+            pass
+        else:
+            if not os.path.exists(pkgroot):
+                os.makedirs(pkgroot)
 
-        shutil.copytree(PkgCreator7z, PkgCreator7z_dir, symlinks=True)
+            shutil.copytree(PkgCreator7z, PkgCreator7z_dir, symlinks=True)
 
-        bat_append = ['\npushd "%~dp0"\n', install, ' ', install_flags, '\npopd\n']
-        with open(bat_path, 'a') as myfile:
-            for batarg in bat_append:
-                myfile.write(str(batarg))
+            bat_append = ['\npushd "%~dp0"\n', install, ' ', install_flags, '\npopd\n']
+            with open(bat_path, 'a') as myfile:
+                for batarg in bat_append:
+                    myfile.write(str(batarg))
 
-        os.chmod(PkgCreator7zr, stat.S_IEXEC)
+            os.chmod(PkgCreator7zr, stat.S_IEXEC)
 
-        cmd = [PkgCreator7zr, 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
+            cmd = [PkgCreator7zr, 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
 
-        proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        (stdout, stderr) = proc.communicate()
+            proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            (stdout, stderr) = proc.communicate()
 
-        PkgCreator7z_files = [PkgCreator7z_Sfx, PkgCreator7z_config, PkgCreator7z_archive]
-        with open(pkg_path, 'w') as outfile:
-            for fname in PkgCreator7z_files:
-                with open(fname) as infile:
-                    for line in infile:
-                        outfile.write(line)
+            PkgCreator7z_files = [PkgCreator7z_Sfx, PkgCreator7z_config, PkgCreator7z_archive]
+            with open(pkg_path, 'w') as outfile:
+                for fname in PkgCreator7z_files:
+                    with open(fname) as infile:
+                        for line in infile:
+                            outfile.write(line)
 
-        shutil.rmtree(PkgCreator7z_dir)
+            shutil.rmtree(PkgCreator7z_dir)
 
 if __name__ == '__main__':
     processor = PkgCreator7z()
