@@ -31,8 +31,6 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-						  	<key>filename</key>
-						  	<string>%NAME%-%major_version%.%minor_version%.exe</string>
 								<key>url</key>
                 <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/v%dl_version%l%minor_version%/WinScanSnapV%dl_version%L%minor_version%UpWW.exe</string>
             </dict>

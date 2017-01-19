@@ -31,8 +31,6 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-						  	<key>filename</key>
-						  	<string>%NAME%-%major%.%minor%.%latest%.exe</string>
 								<key>url</key>
                 <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/w-ix500/WiniX500ManagerV%major%%minor%L%latest%WW.exe</string>
             </dict>
