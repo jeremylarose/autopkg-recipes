@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Acrobat Pro XI Update</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.AdobeAcrobatProXIUpdate</string>
+	<string>com.github.jeremylarose.download.Win.AdobeAcrobatProXIUpdate</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

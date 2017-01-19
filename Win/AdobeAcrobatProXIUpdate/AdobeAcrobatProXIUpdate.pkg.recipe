@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of AdobeAcrobatProXIUpdate Executables.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.win.AdobeAcrobatProXIUpdate</string>
+	<string>com.github.jeremylarose.pkg.Win.AdobeAcrobatProXIUpdate</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.win.AdobeAcrobatProXIUpdate</string>
+	<string>com.github.jeremylarose.download.Win.AdobeAcrobatProXIUpdate</string>
 	<key>Process</key>
 	<array>
 		<dict>
