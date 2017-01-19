@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500.html</string>
                 <key>re_pattern</key>
-                <string>software[\w]mg(?P&lt;dl_version&gt;[0-9]+)[\S]+[\s]+[\S]V(?P&lt;major_version&gt;[\d\.]+)L(?P&lt;minor_version&gt;[0-9]+)</string>
+                <string>software[\W]mg(?P&lt;dl_version&gt;[0-9]+)[\S]+[\s]+[\S]V(?P&lt;major_version&gt;[\d\.]+)L(?P&lt;minor_version&gt;[0-9]+)</string>
             </dict>
         </dict>
         <dict>
