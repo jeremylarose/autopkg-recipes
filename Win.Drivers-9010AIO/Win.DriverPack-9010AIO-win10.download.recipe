@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>9010 AIO</string>
+		<string>9010AIO</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -31,10 +31,16 @@
 			<dict>
 				<key>url</key>
 				<string>http://downloads.dell.com/%urlstring%-%platform%-%version%-%id%.CAB</string>
+				<key>filename</key>
+				<string>%NAME%-%platform%-%version%-%id%.CAB</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
+		<dict>
+ 				<key>Processor</key>
+ 				<string>EndOfCheckPhase</string>
+ 		</dict>
 	</array>
 </dict>
 </plist>
