@@ -19,7 +19,7 @@
 	<array>
 		<dict>
 		  <key>Processor</key>
-		  <string>PkgCreator7z</string>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>

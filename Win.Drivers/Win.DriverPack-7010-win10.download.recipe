@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest 7010 drivers cab.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.DriverPack-7010-win10</string>
+	<string>com.github.jeremylarose.download.Win.DriverPack-7010-win10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

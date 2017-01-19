@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Creates an 7010 BIOS installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.win.BIOS-7010</string>
+	<string>com.github.jeremylarose.pkg.Win.BIOS-7010</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.win.BIOS-7010</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-7010</string>
 	<key>Process</key>
 	<array>
 		<dict>

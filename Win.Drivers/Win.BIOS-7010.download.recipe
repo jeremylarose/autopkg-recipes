@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest 7010 BIOS Update.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.BIOS-7010</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-7010</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

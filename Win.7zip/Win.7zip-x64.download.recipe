@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of 7zip-x64 Executables.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.7zip-x64</string>
+	<string>com.github.jeremylarose.download.Win.7zip-x64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

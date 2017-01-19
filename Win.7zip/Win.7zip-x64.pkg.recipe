@@ -14,12 +14,12 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.win.7zip-x64</string>
+	<string>com.github.jeremylarose.download.Win.7zip-x64</string>
 	<key>Process</key>
 	<array>
 		<dict>
 		  <key>Processor</key>
-		  <string>PkgCreator7z</string>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>

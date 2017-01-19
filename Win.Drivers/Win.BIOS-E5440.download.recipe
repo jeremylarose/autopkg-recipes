@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest E5440 BIOS Update.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.BIOS-E5440</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-E5440</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

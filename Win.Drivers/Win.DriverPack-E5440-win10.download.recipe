@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest E5440 drivers cab.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.win.DriverPack-E5440-win10</string>
+	<string>com.github.jeremylarose.download.Win.DriverPack-E5440-win10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
