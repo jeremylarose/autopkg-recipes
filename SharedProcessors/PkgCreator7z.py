@@ -17,7 +17,7 @@
 import os
 import subprocess
 import shutil
-import sys
+#import sys
 import stat
 
 from autopkglib import Processor, ProcessorError
@@ -83,8 +83,8 @@ class PkgCreator7z(Processor):
 
         bat_path = self.env.get('input_bat_path', PkgCreator7z_bat)
 
-        if os.path.exists(pkg_path):
-            sys.exit(0)
+#        if os.path.exists(pkg_path):
+#            sys.exit(0)
 
         if source_filename.endswith('.msi'):
             install = 'msiexec /i ' + source_filename
@@ -94,7 +94,7 @@ class PkgCreator7z(Processor):
             install = source_filename
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
-            sys.exit(1)
+#            sys.exit(1)
 
         if not os.path.exists(pkgroot):
             os.makedirs(pkgroot)
