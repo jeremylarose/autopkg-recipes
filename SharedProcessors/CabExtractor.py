@@ -80,7 +80,7 @@ class CabExtractor(Processor):
             self.output('cab_path does not have a cab or CAB extension')
             sys.exit(1)
 
-        cmd = ['cabextract', cab_path, '-d', cab_extract_path]
+        cmd = ['/usr/local/bin/cabextract', cab_path, '-d', cab_extract_path]
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (stdout, stderr) = proc.communicate()
 
