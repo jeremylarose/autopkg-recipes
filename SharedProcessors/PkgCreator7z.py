@@ -83,8 +83,8 @@ class PkgCreator7z(Processor):
 
         bat_path = self.env.get('input_bat_path', PkgCreator7z_bat)
 
-#        if os.path.exists(pkg_path):
-#            sys.exit(0)
+        if os.path.exists(pkg_path):
+            exit()
 
         if source_filename.endswith('.msi'):
             install = 'msiexec /i ' + source_filename
