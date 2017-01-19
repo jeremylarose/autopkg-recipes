@@ -26,3 +26,24 @@ Adds a packing function using the 7zip library for windows software.  It can be 
 ## Output Variables
 - **pkg\_path:**
     - **description:** The created package.
+
+# CabExtractor.py
+
+## Description
+Extract CAB files
+
+## Input Variables
+- **cab\_path:**
+    - **required:** False
+    - **description:** Path to a cab file, defaults to pathname
+- **cab\_extract\_path:**
+    - **required:** False
+    - **description:** where cab will be extracted, defaults to RECIPE_CACHE_DIR/NAME.
+- **purge\_destination:**
+    - **required:** False
+    - **description:** Whether the contents of the destination directory will be removed before extracting.
+- **extra\_files:**
+    - **required:** False
+    - **description:** path of a directory or file to include with archive
+
+## Output Variables
