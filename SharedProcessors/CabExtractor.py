@@ -17,7 +17,6 @@
 import os
 import subprocess
 import shutil
-#import sys
 import stat
 
 from autopkglib import Processor, ProcessorError
@@ -67,8 +66,6 @@ class CabExtractor(Processor):
         cabextract_git = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'CabExtractor/cabextract')
         cabextract = os.path.join(RECIPE_CACHE_DIR, 'cabextract')
 
-#        if os.path.exists(cab_extract_path) and purge_destination == False:
-#            sys.exit(0)
         if os.path.exists(cab_extract_path) and purge_destination == True:
             shutil.rmtree(cab_extract_path)
         else:
@@ -80,7 +77,6 @@ class CabExtractor(Processor):
             pass
         else:
             self.output('cab_path does not have a cab or CAB extension')
-#            sys.exit(1)
 
         if os.path.exists(cab_extract_path):
             pass

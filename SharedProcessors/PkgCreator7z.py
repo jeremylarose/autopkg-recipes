@@ -82,9 +82,6 @@ class PkgCreator7z(Processor):
 
         bat_path = self.env.get('input_bat_path', PkgCreator7z_bat)
 
-#        if os.path.exists(pkg_path):
-#            exit()
-
         if source_filename.endswith('.msi'):
             install = 'msiexec /i ' + source_filename
         elif source_filename.endswith('.msp'):
@@ -93,7 +90,6 @@ class PkgCreator7z(Processor):
             install = source_filename
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
-#            exit()
 
         if os.path.exists(pkg_path):
             pass
