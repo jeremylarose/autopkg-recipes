@@ -105,7 +105,7 @@ class PkgCreator7z(Processor):
             for batarg in bat_append:
                 myfile.write(str(batarg))
 
-        cmd = [PkgCreator7zr, 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
+        cmd = ['/usr/local/bin/7zr', 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
 
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (stdout, stderr) = proc.communicate()
