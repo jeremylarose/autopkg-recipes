@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Dummy recipe for referencing shared processors in this directory.</string>
     <key>Identifier</key>
-    <string>com.github.hansen-m.SharedProcessors</string>
+    <string>com.github.jeremylarose.SharedProcessors</string>
     <key>Input</key>
     <dict/>
     <key>MinimumVersion</key>
-    <string>0.4.0</string>
+    <string>0.6.1</string>
     <key>Process</key>
     <array/>
 </dict>
