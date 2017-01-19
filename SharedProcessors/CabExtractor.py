@@ -82,7 +82,7 @@ class CabExtractor(Processor):
             sys.exit(1)
 
         if not os.path.exists(cabextract):
-        shutil.copyfile(cabextract_git, cabextract)
+            shutil.copyfile(cabextract_git, cabextract)
 
         cmd = [cabextract, cab_path, '-d', cab_extract_path]
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
