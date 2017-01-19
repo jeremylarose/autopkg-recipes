@@ -64,7 +64,7 @@ class CabExtractor(Processor):
         cab_extract_path = self.env.get('cab_extract_path', default_path)
         purge_destination = self.env.get('purge_destination', False)
         cabextract_git = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'CabExtractor/cabextract')
-        cabextract = os.path.join('usr', 'local, 'bin', 'cabextract')
+        cabextract = os.path.join('/usr/local/bin/cabextract')
 
         if os.path.exists(cab_extract_path) and purge_destination == False:
             sys.exit(0)
