@@ -63,7 +63,6 @@ class CabExtractor(Processor):
         default_path = os.path.join(RECIPE_CACHE_DIR, NAME)
         cab_extract_path = self.env.get('cab_extract_path', default_path)
         purge_destination = self.env.get('purge_destination', False)
-        cabextract_git = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'CabExtractor/cabextract')
         cabextract = os.path.join('/usr/local/bin/cabextract')
 
         if os.path.exists(cab_extract_path) and purge_destination == False:
@@ -80,9 +79,6 @@ class CabExtractor(Processor):
         else:
             self.output('cab_path does not have a cab or CAB extension')
             sys.exit(1)
-
-        if not os.path.exists(cabextract):
-            shutil.copyfile(cabextract_git, cabextract)
 
         cmd = [cabextract, cab_path, '-d', cab_extract_path]
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
