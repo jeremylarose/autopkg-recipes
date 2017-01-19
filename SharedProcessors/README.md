@@ -19,13 +19,12 @@ Adds a packing function using the 7zip library for windows software.  It can be 
 - **source\_path:**
     - **required:** False
     - **description:** name of source installer path, defaults to pathname
-- **extra\_files:**
-    - **required:** False
-    - **description:** path of a directory or file to include with archive
 
 ## Output Variables
 - **pkg\_path:**
     - **description:** The created package.
+
+
 
 # CabExtractor.py
 
