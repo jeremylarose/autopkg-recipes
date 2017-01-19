@@ -17,7 +17,7 @@
 import os
 import subprocess
 import shutil
-import sys
+#import sys
 import stat
 
 from autopkglib import Processor, ProcessorError
@@ -67,9 +67,9 @@ class CabExtractor(Processor):
         cabextract_git = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'CabExtractor/cabextract')
         cabextract = os.path.join(RECIPE_CACHE_DIR, 'cabextract')
 
-        if os.path.exists(cab_extract_path) and purge_destination == False:
-            sys.exit(0)
-        elif os.path.exists(cab_extract_path) and purge_destination == True:
+#        if os.path.exists(cab_extract_path) and purge_destination == False:
+#            sys.exit(0)
+        if os.path.exists(cab_extract_path) and purge_destination == True:
             shutil.rmtree(cab_extract_path)
         else:
             pass
@@ -80,17 +80,21 @@ class CabExtractor(Processor):
             pass
         else:
             self.output('cab_path does not have a cab or CAB extension')
-            sys.exit(1)
+#            sys.exit(1)
 
-        shutil.copyfile(cabextract_git, cabextract)
-        os.chmod(cabextract, stat.S_IEXEC)
+        if os.path.exists(cab_extract_path):
+            pass
+        else:
+            shutil.copyfile(cabextract_git, cabextract)
 
-        cmd = [cabextract, cab_path, '-d', cab_extract_path]
+            os.chmod(cabextract, stat.S_IEXEC)
 
-        proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        (stdout, stderr) = proc.communicate()
+            cmd = [cabextract, cab_path, '-d', cab_extract_path]
 
-        os.remove(cabextract)
+            proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            (stdout, stderr) = proc.communicate()
+
+            os.remove(cabextract)
 
 if __name__ == '__main__':
     processor = CabExtractor()
