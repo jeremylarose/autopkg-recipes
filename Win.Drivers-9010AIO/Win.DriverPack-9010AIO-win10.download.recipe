@@ -31,8 +31,6 @@
 			<dict>
 				<key>url</key>
 				<string>http://downloads.dell.com/%urlstring%-%platform%-%version%-%id%.CAB</string>
-				<key>filename</key>
-				<string>%NAME%-%platform%-%version%-%id%.CAB</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
