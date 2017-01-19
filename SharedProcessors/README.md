@@ -41,8 +41,5 @@ Extract CAB files
 - **purge\_destination:**
     - **required:** False
     - **description:** Whether the contents of the destination directory will be removed before extracting.
-- **extra\_files:**
-    - **required:** False
-    - **description:** path of a directory or file to include with archive
 
 ## Output Variables
