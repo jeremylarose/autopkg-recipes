@@ -24,6 +24,8 @@
 			<dict>
 				<key>install_flags</key>
 				<string>/S</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.msi</string>
 			</dict>
     </dict>
 	</array>
