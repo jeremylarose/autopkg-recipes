@@ -72,7 +72,7 @@
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%/SDI_x64_%sdi_version%.exe</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%/%NAME%/Win10/x64</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%/9010 AIO/Win10/x64</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%platform%-%version%-%id%-X64.exe</string>
 			</dict>
