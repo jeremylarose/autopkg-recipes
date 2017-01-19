@@ -17,7 +17,6 @@
 import os
 import subprocess
 import shutil
-#import sys
 import stat
 
 from autopkglib import Processor, ProcessorError
@@ -94,7 +93,7 @@ class PkgCreator7z(Processor):
             install = source_filename
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
-#            sys.exit(1)
+            exit()
 
         if not os.path.exists(pkgroot):
             os.makedirs(pkgroot)
