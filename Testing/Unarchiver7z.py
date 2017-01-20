@@ -13,10 +13,10 @@ import subprocess
 from autopkglib import Processor, ProcessorError
 
 
-__all__ = ["WinInstallerExtractor"]
+__all__ = ["Unarchiver7z"]
 
 
-class WinInstallerExtractor(Processor):
+class Unarchiver7z(Processor):
     description = "Extracts the Windows archive meta-data using 7z."
     input_variables = {
         "exe_path": {
@@ -55,11 +55,13 @@ class WinInstallerExtractor(Processor):
         ignore_errors = self.env.get('ignore_errors', 'False')
         verbosity = self.env.get('verbose', 0)
 
+        Unarchiver7za = os.path.join(os.path.dirname(os.path.abspath(__file__)), '7z/7za')
+
         extract_flag = 'x' if preserve_paths == 'True' else 'e'
         extract_path = "%s/%s" % (working_directory, extract_directory)
 
         self.output("Extracting: %s" % exe_path)
-        cmd = ['7z', extract_flag, '-y', '-o%s' % extract_path , exe_path]
+        cmd = [Unarchiver7za, extract_flag, '-y', '-o%s' % extract_path , exe_path]
 
         if ignore_pattern:
             cmd.append('-x!%s' % ignore_pattern)
@@ -76,5 +78,5 @@ class WinInstallerExtractor(Processor):
         self.output("Extracted Archive Path: %s" % extract_path)
 
 if __name__ == '__main__':
-    processor = WinInstallerExtractor()
+    processor = Unarchiver7z()
     processor.execute_shell()
