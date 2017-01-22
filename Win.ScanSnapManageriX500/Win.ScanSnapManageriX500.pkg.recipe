@@ -90,7 +90,7 @@ xcopy %~dp0setup.iss c:\windows\temp /y
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/s /f1c:\windows\temp\setup.iss && del c:\windows\temp\setup.iss</string>
+				<string>/s /f1c:\windows\temp\setup.iss</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/working/install.bat</string>
 				<key>extra_files</key>
