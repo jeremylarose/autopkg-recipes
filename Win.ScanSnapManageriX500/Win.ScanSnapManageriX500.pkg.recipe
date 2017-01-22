@@ -23,7 +23,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>file_path</key>
-						<string>%RECIPE_CACHE_DIR%/working/setup.iss</string>
+						<string>%RECIPE_CACHE_DIR%/downloads/setup.iss</string>
 						<key>file_content</key>
 						<string>[InstallShield Silent]
 Version=v7.00
@@ -66,7 +66,7 @@ Count=0
 				<key>Arguments</key>
 				<dict>
 						<key>file_path</key>
-						<string>%RECIPE_CACHE_DIR%/working/install.bat</string>
+						<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
 						<key>file_content</key>
 						<string>@echo off
 
@@ -92,9 +92,9 @@ xcopy %~dp0setup.iss c:\windows\temp /y
 				<key>install_flags</key>
 				<string>/s /f1c:\windows\temp\setup.iss</string>
 				<key>input_bat_path</key>
-				<string>%RECIPE_CACHE_DIR%/working/install.bat</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/working/setup.iss</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/setup.iss</string>
 				<key>pkg_name</key>
 				<string>%NAME%-V%major%%minor%L%latest%.exe</string>
 			</dict>
@@ -106,7 +106,8 @@ xcopy %~dp0setup.iss c:\windows\temp /y
 				<dict>
 						<key>path_list</key>
 						<array>
-								<string>%RECIPE_CACHE_DIR%/working</string>
+								<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+								<string>%RECIPE_CACHE_DIR%/downloads/setup.iss</string>
 						</array>
 				</dict>
 		</dict>
