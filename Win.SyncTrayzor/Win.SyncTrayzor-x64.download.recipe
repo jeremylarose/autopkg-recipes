@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of SyncTrayzor.</string>
+	<string>Downloads the latest version of SyncTrayzor-x64.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.SyncTrayzor</string>
+	<string>com.github.jeremylarose.download.Win.SyncTrayzor-x64</string>
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>
