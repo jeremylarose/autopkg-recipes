@@ -48,7 +48,7 @@ Result=1
 Result=1
 [Application]
 Name=ScanSnap Manager
-Version=V%major%%minor%L%latest%
+Version=V%major%.%minor%L%latest%
 Company=PFU
 Lang=0009
 [{DBCDB997-EEEB-4BE9-BAFF-26B4094DBDE6}-SdFinish-0]
