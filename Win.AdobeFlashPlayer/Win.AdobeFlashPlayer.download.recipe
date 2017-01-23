@@ -34,16 +34,16 @@
 						<key>url</key>
 						<string>https://helpx.adobe.com/flash-player/release-note/fp_%major_version%_air_%major_version%_release_notes.html</string>
 						<key>re_pattern</key>
-						<string>%major_version%.(?P&lt;version_rest&gt;[\d\.]{3,})</string>
+						<string>%major_version%.(?P&lt;v2&gt;[0-9]+).(?P&lt;v3&gt;[0-9]+).(?P&lt;v4&gt;[0-9]+)</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>AdobeFlashPlayer_ppapi-%major_version%.%version_rest%.exe</string>
+				<string>AdobeFlashPlayer-ppapi-%major_version%.%v2%.%v3%.%v4%.exe</string>
 				<key>url</key>
-				<string>http://fpdownload.adobe.com/get/flashplayer/pdc/%major_version%.%version_rest%/install_flash_player_ppapi.exe</string>
+				<string>http://fpdownload.adobe.com/get/flashplayer/pdc/%major_version%.%v2%.%v3%.%v4%/install_flash_player_ppapi.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
