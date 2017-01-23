@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest AdobeFlashPlayer</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.AdobeFlashPlayer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeFlashPlayer</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</string>
+						<key>re_pattern</key>
+						<string>fp_(?P&lt;major_version&gt;[0-9]+)_air_[0-9]+_release_notes.html</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://helpx.adobe.com/flash-player/release-note/fp_%major_version%_air_%major_version%_release_notes.html</string>
+						<key>re_pattern</key>
+						<string>%major_version%.(?P&lt;version_rest&gt;[\d\.]{3,})</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>AdobeFlashPlayer_ppapi-%major_version%.%version_rest%.exe</string>
+				<key>url</key>
+				<string>http://fpdownload.adobe.com/get/flashplayer/pdc/%major_version%.%version_rest%/install_flash_player_ppapi.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
