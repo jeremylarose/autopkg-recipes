@@ -21,20 +21,9 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</string>
+						<string>http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_win_pl.xml</string>
 						<key>re_pattern</key>
-						<string>fp_(?P&lt;major_version&gt;[0-9]+)_air_[0-9]+_release_notes.html</string>
-				</dict>
-		</dict>
-		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>https://helpx.adobe.com/flash-player/release-note/fp_%major_version%_air_%major_version%_release_notes.html</string>
-						<key>re_pattern</key>
-						<string>%major_version%.(?P&lt;v2&gt;[0-9]+).(?P&lt;v3&gt;[0-9]+).(?P&lt;v4&gt;[0-9]+)</string>
+						<string>version="%major_version%,(?P&lt;v2&gt;[0-9]+),(?P&lt;v3&gt;[0-9]+),(?P&lt;v4&gt;[0-9]+)"</string>
 				</dict>
 		</dict>
 		<dict>
