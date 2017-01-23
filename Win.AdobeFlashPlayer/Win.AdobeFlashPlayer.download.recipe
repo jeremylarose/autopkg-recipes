@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest AdobeFlashPlayer</string>
+	<string>Downloads the latest AdobeFlashPlayer ActiveX, NPAPI, and PPAPI</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.Win.AdobeFlashPlayer</string>
 	<key>Input</key>

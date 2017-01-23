@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads and creates a AdobeFlashPlayer silent installer.</string>
+	<string>Downloads the latest AdobeFlashPlayer ActiveX, NPAPI, and PPAPI and creates a silent installer.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.pkg.Win.AdobeFlashPlayer</string>
 	<key>Input</key>
