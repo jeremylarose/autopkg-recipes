@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_win_pl.xml</string>
 						<key>re_pattern</key>
-						<string>version="%major_version%,(?P&lt;v2&gt;[0-9]+),(?P&lt;v3&gt;[0-9]+),(?P&lt;v4&gt;[0-9]+)"</string>
+						<string>version="(?P&lt;major_version&gt;[0-9]+),(?P&lt;v2&gt;[0-9]+),(?P&lt;v3&gt;[0-9]+),(?P&lt;v4&gt;[0-9]+)"</string>
 				</dict>
 		</dict>
 		<dict>
