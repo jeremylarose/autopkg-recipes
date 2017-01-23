@@ -38,7 +38,7 @@ echo .
 echo --------------------------------------------------------
 
 %~dp0AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
-%~dp0AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4% -install
+%~dp0AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4% -install
 sc config AdobeFlashPlayerUpdateSvc start= disabled
 						</string>
 				</dict>
@@ -53,7 +53,7 @@ sc config AdobeFlashPlayerUpdateSvc start= disabled
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/AdobeFlashPlayer-%major_version%.%v2%.%v3%.%v4%.exe, %RECIPE_CACHE_DIR%/downloads/AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4%.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe, %RECIPE_CACHE_DIR%/downloads/AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%major_version%.%v2%.%v3%.%v4%.exe</string>
 			</dict>
