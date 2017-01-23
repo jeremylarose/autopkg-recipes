@@ -50,7 +50,7 @@ sc config AdobeFlashPlayerUpdateSvc start= disabled
 			<dict>
 				<key>source</key>
 				<string>%pathname%</string>
-				<key>destination</key>
+				<key>target</key>
 				<string>%RECIPE_CACHE_DIR%/AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
 			</dict>
     </dict>
@@ -89,7 +89,7 @@ sc config AdobeFlashPlayerUpdateSvc start= disabled
 			<dict>
 				<key>source</key>
 				<string>%RECIPE_CACHE_DIR%/AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
-				<key>destination</key>
+				<key>target</key>
 				<string>%pathname%</string>
 			</dict>
     </dict>
