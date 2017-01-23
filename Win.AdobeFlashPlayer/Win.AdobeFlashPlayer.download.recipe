@@ -30,7 +30,29 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>AdobeFlashPlayer-ppapi-%major_version%.%v2%.%v3%.%v4%.exe</string>
+				<string>AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
+				<key>url</key>
+				<string>http://fpdownload.adobe.com/get/flashplayer/pdc/%major_version%.%v2%.%v3%.%v4%/install_flash_player_ax.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe</string>
+				<key>url</key>
+				<string>http://fpdownload.adobe.com/get/flashplayer/pdc/%major_version%.%v2%.%v3%.%v4%/install_flash_player_npapi.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4%.exe</string>
 				<key>url</key>
 				<string>http://fpdownload.adobe.com/get/flashplayer/pdc/%major_version%.%v2%.%v3%.%v4%/install_flash_player_ppapi.exe</string>
 			</dict>
