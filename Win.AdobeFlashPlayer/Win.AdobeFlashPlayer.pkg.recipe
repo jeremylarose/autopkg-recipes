@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of AdobeFlashPlayer and creates a silent install package.</string>
+	<string>Downloads and creates a AdobeFlashPlayer silent installer.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.pkg.Win.AdobeFlashPlayer</string>
 	<key>Input</key>
@@ -18,14 +18,57 @@
 	<key>Process</key>
 	<array>
 		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .         Installing Adobe Flash - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+pushd "%~dp0"
+AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
+AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
+popd
+sc config AdobeFlashPlayerUpdateSvc start= disabled
+						</string>
+				</dict>
+		</dict>
+		<dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/qn</string>
+				<string>-install</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%major_version%.%v2%.%v3%.%v4%.exe</string>
 			</dict>
     </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+						</array>
+				</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
