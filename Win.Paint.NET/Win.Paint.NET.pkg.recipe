@@ -27,7 +27,7 @@
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%filename%</string>
 				<key>pkg_name</key>
-				<string>%NAME%-%version%exe</string>
+				<string>%NAME%-%version%.exe</string>
 			</dict>
     </dict>
 	</array>
