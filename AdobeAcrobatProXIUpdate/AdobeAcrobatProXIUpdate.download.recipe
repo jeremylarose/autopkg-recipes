@@ -41,21 +41,21 @@
 				<key>Processor</key>
 				<string>EndOfCheckPhase</string>
 		</dict>
-		<dict>
-				<key>Processor</key>
-				<string>CodeSignatureVerifier</string>
-				<key>Arguments</key>
-				<dict>
-						<key>input_path</key>
-						<string>%pathname%/AcrobatUpd11%major_version%%minor_version%.pkg</string>
-						<key>expected_authority_names</key>
-						<array>
-								<string>Developer ID Installer: Adobe Systems, Inc.</string>
-								<string>Developer ID Certification Authority</string>
-								<string>Apple Root CA</string>
-						</array>
-				</dict>
-		</dict>
+#		<dict>
+#				<key>Processor</key>
+#				<string>CodeSignatureVerifier</string>
+#				<key>Arguments</key>
+#				<dict>
+#						<key>input_path</key>
+#						<string>%pathname%/AcrobatUpd11%major_version%%minor_version%.pkg</string>
+#						<key>expected_authority_names</key>
+#						<array>
+#								<string>Developer ID Installer: Adobe Systems, Inc.</string>
+#								<string>Developer ID Certification Authority</string>
+#								<string>Apple Root CA</string>
+#						</array>
+#				</dict>
+#		</dict>
 	</array>
 </dict>
 </plist>
