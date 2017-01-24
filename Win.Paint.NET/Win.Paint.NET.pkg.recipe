@@ -18,6 +18,32 @@
 	<key>Process</key>
 	<array>
 		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+:: quit installer if application is running....
+tasklist.exe /FI "IMAGENAME eq PaintDotNet.exe" 2>NUL | find /I /N "PaintDotNet.exe" >NUL
+if "%ERRORLEVEL%"=="0" EXIT
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .          Installing Paint.net - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+						</string>
+				</dict>
+		</dict>
+		<dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
@@ -28,8 +54,21 @@
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.exe</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%version%.exe</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
 			</dict>
     </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+						</array>
+				</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
