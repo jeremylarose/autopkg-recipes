@@ -9,8 +9,6 @@
 	<string>com.github.jeremylarose.pkg.AdobeAcrobatProXIUpdate</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>org.saltstack.saltminion</string>
 		<key>NAME</key>
 		<string>AdobeAcrobatProXIUpdate</string>
 	</dict>
