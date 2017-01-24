@@ -29,6 +29,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%.zip</string>
 				<key>url</key>
 				<string>http://www.dotpdn.com/files/paint.net.%version%.install.zip</string>
 			</dict>
@@ -36,6 +38,11 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads</string>
+			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
