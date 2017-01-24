@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>http://www.dotpdn.com/downloads/pdn.html</string>
 						<key>re_pattern</key>
-            <string>http://www.dotpdn.com/files/paint.net.(?P&lt;version&gt;[\d\.]+).install.zip</string>
+            <string>http://www.dotpdn.com/files/paint.net.(?P&lt;version&gt;[0-9]+.[0-9]+.[0-9]+).install.zip</string>
 				</dict>
 		</dict>
 		<dict>
