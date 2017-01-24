@@ -3,32 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of SaltMinion and creates a package.</string>
+	<string>Installs the latest version of AdobeAcrobatProXIUpdate</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.SaltMinion</string>
+	<string>com.github.jeremylarose.install.AdobeAcrobatProXIUpdate</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>org.saltstack.saltminion</string>
 		<key>NAME</key>
-		<string>SaltMinion</string>
+		<string>AdobeAcrobatProXIUpdate</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.SaltMinion</string>
+	<string>com.github.jeremylarose.download.AdobeAcrobatProXIUpdate</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
-				<key>source_path</key>
+				<key>pkg_path</key>
 				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
-			<string>Copier</string>
+			<string>Installer</string>
 		</dict>
 	</array>
 </dict>

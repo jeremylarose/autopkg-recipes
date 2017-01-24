@@ -1,29 +1,30 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of SaltMinion and creates a package.</string>
+	<string>Downloads the latest version of AdobeAcrobatProXIUpdate and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.SaltMinion</string>
+	<string>com.github.jeremylarose.pkg.AdobeAcrobatProXIUpdate</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
 		<string>org.saltstack.saltminion</string>
 		<key>NAME</key>
-		<string>SaltMinion</string>
+		<string>AdobeAcrobatProXIUpdate</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.SaltMinion</string>
+	<string>com.github.jeremylarose.download.AdobeAcrobatProXIUpdate</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-11.%major_version%.%minor_version%.pkg</string>
 				<key>source_path</key>
 				<string>%pathname%</string>
 			</dict>
