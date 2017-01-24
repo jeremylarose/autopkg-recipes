@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Spiceworks and creates a silent installer.</string>
+	<string>Downloads the latest version of Paint.NET and creates a silent installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.Spiceworks</string>
+	<string>com.github.jeremylarose.pkg.Win.Paint.NET</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Spiceworks</string>
+		<string>Paint.NET</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.Spiceworks</string>
+	<string>com.github.jeremylarose.download.Win.Paint.NET</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -23,7 +23,11 @@
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/S</string>
+				<string>/auto DESKTOPSHORTCUT=0 CHECKFORUPDATES=0 JPGPNGBMPEDITOR=0</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%filename%</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%.exe</string>
 			</dict>
     </dict>
 	</array>
