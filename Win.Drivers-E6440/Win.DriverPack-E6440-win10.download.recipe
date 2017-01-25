@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest E6440 drivers cab.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.DriverPack-E6440-win10</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>E6440</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>http://en.community.dell.com/techcenter/enterprise-client/w/wiki/11572.latitude-e6440-windows-10-driver-pack</string>
+						<key>re_pattern</key>
+            <string>http://downloads.dell.com/(?P&lt;urlstring&gt;[\S]+)-(?P&lt;platform&gt;[\S]+)-(?P&lt;version&gt;[\S]+)-(?P&lt;id&gt;[\S]+).CAB</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://downloads.dell.com/%urlstring%-%platform%-%version%-%id%.CAB</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
