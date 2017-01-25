@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Creates an 5040 BIOS installer.</string>
+	<string>Creates an 7275 BIOS installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.BIOS-5040</string>
+	<string>com.github.jeremylarose.pkg.Win.BIOS-7275</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>5040</string>
+		<string>7275</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.BIOS-5040</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-7275</string>
 	<key>Process</key>
 	<array>
 		<dict>
