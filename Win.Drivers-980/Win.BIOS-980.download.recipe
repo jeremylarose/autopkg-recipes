@@ -23,14 +23,14 @@
 						<key>url</key>
 						<string>http://www.dell.com/support/home/us/en/04/product-support/product/optiplex-980/drivers</string>
 						<key>re_pattern</key>
-            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]O980-(?P&lt;version&gt;[\S]+).exe</string>
+            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]O980-(?P&lt;version&gt;[\S]+).EXE</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://downloads.dell.com/%folder%/%number%/O980-%version%.exe</string>
+				<string>https://downloads.dell.com/%folder%/%number%/O980-%version%.EXE</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
