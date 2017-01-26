@@ -72,6 +72,17 @@ EXIT
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%major_version%.%minor_version%-x64.exe</string>
 			</dict>
     </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
