@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>http://www.dell.com/support/home/us/en/04/product-support/product/optiplex-7440-aio/drivers</string>
 						<key>re_pattern</key>
-            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]OptiPlex_7440_?P&lt;version&gt;[\S]+).exe</string>
+            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]OptiPlex_7440_(?P&lt;version&gt;[\S]+).exe</string>
 				</dict>
 		</dict>
 		<dict>
