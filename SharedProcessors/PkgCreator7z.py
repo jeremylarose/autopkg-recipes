@@ -88,6 +88,8 @@ class PkgCreator7z(Processor):
             install = 'msiexec /p ' + source_filename
         elif source_filename.endswith('.exe'):
             install = source_filename
+        elif source_filename.endswith('.EXE'):
+            install = source_filename
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
 
