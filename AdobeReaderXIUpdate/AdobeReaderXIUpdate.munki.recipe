@@ -19,13 +19,13 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Update for Adobe Acrobat Pro XI</string>
+			<string>Update for Adobe Reader XI</string>
 			<key>category</key>
 			<string>Productivity</string>
 			<key>developer</key>
 			<string>Adobe</string>
 			<key>display_name</key>
-			<string>Adobe Acrobat Pro XI Update</string>
+			<string>Adobe Reader XI Update</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
