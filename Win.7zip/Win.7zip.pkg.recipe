@@ -27,10 +27,6 @@
 						<key>file_content</key>
 						<string>@echo off
 
-::check if current version is installed, if is, exit....
-for /f "tokens=3*" %%i in ('reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\7-Zip" /v DisplayVersion') do set "regdata=%%~i"
-IF "%regdata%"==%major_version%.%minor_version% EXIT
-
 cls
 echo --------------------------------------------------------
 echo .
