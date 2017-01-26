@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of 7zip x86 and x64 and creates an OS dependent silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.7zip</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>7zip</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.7zip</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+::check if current version is installed, if is, exit....
+for /f "tokens=3*" %%i in ('reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\7-Zip" /v DisplayVersion') do set "regdata=%%~i"
+IF "%regdata%"=="%major_version%.%minor_version%" EXIT
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .          Installing 7-Zip - Please Wait
+echo .         Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+::uninstall any other versions
+IF EXIST "C:\Program Files (x86)\7-Zip\Uninstall.exe" "C:\Program Files (x86)\7-Zip\uninstall.exe" /S
+IF EXIST "C:\Program Files\7-Zip\Uninstall.exe" "C:\Program Files\7-Zip\uninstall.exe" /S
+
+::uninstall any 7-Zip msi installed...
+wmic.exe product where "name like '%7-Zip%'" call uninstall /nointeractive
+
+::Install new version
+IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
+IF EXIST "C:\Program Files (x86)" %~dp0%NAME%-%major_version%.%minor_version%-x64.exe /S
+EXIT
+
+:x86install
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/S</string>
+			</dict>
+    </dict>
+	</array>
+</dict>
+</plist>
