@@ -37,13 +37,6 @@ echo .
 echo .
 echo --------------------------------------------------------
 
-::uninstall any other versions
-IF EXIST "C:\Program Files (x86)\7-Zip\Uninstall.exe" "C:\Program Files (x86)\7-Zip\uninstall.exe" /S
-IF EXIST "C:\Program Files\7-Zip\Uninstall.exe" "C:\Program Files\7-Zip\uninstall.exe" /S
-
-::uninstall any 7-Zip msi installed...
-wmic.exe product where "name like '%7-Zip%'" call uninstall /nointeractive
-
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
