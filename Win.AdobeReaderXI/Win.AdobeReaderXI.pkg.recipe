@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of AdobeReaderXI Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.AdobeReaderXI</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeReaderXI</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.AdobeReaderXI</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+:: Quit installer if application is running...
+tasklist.exe /FI "IMAGENAME eq AcroRd32.exe" 2>NUL | find /I /N "AcroRd32.exe" >NUL
+if "%ERRORLEVEL%"=="0" EXIT
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .       Installing Adobe Reader XI - Please Wait
+echo .          Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+pushd "%~dp0"
+:: check if installed at all, if is, go to updates
+IF EXIST "C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPDATE
+
+:: install reader
+AdbeRdr11010_en_US.exe /sAll /rs /msi EULA_ACCEPT=YES
+
+:: disable updates
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\11.0\FeatureLockDown" /v bUpdater /t REG_DWORD /d 00000000 /f
+
+:: delete desktop shortcuts
+del "%Public%\Desktop\Adobe Reader XI.lnk"
+del "%ALLUSERSPROFILE%\Desktop\Adobe Reader XI.lnk"
+
+:UPDATE
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/qn /norestart</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/AdbeRdr11010_en_US.exe</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

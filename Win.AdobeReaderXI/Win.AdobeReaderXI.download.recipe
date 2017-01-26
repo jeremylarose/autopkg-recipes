@@ -5,16 +5,25 @@
 	<key>Description</key>
 	<string>Downloads the latest Adobe Reader XI Update</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.AdobeReaderXIUpdate</string>
+	<string>com.github.jeremylarose.download.Win.AdobeReaderXI</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>AdobeReaderXIUpdate</string>
+		<string>AdobeReaderXI</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://ardownload2.adobe.com/pub/adobe/reader/win/11.x/11.0.10/en_US/AdbeRdr11010_en_US.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
 		<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
