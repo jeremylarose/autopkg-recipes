@@ -29,7 +29,7 @@
 
 ::check if current version is installed, if is, exit....
 for /f "tokens=3*" %%i in ('reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\7-Zip" /v DisplayVersion') do set "regdata=%%~i"
-IF "%regdata%"=="%major_version%.%minor_version%" EXIT
+IF "%regdata%"==%major_version%.%minor_version% EXIT
 
 cls
 echo --------------------------------------------------------
@@ -50,7 +50,9 @@ wmic.exe product where "name like '%7-Zip%'" call uninstall /nointeractive
 
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
-IF EXIST "C:\Program Files (x86)" %~dp0%NAME%-%major_version%.%minor_version%-x64.exe /S
+pushd "%~dp0"
+IF EXIST "C:\Program Files (x86)" %NAME%-%major_version%.%minor_version%-x64.exe /S
+popd
 EXIT
 
 :x86install
