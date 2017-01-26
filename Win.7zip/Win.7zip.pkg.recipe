@@ -64,6 +64,10 @@ EXIT
 			<dict>
 				<key>install_flags</key>
 				<string>/S</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%major_version%.%minor_version%-x64.exe</string>
 			</dict>
     </dict>
 	</array>
