@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of AdobeReaderXI Executables.</string>
+	<string>Downloads Adobe Reader 11.0.10 and the latest update, then installs or updates accordingly.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.pkg.Win.AdobeReaderXI</string>
 	<key>Input</key>

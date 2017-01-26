@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Adobe Reader XI Update</string>
+	<string>Downloads Adobe Reader 11.0.10 and the latest update.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.Win.AdobeReaderXI</string>
 	<key>Input</key>
