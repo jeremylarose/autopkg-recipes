@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of AdobeAcrobatProXIUpdate Executables.</string>
+	<string>Downloads the latest version of AdobeReaderXIUpdate Executables.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.AdobeAcrobatProXIUpdate</string>
+	<string>com.github.jeremylarose.pkg.Win.AdobeReaderXIUpdate</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>AdobeAcrobatProXIUpdate</string>
+		<string>AdobeReaderXIUpdate</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.AdobeAcrobatProXIUpdate</string>
+	<string>com.github.jeremylarose.download.Win.AdobeReaderXIUpdate</string>
 	<key>Process</key>
 	<array>
 		<dict>
