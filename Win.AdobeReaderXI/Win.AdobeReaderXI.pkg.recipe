@@ -27,10 +27,6 @@
 						<key>file_content</key>
 						<string>@echo off
 
-:: Quit installer if application is running...
-tasklist.exe /FI "IMAGENAME eq AcroRd32.exe" 2>NUL | find /I /N "AcroRd32.exe" >NUL
-if "%%ERRORLEVEL%%"=="0" EXIT
-
 cls
 echo --------------------------------------------------------
 echo .
