@@ -39,6 +39,7 @@ echo --------------------------------------------------------
 
 :: check if installed at all, if is, go to updates
 IF EXIST "C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPDATE
+IF EXIST "C:\Program Files\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPDATE
 
 :: install reader
 %~dp0AdbeRdr11010_en_US.exe /sAll /rs /msi EULA_ACCEPT=YES
