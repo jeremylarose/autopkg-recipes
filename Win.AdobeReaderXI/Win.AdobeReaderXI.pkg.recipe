@@ -47,10 +47,6 @@ IF EXIST "C:\Program Files\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPDATE
 :: disable updates
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\11.0\FeatureLockDown" /v bUpdater /t REG_DWORD /d 00000000 /f
 
-:: delete desktop shortcuts
-del "%Public%\Desktop\Adobe Reader XI.lnk"
-del "%ALLUSERSPROFILE%\Desktop\Adobe Reader XI.lnk"
-
 :UPDATE
 						</string>
 				</dict>
