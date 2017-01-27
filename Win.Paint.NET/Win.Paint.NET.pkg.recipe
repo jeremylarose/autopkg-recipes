@@ -28,8 +28,9 @@
 						<string>@echo off
 
 :: quit installer if application is running....
-tasklist.exe /FI "IMAGENAME eq PaintDotNet.exe" 2>NUL | find /I /N "PaintDotNet.exe" >NUL
-if "%ERRORLEVEL%"=="0" EXIT
+tasklist.exe /FI "IMAGENAME eq PaintDotNet.exe" 2>NUL | find /I /N "PaintDotNet.exe" || goto continue
+EXIT
+:continue
 
 cls
 echo --------------------------------------------------------
