@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://cdburnerxp.se/en/download</string>
 						<key>re_pattern</key>
-						<string>download.cdburnerxp.se/minimal/(?P&lt;urlstring&gt;[\S]+)_setup_(?P&lt;version&gt;[\d\.]+)_minimal.exe</string>
+						<string>download.cdburnerxp.se/minimal/(?P&lt;urlstring&gt;[\S]+)_setup_(?P&lt;version&gt;[\d\.]+)_x64_minimal.exe</string>
 				</dict>
 		</dict>
 		<dict>
@@ -38,12 +38,23 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://cdburnerxp.se/en/download</string>
+						<key>re_pattern</key>
+						<string>download.cdburnerxp.se/minimal/(?P&lt;urlstringx86&gt;[\S]+)_setup_(?P&lt;version&gt;[\d\.]+)_minimal.exe</string>
+				</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%-%version%.exe</string>
 				<key>url</key>
-				<string>https://download.cdburnerxp.se/minimal/%urlstring%_setup_%version%_minimal.exe</string>
+				<string>https://download.cdburnerxp.se/minimal/%urlstringx86%_setup_%version%_minimal.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
