@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of CDBurnerXP x86 and x64 Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.CDBurnerXP</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>CDBurnerXP</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://cdburnerxp.se/en/download</string>
+						<key>re_pattern</key>
+						<string>download.cdburnerxp.se/minimal/(?P&lt;urlstring&gt;[\S]+)_setup_(?P&lt;version&gt;[\d\.]+)_minimal.exe</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-x64.exe</string>
+				<key>url</key>
+				<string>https://download.cdburnerxp.se/minimal/%urlstring%_setup_%version%_x64_minimal.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%.exe</string>
+				<key>url</key>
+				<string>https://download.cdburnerxp.se/minimal/%urlstring%_setup_%version%_minimal.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
