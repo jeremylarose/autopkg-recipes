@@ -66,6 +66,8 @@ EXIT
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%.exe</string>
 				<key>install_flags</key>
 				<string>/language=en_GB /S</string>
 				<key>input_bat_path</key>
