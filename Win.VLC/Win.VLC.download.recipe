@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of VLC x86 and x64 Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.VLC</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>VLC</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://www.videolan.org/vlc/download-windows.html</string>
+						<key>re_pattern</key>
+						<string>get.videolan.org/wscounter/(?P&lt;version&gt;[\d\.]+)</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://download.videolan.org/pub/videolan/vlc/%version%/win64/vlc-%version%-win64.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://download.videolan.org/pub/videolan/vlc/%version%/win32/vlc-%version%-win32.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
