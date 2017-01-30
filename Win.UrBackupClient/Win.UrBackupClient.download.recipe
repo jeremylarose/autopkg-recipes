@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://www.urbackup.org/download.html</string>
 						<key>re_pattern</key>
-            <string>http://hndl.urbackup.org/Client/(?P&lt;version&gt;[\d\.]+)/UrBackup%20Client%20(?P&lt;version&gt;[\d\.]+).exe"</string>
+            <string>UrBackup%20Client%20(?P&lt;version&gt;[\d\.]+).exe</string>
 				</dict>
 		</dict>
 		<dict>
@@ -32,7 +32,7 @@
 				<key>filename</key>
 				<string>%NAME%-%version%.exe</string>
 				<key>url</key>
-				<string>https://hndl.urbackup.org/Client/%major_version%/UrBackup%20Client%20%version%.exe</string>
+				<string>https://hndl.urbackup.org/Client/%version%/UrBackup%20Client%20%version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
