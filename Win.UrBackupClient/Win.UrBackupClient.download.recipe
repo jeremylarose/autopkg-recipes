@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://www.urbackup.org/download.html</string>
 						<key>re_pattern</key>
-            <string>href="http://hndl.urbackup.org/Client/(?P&lt;major_version&gt;[\d\.]+)/UrBackup%20Client%20(?P&lt;version&gt;[\d\.]+).exe"</string>
+            <string>http://hndl.urbackup.org/Client/(?P&lt;version&gt;[\d\.]+)/UrBackup%20Client%20(?P&lt;version&gt;[\d\.]+).exe"</string>
 				</dict>
 		</dict>
 		<dict>
