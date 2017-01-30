@@ -21,20 +21,9 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://sourceforge.net/projects/keepass/</string>
+						<string>https://sourceforge.net/projects/keepass/files/latest/download</string>
 						<key>re_pattern</key>
-						<string>KeePass-(?P&lt;version&gt;[\d\.]+).zip</string>
-				</dict>
-		</dict>
-		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>http://keepass.info/download.html</string>
-						<key>re_pattern</key>
-						<string>href="http://sourceforge.net/projects/keepass/files/(?P&lt;folder&gt;[\S]+)/%version%/KeePass-%version%-Setup.exe/download</string>
+						<string>downloads.sourceforge.net/project/keepass/(?P&lt;folder&gt;[\S]+)/(?P&lt;version&gt;[\d\.]+)/</string>
 				</dict>
 		</dict>
 		<dict>
