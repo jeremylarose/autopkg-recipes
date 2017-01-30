@@ -32,9 +32,9 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>href="http://sourceforge.net/projects/keepass/files/(?P&lt;folder&gt;[\S]+)/%version%/KeePass-%version%-Setup.exe/download</string>
+						<string>http://keepass.info/download.html</string>
 						<key>re_pattern</key>
-						<string>KeePass-(?P&lt;version&gt;[\d\.]+).zip</string>
+						<string>href="http://sourceforge.net/projects/keepass/files/(?P&lt;folder&gt;[\S]+)/%version%/KeePass-%version%-Setup.exe/download</string>
 				</dict>
 		</dict>
 		<dict>
