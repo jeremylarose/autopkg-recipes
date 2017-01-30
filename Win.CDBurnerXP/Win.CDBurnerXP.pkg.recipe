@@ -45,7 +45,7 @@ echo --------------------------------------------------------
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
-IF EXIST "C:\Program Files (x86)" %NAME%-%version%-x64.exe /VERYSILENT /LANG=English /NORESTART
+IF EXIST "C:\Program Files (x86)" %NAME%-%version%-x64.exe /VERYSILENT /LANG=English /NORESTART /MERGETASKS="!desktopicon"
 popd
 EXIT
 
@@ -59,7 +59,7 @@ EXIT
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/VERYSILENT /LANG=English /NORESTART</string>
+				<string>/VERYSILENT /LANG=English /NORESTART /MERGETASKS="!desktopicon"</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
