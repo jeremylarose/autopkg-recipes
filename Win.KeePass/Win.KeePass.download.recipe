@@ -21,9 +21,9 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://sourceforge.net/projects/keepass/files/latest/download</string>
+						<string>http://keepass.info/download.html</string>
 						<key>re_pattern</key>
-						<string>downloads.sourceforge.net/project/keepass/(?P&lt;folder&gt;[\S]+)/(?P&lt;version&gt;[\d\.]+)/</string>
+						<string>sourceforge.net/projects/keepass/files/(?P&lt;folder&gt;[\S]+)/2.[0-9]+/KeePass-(?P&lt;version&gt;[\d\.]+)-Setup.exe/download</string>
 				</dict>
 		</dict>
 		<dict>
