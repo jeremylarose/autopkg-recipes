@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads KeePass and creates a silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.KeePass</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>KeePass</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.KeePass</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+::check if current version is installed, if is, exit, else continue....
+reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\KeePassPasswordSafe2_is1" /v DisplayVersion | findstr %version% || goto notinstalled
+EXIT
+:notinstalled
+
+:: quit installer if application is running, else continue....
+tasklist.exe /FI "IMAGENAME eq KeePass.exe" 2>NUL | find /I /N "KeePass.exe" || goto notrunning
+EXIT
+:notrunning
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .           Installing KeePass - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/SILENT</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

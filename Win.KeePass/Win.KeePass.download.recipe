@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads lates version of KeePass for Windows</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.KeePass</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>KeePass</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://sourceforge.net/projects/keepass/</string>
+						<key>re_pattern</key>
+						<string>KeePass-(?P&lt;version&gt;[\d\.]+).zip</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>href="http://sourceforge.net/projects/keepass/files/(?P&lt;folder&gt;[\S]+)/%version%/KeePass-%version%-Setup.exe/download</string>
+						<key>re_pattern</key>
+						<string>KeePass-(?P&lt;version&gt;[\d\.]+).zip</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://sourceforge.net/projects/keepass/files/%folder%/%version%/KeePass-%version%-Setup.exe/download</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
