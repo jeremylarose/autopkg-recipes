@@ -47,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>source</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/OCS-NG-Windows-Agent-Setup.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/OCSNG-Windows-Agent-%version%/OCS-NG-Windows-Agent-Setup.exe</string>
 				<key>target</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.exe</string>
 			</dict>
