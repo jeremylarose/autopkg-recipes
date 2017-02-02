@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>OCSNG-Windows-Agent-(?P&lt;long_version&gt;[\d\.]+).zip</string>
+				<string>OCSNG[\S]+.zip</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -36,22 +36,11 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<string>%RECIPE_CACHE_DIR%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
-		<dict>
-		  <key>Processor</key>
-		  <string>FileMover</string>
-			<key>Arguments</key>
-			<dict>
-				<key>source</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/OCSInventoryNGAgent/OCSNG-Windows-Agent-%long_version%/OCS-NG-Windows-Agent-Setup.exe</string>
-				<key>target</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.exe</string>
-			</dict>
-    </dict>
 		<dict>
 				<key>Processor</key>
 				<string>EndOfCheckPhase</string>
