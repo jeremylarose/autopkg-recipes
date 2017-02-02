@@ -1,1 +1,1 @@
-work in progress
+just downloads and extracts latest version
