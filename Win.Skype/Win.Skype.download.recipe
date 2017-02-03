@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Spiceworks Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.Spiceworks</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Spiceworks</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://support.skype.com/en/faq/FA34509/what-s-new-in-skype-for-windows-desktop</string>
+						<key>re_pattern</key>
+            <string>Skype[\s](?P&lt;version&gt;[\d\.]+)[\W]br[\s][\S][\S][\s][\S]em[\S]released[\s]</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%.msi</string>
+				<key>url</key>
+				<string>https://www.skype.com/go/getskype-msi</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
