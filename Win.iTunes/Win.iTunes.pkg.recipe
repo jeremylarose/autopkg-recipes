@@ -85,11 +85,11 @@ msiexec /i %~dp0Bonjour.msi /qn /norestart
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>-install</string>
+				<string>/qn /norestart</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%version%.exe</string>
 				<key>source_path</key>
@@ -124,7 +124,7 @@ msiexec /i %~dp0Bonjour.msi /qn /norestart
 				<key>Arguments</key>
 				<dict>
 						<key>file_path</key>
-						<string>%RECIPE_CACHE_DIR%/%NAME%-%version%</string>
+						<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
 						<key>file_content</key>
 						<string>installer was extracted and packaged, then the extracted path was deleted to save space</string>
 				</dict>
