@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest AdobeFlashPlayer ActiveX, NPAPI, and PPAPI and creates a silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.AdobeFlashPlayer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeFlashPlayer</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.AdobeFlashPlayer</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .         Installing Adobe Flash - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+%~dp0downloads\AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
+%~dp0downloads\AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4% -install
+sc config AdobeFlashPlayerUpdateSvc start= disabled
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>FileMover</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source</key>
+				<string>%pathname%</string>
+				<key>target</key>
+				<string>%RECIPE_CACHE_DIR%/AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
+			</dict>
+    </dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>-install</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%major_version%.%v2%.%v3%.%v4%.exe</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>FileMover</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source</key>
+				<string>%RECIPE_CACHE_DIR%/AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
+				<key>target</key>
+				<string>%pathname%</string>
+			</dict>
+    </dict>
+	</array>
+</dict>
+</plist>
