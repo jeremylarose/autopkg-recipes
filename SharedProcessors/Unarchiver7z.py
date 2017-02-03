@@ -74,7 +74,7 @@ class Unarchiver7z(Processor):
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (stdout, stderr) = proc.communicate()
 
-        shutil.rmtree(dir_7z)
+#        shutil.rmtree(dir_7z)
 
 if __name__ == '__main__':
     processor = Unarchiver7z()
