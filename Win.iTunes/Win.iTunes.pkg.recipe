@@ -27,9 +27,7 @@
 			<key>Arguments</key>
 			<dict>
 	  		<key>extract_path</key>
-		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%-x64</string>
+		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.exe</string>
 			</dict>
     </dict>
 	</array>
