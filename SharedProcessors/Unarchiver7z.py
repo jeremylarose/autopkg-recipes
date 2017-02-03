@@ -65,21 +65,17 @@ class Unarchiver7z(Processor):
         else:
             pass
 
-        if os.path.exists(extract_path):
-            pass
-        else:
-            if not os.path.exists(extract_path):
-                os.makedirs(extract_path)
+        os.makedirs(extract_path)
 
-            shutil.copytree(source_7z, dir_7z)
-            os.chmod(file_7z, stat.S_IEXEC)
+        shutil.copytree(source_7z, dir_7z)
+        os.chmod(file_7z, stat.S_IEXEC)
 
-            cmd = [file_7z, 'e', '-y', '-o' + extract_path , archive_path]
+        cmd = [file_7z, 'e', '-y', '-o' + extract_path , archive_path]
 
-            proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            (stdout, stderr) = proc.communicate()
+        proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        (stdout, stderr) = proc.communicate()
 
-            shutil.rmtree(dir_7z)
+        shutil.rmtree(dir_7z)
 
 if __name__ == '__main__':
     processor = Unarchiver7z()
