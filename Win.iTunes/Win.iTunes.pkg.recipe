@@ -127,7 +127,7 @@ popd
 				<key>Arguments</key>
 				<dict>
 						<key>file_path</key>
-						<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%/</string>
+						<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
 						<key>file_content</key>
 						<string>installer was extracted and packaged, then the extracted path was deleted to save space</string>
 				</dict>
