@@ -26,7 +26,6 @@
 					<string>%RECIPE_CACHE_DIR%/%downloads%/extracted</string>
 			</dict>
     </dict>
-
 	</array>
 </dict>
 </plist>
