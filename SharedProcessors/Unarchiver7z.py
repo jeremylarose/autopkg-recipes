@@ -52,6 +52,7 @@ class Unarchiver7z(Processor):
         pathname = self.env.get('pathname')
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         NAME = self.env.get('NAME')
+        purge_destination = self.env.get('purge_destination', False)
         archive_path = self.env.get('archive_path', pathname)
         extract_path = self.env.get('extract_path', RECIPE_CACHE_DIR + NAME)
         source_7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), '7z')
