@@ -69,7 +69,7 @@ class Unarchiver7z(Processor):
         shutil.copytree(source_7z, dir_7z)
         os.chmod(file_7z, stat.S_IEXEC)
 
-        cmd = [file_7z, 'e', '-y', '-o' + extract_path, archive_path]
+        cmd = [file_7z, 'e', '-y', archive_path]
 
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (stdout, stderr) = proc.communicate()
