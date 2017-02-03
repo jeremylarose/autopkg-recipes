@@ -27,12 +27,28 @@ Adds a packing function using the 7zip library for windows software.  It can be 
 - **pkg\_path:**
     - **description:** The created package.
 
+# Unarchiver7z.py
 
+## Description
+Extract archives using 7z
+
+## Input Variables
+- **archive\_path:**
+    - **required:** False
+    - **description:** Path to a archive file, defaults to pathname
+- **extract\_path:**
+    - **required:** False
+    - **description:** where archive will be unpacked, defaults to RECIPE_CACHE_DIR/NAME.
+- **purge\_destination:**
+    - **required:** False
+    - **description:** Whether the contents of the destination directory will be removed before extracting.
+
+## Output Variables
 
 # CabExtractor.py
 
 ## Description
-Extract CAB files
+Extract CAB files using cabextract
 
 ## Input Variables
 - **cab\_path:**

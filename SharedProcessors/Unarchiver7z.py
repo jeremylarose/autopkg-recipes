@@ -30,7 +30,7 @@ class Unarchiver7z(Processor):
     input_variables = {
         "archive_path": {
             "required": False,
-            "description": "name of source installer path, defaults to pathname"
+            "description": "Path to a archive file, defaults to pathname"
         },
         "extract_path": {
             "required": False,
