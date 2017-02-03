@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 	  		<key>extract_path</key>
-		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
+		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%/x64</string>
 				<key>archive_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%-x64.exe</string>
 			</dict>
@@ -65,10 +65,10 @@ echo --------------------------------------------------------
 ::Install 64-bit for 64-Bit systems and 32-Bit for 32-Bit Systems
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
-msiexec /i %NAME%-%version%\AppleApplicationSupport64.msi /qn /norestart
-msiexec /i %NAME%-%version%\iTunes6464.msi /qn /norestart
-msiexec /i %NAME%-%version%\AppleMobileDeviceSupport6464.msi /qn /norestart
-msiexec /i %NAME%-%version%\Bonjour64.msi /qn /norestart
+msiexec /i %NAME%-%version%\x64\AppleApplicationSupport64.msi /qn /norestart
+msiexec /i %NAME%-%version%\x64\iTunes6464.msi /qn /norestart
+msiexec /i %NAME%-%version%\x64\AppleMobileDeviceSupport6464.msi /qn /norestart
+msiexec /i %NAME%-%version%\x64\Bonjour64.msi /qn /norestart
 popd
 EXIT
 
@@ -127,7 +127,7 @@ popd
 				<key>Arguments</key>
 				<dict>
 						<key>file_path</key>
-						<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
+						<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%/</string>
 						<key>file_content</key>
 						<string>installer was extracted and packaged, then the extracted path was deleted to save space</string>
 				</dict>
