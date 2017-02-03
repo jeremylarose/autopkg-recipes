@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 	  		<key>extract_path</key>
-		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.exe</string>
+		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
 			</dict>
     </dict>
 		<dict>
@@ -32,11 +32,103 @@
 			<key>Arguments</key>
 			<dict>
 	  		<key>extract_path</key>
-		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.exe</string>
+		  	<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
 				<key>archive_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%-x64.exe</string>
 			</dict>
     </dict>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+:: quit installer if application is running, else continue....
+tasklist.exe /FI "IMAGENAME eq iTunes.exe" 2>NUL | find /I /N "iTunes.exe" || goto notrunning
+EXIT
+:notrunning
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .            Installing iTunes - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+::Install 64-bit for 64-Bit systems and 32-Bit for 32-Bit Systems
+IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
+pushd "%~dp0"
+msiexec /i AppleApplicationSupport64.msi /qn /norestart
+msiexec /i iTunes6464.msi /qn /norestart
+msiexec /i AppleMobileDeviceSupport6464.msi /qn /norestart
+msiexec /i Bonjour64.msi /qn /norestart
+popd
+EXIT
+
+:x86install
+msiexec /i %~dp0AppleApplicationSupport.msi /qn /norestart
+msiexec /i %~dp0AppleMobileDeviceSupport.msi /qn /norestart
+msiexec /i %~dp0Bonjour.msi /qn /norestart
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>-install</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%.exe</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%/%NAME%.msi</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
+						</array>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/%NAME%-%version%</string>
+						<key>file_content</key>
+						<string>installer was extracted and packaged, then the extracted path was deleted to save space</string>
+				</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
