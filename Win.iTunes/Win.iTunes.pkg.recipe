@@ -21,6 +21,15 @@
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/Unarchiver7z</string>
     </dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/Unarchiver7z</string>
+			<key>Arguments</key>
+			<dict>
+					<key>archive_path</key>
+					<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%-x64</string>
+			</dict>
+    </dict>
 	</array>
 </dict>
 </plist>
