@@ -25,7 +25,7 @@ from autopkglib import Processor, ProcessorError
 __all__ = ["Unarchiver7z"]
 
 
-class PkgCreator7z(Processor):
+class Unarchiver7z(Processor):
     description = "Archive decompressor using 7z.'"
     input_variables = {
         "archive_path": {
