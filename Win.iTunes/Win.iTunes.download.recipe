@@ -27,12 +27,34 @@
 				</dict>
 		</dict>
 		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://swdlp.apple.com/iframes/82/en_us/82_en_us.html</string>
+						<key>re_pattern</key>
+						<string>https://secure-appldnld.apple.com/itunes12/(?P&lt;folder_x64&gt;[\S]+)/iTunes6464Setup.exe</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://swdlp.apple.com/iframes/82/en_us/82_en_us.html</string>
+						<key>re_pattern</key>
+						<string>https://secure-appldnld.apple.com/itunes12/(?P&lt;folder_x86&gt;[\S]+)/iTunesSetup.exe</string>
+				</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%-%version%-x64.exe</string>
 				<key>url</key>
-				<string>https://secure-appldnld.apple.com/itunes12/%folder_x64%/iTunes6464Setup.exe<</string>
+				<string>https://secure-appldnld.apple.com/itunes12/%folder_x64%/iTunes6464Setup.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
