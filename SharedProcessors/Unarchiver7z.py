@@ -55,7 +55,7 @@ class Unarchiver7z(Processor):
         archive_path = self.env.get('archive_path', pathname)
         extract_path = self.env.get('extract_path', RECIPE_CACHE_DIR + NAME)
         source_7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), '7z')
-        working_directory = os.path.join(RECIPE_CACHE_DIR, 'downloads')
+        working_directory = os.path.join(RECIPE_CACHE_DIR + 'downloads')
         dir_7z = os.path.join(working_directory, '7z')
         file_7z = os.path.join(dir_7z, '7z')
 
