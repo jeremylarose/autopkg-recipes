@@ -1,1 +1,1 @@
-work in progress
+this is working, requires osxfuse
