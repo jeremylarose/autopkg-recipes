@@ -45,7 +45,7 @@ class PkgCopyToPkgsFolder(Processor):
         if os.path.exists(pkg_path):
             pass
         else:
-            shutil.copyfile(pathname, pkg_path)
+            shutil.copy(pathname, PkgsFolder)
 
 if __name__ == '__main__':
     processor = PkgCopyToPkgsFolder()
