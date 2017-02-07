@@ -42,11 +42,7 @@ class PkgCopyToPkgsFolder(Processor):
 
         if not os.path.exists(Pkgs_folder):
             os.makedirs(Pkgs_folder)
-#        pkg_path = os.path.abspath(os.path.join(CACHE_DIR, filename))
 
-#        if os.path.exists(pkg_path):
-#            pass
-#        else:
         shutil.copy(pkg_path, Pkgs_folder)
 
 if __name__ == '__main__':
