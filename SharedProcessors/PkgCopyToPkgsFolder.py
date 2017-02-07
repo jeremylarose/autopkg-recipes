@@ -39,13 +39,16 @@ class PkgCopyToPkgsFolder(Processor):
         filename = self.env.get('filename')
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
-        PkgsFolder = os.path.join(CACHE_DIR, 'Pkgs')
+        Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
+
+        if not os.path.exists(Pgs_folder):
+            os.makedirs(Pkgs_folder)
 #        pkg_path = os.path.abspath(os.path.join(CACHE_DIR, filename))
 
 #        if os.path.exists(pkg_path):
 #            pass
 #        else:
-        shutil.copy(pathname, PkgsFolder)
+        shutil.copy(pathname, Pkgs_folder)
 
 if __name__ == '__main__':
     processor = PkgCopyToPkgsFolder()
