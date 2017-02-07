@@ -54,6 +54,10 @@ class PkgCreator7z(Processor):
         },
     }
     output_variables = {
+        "pkg_path": {
+            "required": False,
+            "description": "The created package.",
+        },
     }
 
     __doc__ = description
