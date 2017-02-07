@@ -124,6 +124,8 @@ class PkgCreator7z(Processor):
                         for line in infile:
                             outfile.write(line)
 
+            self.env["pkg_path"] = pkg_path
+            
             shutil.rmtree(PkgCreator7z_dir)
 
 if __name__ == '__main__':
