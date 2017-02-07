@@ -35,7 +35,6 @@ class PkgCopyToPkgsFolder(Processor):
 
     def main(self):
 
-        filename = self.env.get('filename')
         pkg_path = self.env.get('pkg_path')
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
