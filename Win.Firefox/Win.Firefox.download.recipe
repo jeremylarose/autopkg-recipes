@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Firefox x86 and x64 Fully Localized Executables.</string>
+	<string>Downloads the latest offline versions of Firefox x86 and x64 Executables.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.Win.Firefox</string>
 	<key>Input</key>
@@ -21,9 +21,9 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://www.mozilla.org/en-US/firefox/all/</string>
+						<string>https://www.mozilla.org/en-US/firefox/all</string>
 						<key>re_pattern</key>
-						<string>data-latest-firefox[\S][\S](?P&lt;version&gt;[\d\.]+)[\S]</string>
+						<string>data-latest-firefox="(?P&lt;version&gt;[\d\.]+)"</string>
 				</dict>
 		</dict>
 		<dict>
