@@ -41,7 +41,7 @@ class PkgCopyToPkgsFolder(Processor):
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
         Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
 
-        if not os.path.exists(Pgs_folder):
+        if not os.path.exists(Pkgs_folder):
             os.makedirs(Pkgs_folder)
 #        pkg_path = os.path.abspath(os.path.join(CACHE_DIR, filename))
 
