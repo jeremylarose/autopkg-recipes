@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Firefox x86 and x64 Fully Localized Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.Firefox</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Firefox</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://www.mozilla.org/en-US/firefox/all/</string>
+						<key>re_pattern</key>
+						<string>data-latest-firefox="(?P&lt;version&gt;[\d\.]+)"</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-x64.exe</string>
+				<key>url</key>
+				<string>https://download.mozilla.org/?product=firefox-%version%-SSL&os=win64&lang=en-US</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-x86.exe</string>
+				<key>url</key>
+				<string>https://download.mozilla.org/?product=firefox-%version%-SSL&os=win&lang=en-US</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>

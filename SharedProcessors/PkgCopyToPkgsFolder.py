@@ -25,7 +25,7 @@ __all__ = ["PkgCopyToPkgsFolder"]
 
 
 class PkgCopyToPkgsFolder(Processor):
-    description = "Simply copies all Pkgs to Pkgs folder in Cache Folder'"
+    description = "Simply copies all Pkgs to Pkgs folder within AutoPkg Cache Folder, intended use as a post processor'"
     input_variables = {
     }
     output_variables = {
