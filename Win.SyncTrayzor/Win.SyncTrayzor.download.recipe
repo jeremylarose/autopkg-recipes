@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of SyncTrayzor-x86.</string>
+	<string>Downloads the latest version of SyncTrayzor x64 and x86.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.SyncTrayzor-x86</string>
+	<string>com.github.jeremylarose.download.Win.SyncTrayzor</string>
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>
@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>SyncTrayzorSetup-x86.exe</string>
+				<string>SyncTrayzorSetup-x64.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -33,9 +33,21 @@
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
-				<string>SyncTrayzor-%version%-x86.exe</string>
-				<key>url</key>
-				<string>https://github.com/canton7/SyncTrayzor/releases/download/v%version%/SyncTrayzorSetup-x86.exe</string>
+					<key>filename</key>
+					<string>SyncTrayzor-%version%-x64.exe</string>
+					<key>url</key>
+					<string>https://github.com/canton7/SyncTrayzor/releases/download/v%version%/SyncTrayzorSetup-x64.exe</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+					<key>filename</key>
+					<string>SyncTrayzor-%version%-x86.exe</string>
+					<key>url</key>
+					<string>https://github.com/canton7/SyncTrayzor/releases/download/v%version%/SyncTrayzorSetup-x86.exe</string>
 			</dict>
 		</dict>
 		<dict>
