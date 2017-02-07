@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Downloads the latest version of SSHFS and imports it into Munki</string>
+	<string>Downloads the latest version of SSHFS and imports it into Munki, requires fuse for macos</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.munki.SSHFS</string>
 	<key>Input</key>
