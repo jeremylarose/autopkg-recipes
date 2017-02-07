@@ -75,6 +75,7 @@ class PkgCreator7z(Processor):
         pkg_name = self.env.get('pkg_name', prefix + sep +'exe')
         pkgroot = self.env.get('pkgroot', RECIPE_CACHE_DIR)
         pkg_path = os.path.join(pkgroot, pkg_name)
+        self.env["pkg_path"] = pkg_path
 
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
@@ -124,8 +125,6 @@ class PkgCreator7z(Processor):
                         for line in infile:
                             outfile.write(line)
 
-            self.env["pkg_path"] = pkg_path
-            
             shutil.rmtree(PkgCreator7z_dir)
 
 if __name__ == '__main__':
