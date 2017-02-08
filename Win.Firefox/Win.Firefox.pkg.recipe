@@ -70,6 +70,8 @@ EXIT
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%-x64.exe</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%.exe</string>
 			</dict>
     </dict>
 		<dict>
