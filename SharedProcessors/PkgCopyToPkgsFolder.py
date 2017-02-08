@@ -47,9 +47,10 @@ class PkgCopyToPkgsFolder(Processor):
         else:
             if not os.path.exists(Pkgs_folder):
                 os.makedirs(Pkgs_folder)
-
-            shutil.copy(pkg_path, Pkgs_folder)
-
+            if os.path.exists(pkg_path):
+                pass
+            else:
+                shutil.copy(pkg_path, Pkgs_folder)
 
 if __name__ == '__main__':
     processor = PkgCopyToPkgsFolder()
