@@ -37,22 +37,20 @@ This package contains a universal build of SSHFS, that is based on FUSE for OS X
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.pkg.SSHFS</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Comment</key>
-            <string>Import the pkg into Munki!</string>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
-            <key>Arguments</key>
-            <dict>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-								<key>pkg_path</key>
-							  <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
-            </dict>
-        </dict>
+	<string>com.github.jeremylarose.download.SSHFS</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
     </array>
 </dict>
 </plist>
