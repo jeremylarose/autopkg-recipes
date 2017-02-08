@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Installs the latest version of Chromium.</string>
+	<string>Installs the latest Chromium OS X stable FreeSMUG build.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.install.Chromium</string>
 	<key>Input</key>
