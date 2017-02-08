@@ -23,6 +23,7 @@
                 <key>url</key>
                 <string>http://www.mono-project.com/download/</string>
                 <key>re_pattern</key>
+                <string>archive/(?P&lt;major_version&gt;[\d\.]+)/macos-10-universal/MonoFramework-MDK-(?P&lt;version&gt;[\d\.]+).macos10.xamarin.universal.pkg</string>
                 <string>href="https://download.mono-project.com/archive/(?P&lt;major_version&gt;[\d\.]+)/macos-10-universal/MonoFramework-MDK-(?P&lt;version&gt;[\d\.]+).macos10.xamarin.universal.pkg"</string>
             </dict>
         </dict>
@@ -32,7 +33,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://download.mono-project.com/archive/%major_version%/macos-10-universal/MonoFramework-MDK-%version%.macos10.xamarin.universal.pkg</string>
+                <string>https://mono-project.azureedge.net/archive/%major_version%/macos-10-universal/MonoFramework-MDK-%version%.macos10.xamarin.universal.pkg</string>
             </dict>
         </dict>
         <dict>
