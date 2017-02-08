@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Chromium OS X stable FreeSMUG build and imports it into Munki.</string>
+	<string>Downloads the latest version of Audacity and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.munki.Chromium</string>
+	<string>com.github.jeremylarose.munki.Audacity</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Chromium</string>
+		<string>Audacity</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,15 +19,13 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web.</string>
+			<string>Audacity is a free, easy-to-use, multi-track audio editor and recorder for Windows, Mac OS X, GNU/Linux and other operating systems.</string>
 			<key>developer</key>
-			<string>FreeSMUG</string>
-			<key>category</key>
-			<string>Internet</string>
+			<string>The Audacity Team</string>
 			<key>display_name</key>
-			<string>Chromium</string>
-			<key>minimum_os_version</key>
-			<string>10.9.0</string>
+			<string>Audacity</string>
+			<key>category</key>
+			<string>Media</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -36,8 +34,7 @@
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
-	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.pkg.Chromium</string>
+	<string>com.github.jeremylarose.pkg.Audacity</string>
     <key>Process</key>
     <array>
         <dict>
