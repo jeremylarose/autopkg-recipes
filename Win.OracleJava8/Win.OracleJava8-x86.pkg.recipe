@@ -51,6 +51,8 @@ wmic product where "name like 'Java 8%%'" call uninstall /nointeractive
 			<dict>
 				<key>install_flags</key>
 				<string>/s</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%-x86.exe</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 			</dict>
