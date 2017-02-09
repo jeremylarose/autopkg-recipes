@@ -34,7 +34,7 @@
 				<key>filename</key>
 				<string>%NAME%-%version%-r%revision%-x64.exe</string>
 				<key>url</key>
-				<string>https://github.com/henrypp/chromium/releases/download/v%version%-r%revision%-win64/chromium-nosync.exe</string>
+				<string>https://github.com/henrypp/chromium/releases/download/v%version%-win64/chromium-nosync.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -45,7 +45,7 @@
 				<key>filename</key>
 				<string>%NAME%-%version%-r%revision%-x86.exe</string>
 				<key>url</key>
-				<string>https://github.com/henrypp/chromium/releases/download/v%version%-r%revision%-win32/chromium-nosync.exe</string>
+				<string>https://github.com/henrypp/chromium/releases/download/v%version%-win32/chromium-nosync.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
