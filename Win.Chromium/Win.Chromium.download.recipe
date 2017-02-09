@@ -16,15 +16,15 @@
 	<key>Process</key>
 	<array>
 		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>https://github.com/henrypp/chromium/releases</string>
-						<key>re_pattern</key>
-            <string>href="/henrypp/chromium/releases/download/v(?P&lt;version&gt;[\d\.]+)-r(?P&lt;revision&gt;[0-9]+)-win32/chromium-nosync.exe"</string>
-				</dict>
+			<key>Arguments</key>
+			<dict>
+				<key>asset_regex</key>
+				<string>download/v(?P&lt;version&gt;[\d\.]+)-r(?P&lt;revision&gt;[0-9]+)-win32/chromium-nosync.exe</string>
+				<key>github_repo</key>
+				<string>%GITHUB_REPO%</string>
+			</dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
