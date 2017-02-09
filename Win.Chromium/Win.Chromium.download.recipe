@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Chromium x86 and x64 Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.Chromium</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Chromium</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://chromium.woolyss.com</string>
+						<key>re_pattern</key>
+						<string>download/v(?P&lt;version&gt;[\d\.]+)-r(?P&lt;revision&gt;[0-9]+)-win64/chromium-nosync.exe</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-r%revision%-x64.exe</string>
+				<key>url</key>
+				<string>https://github.com/henrypp/chromium/releases/download/v%version%-r%revision%-win64/chromium-nosync.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-r%revision%-x86.exe</string>
+				<key>url</key>
+				<string>https://github.com/henrypp/chromium/releases/download/v%version%-r%revision%-win32/chromium-nosync.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>

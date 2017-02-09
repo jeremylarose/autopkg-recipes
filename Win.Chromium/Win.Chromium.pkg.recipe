@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Chromium x86 and x64 and creates an OS dependent silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.Chromium</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Chromium</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.Chromium</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .          Installing Chromium - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+::Install new version
+IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
+pushd "%~dp0"
+IF EXIST "C:\Program Files (x86)" %NAME%-%version%-r%revision%-x64.exe
+popd
+EXIT
+
+:x86install
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%major_version%.%minor_version%-x64.exe</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
