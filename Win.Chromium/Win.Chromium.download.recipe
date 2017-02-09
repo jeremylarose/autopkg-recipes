@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Chromium</string>
+		<key>GITHUB_REPO</key>
+		<string>henrypp/chromium</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -19,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>win32/chromium-nosync.exe</string>
+				<string>download/v(?P&lt;version&gt;[\d\.]+)-r(?P&lt;revision&gt;[0-9]+)-win32/chromium-nosync.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
