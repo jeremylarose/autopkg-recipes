@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%-r%revision%-x64.exe</string>
+				<string>%NAME%-%version%-x64.exe</string>
 				<key>url</key>
 				<string>https://github.com/henrypp/chromium/releases/download/v%version%-win64/chromium-nosync.exe</string>
 			</dict>
@@ -43,7 +43,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%-r%revision%-x86.exe</string>
+				<string>%NAME%-%version%-x86.exe</string>
 				<key>url</key>
 				<string>https://github.com/henrypp/chromium/releases/download/v%version%-win32/chromium-nosync.exe</string>
 			</dict>
