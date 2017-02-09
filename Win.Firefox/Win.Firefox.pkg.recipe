@@ -43,10 +43,10 @@ echo .
 echo --------------------------------------------------------
 
 ::uninstall older versions of 3 or 4 if installed
-IF EXIST "%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" "%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" -ms
-IF EXIST "%ProgramFiles(x86)%\Mozilla Firefox\uninstall\helper.exe" "%ProgramFiles(x86)%\Mozilla Firefox\uninstall\helper.exe" -ms
-IF EXIST "%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" "%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" /s
-IF EXIST "%ProgramFiles(x86)%\Mozilla Firefox\uninstall\helper.exe" "%ProgramFiles(x86)%\Mozilla Firefox\uninstall\helper.exe" /s
+IF EXIST "c:\program files\Mozilla Firefox\uninstall\helper.exe" "c:\program files\Mozilla Firefox\uninstall\helper.exe" -ms
+IF EXIST "c:\program files(x86)\Mozilla Firefox\uninstall\helper.exe" "c:\program files(x86)\Mozilla Firefox\uninstall\helper.exe" -ms
+IF EXIST "c:\program files%\Mozilla Firefox\uninstall\helper.exe" "c:\program files\Mozilla Firefox\uninstall\helper.exe" /s
+IF EXIST "c:\program files(x86)\Mozilla Firefox\uninstall\helper.exe" "c:\program files(x86)\Mozilla Firefox\uninstall\helper.exe" /s
 
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
