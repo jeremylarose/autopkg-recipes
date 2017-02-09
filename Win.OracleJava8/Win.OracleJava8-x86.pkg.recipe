@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Oracle Java 8 JRE 32-Bit and creates silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.OracleJava8-x86</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OracleJava8</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.hansen-m.download.OracleJava8-Win</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo ---------------------------------------------------------------
+echo .
+echo .
+echo .           Installing OracleJava8 JRE x86 - Please Wait
+echo .                Window will close once installed
+echo .
+echo .
+echo ---------------------------------------------------------------
+
+:: remove all old versions of java8
+wmic product where "name like 'Java 8%%'" call uninstall /nointeractive
+
+:: install
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/s</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
