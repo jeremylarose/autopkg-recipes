@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Chromium x86 and x64 Executables.</string>
+	<string>Downloads the latest version of Chromium x64 Executable.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.Chromium</string>
+	<string>com.github.jeremylarose.download.Win.Chromium-x64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -32,20 +32,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%-x64.exe</string>
+				<string>%NAME%-%version%.exe</string>
 				<key>url</key>
-				<string>https://github.com/henrypp/chromium/releases/download/v%version%-win64/chromium-nosync.exe</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%-%version%-x86.exe</string>
-				<key>url</key>
-				<string>https://github.com/henrypp/chromium/releases/download/v%version%-win32/chromium-nosync.exe</string>
+				<string>https://github.com/henrypp/chromium/releases/download/v%version%/chromium-nosync.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
