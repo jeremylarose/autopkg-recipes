@@ -25,7 +25,7 @@
 						<key>url</key>
 						<string>http://omahaproxy.appspot.com/all</string>
 						<key>re_pattern</key>
-						<string>win,stable,(?P&lt;version&gt;[\d\.]+),[\S]+,[\S]+,[\S]+,[\S]+,(?P&lt;revision&gt;[0-9]+)</string>
+						<string>win,stable,(?P&lt;version&gt;[\d\.]+),(?P&lt;revision&gt;[\S]+)</string>
 				</dict>
 		</dict>
 		<dict>
