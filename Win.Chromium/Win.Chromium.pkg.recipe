@@ -40,7 +40,7 @@ echo --------------------------------------------------------
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
-IF EXIST "C:\Program Files (x86)" %NAME%-%version%-x64.exe.exe
+IF EXIST "C:\Program Files (x86)" %NAME%-%version%-x64.exe
 popd
 EXIT
 
