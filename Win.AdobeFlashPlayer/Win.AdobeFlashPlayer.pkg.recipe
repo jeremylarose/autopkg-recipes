@@ -42,8 +42,9 @@ echo --------------------------------------------------------
 sc config AdobeFlashPlayerUpdateSvc start= disabled
 
 :: do not install ActiveX if OS is Windows 10, else install ActiveX....
-for /f "tokens=2 delims=," %%i in ('wmic os get caption^,version /format:csv') do echo %%i | find " 10 " || goto notwin10
-EXIT
+for /f "tokens=2 delims=," %%i in ('wmic os get caption^,version /format:csv') do set os=%%i
+echo "%%os%%" | find " 10 ">nul || goto notwin10
+exit
 :notwin10
 						</string>
 				</dict>
