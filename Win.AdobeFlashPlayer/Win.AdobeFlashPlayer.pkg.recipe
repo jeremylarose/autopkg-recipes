@@ -64,7 +64,7 @@ sc config AdobeFlashPlayerUpdateSvc start= disabled
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%major_version%.%v2%.%v3%.%v4%</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%major_version%.%v2%.%v3%.%v4%.exe</string>
 				<key>source_path</key>
