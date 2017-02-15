@@ -40,6 +40,9 @@ echo --------------------------------------------------------
 %~dp0%major_version%.%v2%.%v3%.%v4%\AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
 %~dp0%major_version%.%v2%.%v3%.%v4%\AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4% -install
 sc config AdobeFlashPlayerUpdateSvc start= disabled
+setlocal
+for /f "tokens=4-5 delims=. " %%i in ('ver') do set VERSION=%%i.%%j
+if "%version%" == "10.0" EXIT
 						</string>
 				</dict>
 		</dict>
