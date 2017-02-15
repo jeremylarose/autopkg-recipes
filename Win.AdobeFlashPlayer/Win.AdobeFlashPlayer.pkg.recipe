@@ -37,8 +37,8 @@ echo .
 echo .
 echo --------------------------------------------------------
 
-%~dp0downloads\AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
-%~dp0downloads\AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4% -install
+%~dp0%major_version%.%v2%.%v3%.%v4%\AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
+%~dp0%major_version%.%v2%.%v3%.%v4%\AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4% -install
 sc config AdobeFlashPlayerUpdateSvc start= disabled
 						</string>
 				</dict>
