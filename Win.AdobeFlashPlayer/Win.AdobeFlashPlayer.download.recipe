@@ -56,7 +56,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>download_dir</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%major_version%.%v2%.%v3%.%v4%</string>
 				<key>filename</key>
 				<string>AdobeFlashPlayer-ActiveX-%major_version%.%v2%.%v3%.%v4%.exe</string>
 				<key>url</key>
