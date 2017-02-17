@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://www.urbackup.org/download.html</string>
                 <key>re_pattern</key>
-                <string>href="http://hndl.urbackup.org/Client/(?P&lt;major_version&gt;[\d\.]+)/UrBackup%20Client%20(?P&lt;version&gt;[\d\.]+).pkg"</string>
+                <string>UrBackup%20Client%20Mac%20OS%20X%20(?P&lt;version&gt;[\d\.]+).pkg</string>
             </dict>
         </dict>
         <dict>
@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://hndl.urbackup.org/Client/%major_version%/UrBackup%20Client%20%version%.pkg</string>
+                <string>http://hndl.urbackup.org/Client/%version%/UrBackup%20Client%20Mac%20OS%20X%20%version%.pkg</string>
             </dict>
         </dict>
         <dict>
