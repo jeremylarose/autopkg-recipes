@@ -37,12 +37,10 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.pkg.UrBackupClient</string>
+	<string>com.github.jeremylarose.download.UrBackupClient</string>
     <key>Process</key>
     <array>
         <dict>
-            <key>Comment</key>
-            <string>Import the pkg into Munki!</string>
             <key>Processor</key>
             <string>MunkiImporter</string>
             <key>Arguments</key>
