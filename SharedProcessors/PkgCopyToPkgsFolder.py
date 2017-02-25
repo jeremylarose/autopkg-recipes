@@ -49,11 +49,11 @@ class PkgCopyToPkgsFolder(Processor):
           os.environ['os'] = 'win'
 
         if fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
-          os.environ['dest_foldername'] = 'win.bios'
+          dest_foldername = 'win.bios'
         elif fnmatch.fnmatch(pkg_path, '*.DriverPack-*'):
-          os.environ['dest_foldername'] = 'win.drivers'
+          dest_foldername = 'win.drivers'
         else:
-          os.environ['dest_foldername'] = os.environ.get(os)
+          dest_foldername = os
 
         dest_folder_path = os.path.join(Pkgs_folder, dest_foldername)
         dest_path = os.path.join(dest_folder_path, pkg_name)
