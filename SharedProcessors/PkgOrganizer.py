@@ -47,12 +47,12 @@ class PkgOrganizer(Processor):
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
 
-        if fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
+        if fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
+          dest_foldername = 'win.downloads'
+        elif fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
           dest_foldername = 'win.bios'
         elif fnmatch.fnmatch(pkg_path, '*.DriverPack-*'):
           dest_foldername = 'win.drivers'
-        elif fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
-          dest_foldername = 'win.downloads'
         else:
           dest_foldername = pkg_os
 
