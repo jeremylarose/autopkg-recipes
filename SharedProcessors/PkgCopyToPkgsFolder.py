@@ -42,7 +42,7 @@ class PkgCopyToPkgsFolder(Processor):
         Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
         pkg_name = os.path.basename(pkg_path)
         dest_foldername = ''
-        os ='mac'
+        os = 'mac'
 
         if pkg_path.endswith('.exe'):
           os = 'win'
