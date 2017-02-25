@@ -43,16 +43,16 @@ class PkgCopyToPkgsFolder(Processor):
         pkg_name = os.path.basename(pkg_path)
 
         if pkg_path.endswith('.pkg'):
-          os = self.env.get('mac')
+          os.environ['os'] = 'mac'
         elif pkg_path.endswith('.exe'):
-          os = self.env.get('win')
+          os.environ['os'] = 'win'
 
         if fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
-          dest_foldername = 'win.bios'
+          os.environ['dest_foldername'] = 'win.bios'
         elif fnmatch.fnmatch(pkg_path, '*.DriverPack-*'):
-          dest_foldername = 'win.drivers'
+          os.environ['dest_foldername'] = 'win.drivers'
         else:
-          dest_foldername = os
+          os.environ['dest_foldername'] = os
 
         dest_folder_path = os.path.join(Pkgs_folder, dest_foldername)
         dest_path = os.path.join(dest_folder_path, pkg_name)
