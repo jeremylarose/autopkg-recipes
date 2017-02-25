@@ -41,6 +41,7 @@ class PkgCopyToPkgsFolder(Processor):
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
         Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
         pkg_name = os.path.basename(pkg_path)
+        dest_foldername = ''
 
         if pkg_path.endswith('.pkg'):
           os.environ['os'] = 'mac'
