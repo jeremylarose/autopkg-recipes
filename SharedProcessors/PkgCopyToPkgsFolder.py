@@ -17,6 +17,7 @@
 import os
 import subprocess
 import shutil
+import fnmatch
 
 from autopkglib import Processor, ProcessorError
 
@@ -40,17 +41,28 @@ class PkgCopyToPkgsFolder(Processor):
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
         Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
         pkg_name = os.path.basename(pkg_path)
-        dest_path = os.path.join(Pkgs_folder, pkg_name)
+
+        if pkg_path.endswith('.pkg'):
+          os = 'mac'
+        elif pkg_path.endswith('.exe'):
+          os = 'win'
+
+        if fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
+          dest_foldername = 'win.bios'
+        elif fnmatch.fnmatch(pkg_path, '*.DriverPack-*'):
+          dest_foldername = 'win.drivers'
+        else:
+          dest_foldername = os
+
+        dest_folder_path = os.path.join(Pkgs_folder, dest_foldername)
+        dest_path = os.path.join(dest_folder_path, pkg_name)
 
         if os.path.exists(dest_path):
             pass
         else:
-            if not os.path.exists(Pkgs_folder):
-                os.makedirs(Pkgs_folder)
-            if os.path.exists(dest_path):
-                pass
-            else:
-                shutil.copy(pkg_path, Pkgs_folder)
+            if not os.path.exists(Pkgs_folder_path):
+                os.makedirs(dest_folder_path)
+            shutil.copy(pkg_path, dest_folder_path)
 
 if __name__ == '__main__':
     processor = PkgCopyToPkgsFolder()
