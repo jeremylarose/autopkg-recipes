@@ -43,9 +43,9 @@ class PkgCopyToPkgsFolder(Processor):
         pkg_name = os.path.basename(pkg_path)
 
         if pkg_path.endswith('.pkg'):
-          os = 'mac'
+          os = self.env.get('mac')
         elif pkg_path.endswith('.exe'):
-          os = 'win'
+          os = self.env.get('win')
 
         if fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
           dest_foldername = 'win.bios'
