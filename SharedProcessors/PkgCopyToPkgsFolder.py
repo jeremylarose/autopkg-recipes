@@ -15,7 +15,7 @@
 # limitations under the License.
 
 import os
-import subprocess
+#import subprocess
 import shutil
 import fnmatch
 
@@ -42,17 +42,17 @@ class PkgCopyToPkgsFolder(Processor):
         Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
         pkg_name = os.path.basename(pkg_path)
         dest_foldername = ''
-        pkgos = 'mac'
+        pkg_os = 'mac'
 
         if pkg_path.endswith('.exe'):
-          pkgos = 'win'
+          pkg_os = 'win'
 
         if fnmatch.fnmatch(pkg_path, '*.BIOS-*'):
           dest_foldername = 'win.bios'
         elif fnmatch.fnmatch(pkg_path, '*.DriverPack-*'):
           dest_foldername = 'win.drivers'
         else:
-          dest_foldername = pkgos
+          dest_foldername = pkg_os
 
         dest_folder_path = os.path.join(Pkgs_folder, dest_foldername)
         dest_path = os.path.join(dest_folder_path, pkg_name)
@@ -66,4 +66,4 @@ class PkgCopyToPkgsFolder(Processor):
 
 if __name__ == '__main__':
     processor = PkgCopyToPkgsFolder()
-    processor.execute_shell()
+#    processor.execute_shell()
