@@ -60,7 +60,7 @@ class PkgCopyToPkgsFolder(Processor):
         if os.path.exists(dest_path):
             pass
         else:
-            if not os.path.exists(Pkgs_folder_path):
+            if not os.path.exists(dest_folder_path):
                 os.makedirs(dest_folder_path)
             shutil.copy(pkg_path, dest_folder_path)
 
