@@ -35,7 +35,7 @@ class PkgOrganizer(Processor):
 
     def main(self):
 
-        pkg_path = self.env.get('pkg_path')
+        pkg_path = self.env.get('pkg_path', 'pathname')
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
         Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
