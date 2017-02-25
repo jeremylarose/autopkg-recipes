@@ -25,7 +25,7 @@ __all__ = ["PkgOrganizer"]
 
 
 class PkgOrganizer(Processor):
-    description = "Simply copies and organizes all Pkgs to Pkgs folder within AutoPkg Cache Folder, intended use as a post processor'"
+    description = "Simply copies and organizes all Pkgs to PkgOrganizer folder within AutoPkg Cache Folder, intended use as a post processor'"
     input_variables = {
     }
     output_variables = {
@@ -39,7 +39,7 @@ class PkgOrganizer(Processor):
         pkg_path = self.env.get('pkg_path', pathname)
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
-        Pkgs_folder = os.path.join(CACHE_DIR, 'Pkgs')
+        Pkgs_folder = os.path.join(CACHE_DIR, 'PkgOrganizer')
         pkg_name = os.path.basename(pkg_path)
         dest_foldername = ''
         pkg_os = 'mac'
@@ -51,6 +51,8 @@ class PkgOrganizer(Processor):
           dest_foldername = 'win.bios'
         elif fnmatch.fnmatch(pkg_path, '*.DriverPack-*'):
           dest_foldername = 'win.drivers'
+        elif fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
+          dest_foldername = 'win.downloads'
         else:
           dest_foldername = pkg_os
 
