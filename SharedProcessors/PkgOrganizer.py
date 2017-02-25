@@ -15,18 +15,17 @@
 # limitations under the License.
 
 import os
-#import subprocess
 import shutil
 import fnmatch
 
 from autopkglib import Processor, ProcessorError
 
 
-__all__ = ["PkgCopyToPkgsFolder"]
+__all__ = ["PkgOrganizer"]
 
 
-class PkgCopyToPkgsFolder(Processor):
-    description = "Simply copies all Pkgs to Pkgs folder within AutoPkg Cache Folder, intended use as a post processor'"
+class PkgOrganizer(Processor):
+    description = "Simply copies and organizes all Pkgs to Pkgs folder within AutoPkg Cache Folder, intended use as a post processor'"
     input_variables = {
     }
     output_variables = {
@@ -65,5 +64,4 @@ class PkgCopyToPkgsFolder(Processor):
             shutil.copy(pkg_path, dest_folder_path)
 
 if __name__ == '__main__':
-    processor = PkgCopyToPkgsFolder()
-#    processor.execute_shell()
+    processor = PkgOrganizer()
