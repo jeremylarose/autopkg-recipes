@@ -46,6 +46,8 @@ class PkgOrganizer(Processor):
 
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
+        else:
+          pass
 
         if fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
           dest_foldername = 'win.downloads'
