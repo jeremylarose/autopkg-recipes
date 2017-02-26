@@ -44,7 +44,7 @@ class PkgOrganizer(Processor):
         dest_foldername = ''
         pkg_os = 'mac'
 
-        if pkg_path is NA:
+        if pkg_path is 'NA':
           return
 
         if pkg_path.endswith('.exe'):
