@@ -35,7 +35,7 @@ class PkgOrganizer(Processor):
 
     def main(self):
 
-        pathname = self.env.get('pathname')
+        pathname = self.env.get('pathname', 'NA')
         pkg_path = self.env.get('pkg_path', pathname)
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
@@ -44,7 +44,7 @@ class PkgOrganizer(Processor):
         dest_foldername = ''
         pkg_os = 'mac'
 
-        if pkg_path is None:
+        if pkg_path is NA:
           return
 
         if pkg_path.endswith('.exe'):
