@@ -48,11 +48,11 @@ class PkgOrganizer(Processor):
 
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
-          pkg_name = (NAME + version + 'exe')
+          pkg_name = NAME + str(version) + '.exe'
         elif pkg_path.endswith('.pkg'):
-          pkg_name = (NAME + version + 'pkg')
+          pkg_name = NAME + str(version) + '.pkg'
         elif pkg_path.endswith('.dmg'):
-          pkg_name = (NAME + version + 'dmg')
+          pkg_name = NAME + str(version) + '.dmg'
         else:
             return
 
