@@ -47,7 +47,7 @@ class PkgOrganizer(Processor):
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
         else:
-          pass
+          pkg_os = 'mac'
 
         if fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
           dest_foldername = 'win.downloads'
