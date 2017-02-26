@@ -44,7 +44,7 @@ class PkgOrganizer(Processor):
         Pkgs_folder = os.path.join(CACHE_DIR, 'PkgOrganizer')
         pkg_name = os.path.basename(pkg_path)
         dest_foldername = ''
-        dest_pkgname = pkg_name
+        dest_pkgname = NAME + str(version)
         pkg_os = 'mac'
 
         if pkg_path.endswith('.exe'):
@@ -75,7 +75,6 @@ class PkgOrganizer(Processor):
             if not os.path.exists(dest_folder_path):
                 os.makedirs(dest_folder_path)
             shutil.copy(pkg_path, dest_folder_path)
-            os.mknod(version)
 
 if __name__ == '__main__':
     processor = PkgOrganizer()
