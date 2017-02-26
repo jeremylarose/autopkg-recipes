@@ -44,15 +44,16 @@ class PkgOrganizer(Processor):
         Pkgs_folder = os.path.join(CACHE_DIR, 'PkgOrganizer')
         pkg_name = os.path.basename(pkg_path)
         dest_foldername = ''
+        dest_pkgname = pkg_name
         pkg_os = 'mac'
 
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
-          pkg_name = NAME + str(version) + '.exe'
+          dest_pkgname = NAME + str(version) + '.exe'
         elif pkg_path.endswith('.pkg'):
-          pkg_name = NAME + str(version) + '.pkg'
+          dest_pkgname = NAME + str(version) + '.pkg'
         elif pkg_path.endswith('.dmg'):
-          pkg_name = NAME + str(version) + '.dmg'
+          dest_pkgname = NAME + str(version) + '.dmg'
         else:
             return
 
@@ -66,7 +67,7 @@ class PkgOrganizer(Processor):
           dest_foldername = pkg_os
 
         dest_folder_path = os.path.join(Pkgs_folder, dest_foldername)
-        dest_path = os.path.join(dest_folder_path, pkg_name)
+        dest_path = os.path.join(dest_folder_path, dest_pkgname)
 
         if os.path.exists(dest_path):
             pass
