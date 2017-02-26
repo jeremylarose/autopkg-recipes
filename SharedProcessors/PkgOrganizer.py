@@ -44,7 +44,7 @@ class PkgOrganizer(Processor):
         Pkgs_folder = os.path.join(CACHE_DIR, 'PkgOrganizer')
         pkg_name = os.path.basename(pkg_path)
         dest_foldername = ''
-        dest_pkgname = NAME + str(version)
+        dest_pkgname = (NAME + str(version))
         pkg_os = 'mac'
 
         if pkg_path.endswith('.exe'):
