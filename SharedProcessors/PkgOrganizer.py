@@ -55,7 +55,7 @@ class PkgOrganizer(Processor):
            pass
         elif pkg_path.endswith('.dmg'):
           pass
-          dest_pkgname = NAME + str(version) + '.dmg'
+#          dest_pkgname = NAME + str(version) + '.dmg'
         else:
             return
 
