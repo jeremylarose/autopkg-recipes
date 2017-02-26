@@ -36,6 +36,8 @@ class PkgOrganizer(Processor):
     def main(self):
 
         pathname = self.env.get('pathname', 'NA')
+        NAME = self.env.get('NAME')
+        version = self.env.get('version')
         pkg_path = self.env.get('pkg_path', pathname)
         RECIPE_CACHE_DIR = self.env.get('RECIPE_CACHE_DIR')
         CACHE_DIR = os.path.abspath(os.path.join(RECIPE_CACHE_DIR, os.pardir))
@@ -44,11 +46,15 @@ class PkgOrganizer(Processor):
         dest_foldername = ''
         pkg_os = 'mac'
 
-        if pkg_path is 'NA':
-          return
-
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
+          pkg_name = (NAME + version + 'exe')
+        elif pkg_path.endswith('.pkg'):
+          pkg_name = (NAME + version + 'pkg')
+        elif pkg_path.endswith('.dmg'):
+          pkg_name = (NAME + version + 'dmg')
+        else:
+            return
 
         if fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
           dest_foldername = 'win.downloads'
