@@ -75,9 +75,9 @@ class PkgOrganizer(Processor):
 #            pass
 #        else:
         if not os.path.exists(dest_folder_path):
-            os.makedirs(dest_folder_path)
+          os.makedirs(dest_folder_path)
 #            shutil.copyfile(pkg_path, dest_path)
-        cmd = ['rsync', '-c', pkg_path, dest_path)
+        cmd = ['rsync', '-c', pkg_path, dest_path]
 
         proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         (stdout, stderr) = proc.communicate()
