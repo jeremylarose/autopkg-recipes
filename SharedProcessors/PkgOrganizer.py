@@ -17,6 +17,7 @@
 import os
 import shutil
 import fnmatch
+import subprocess
 
 from autopkglib import Processor, ProcessorError
 
@@ -48,13 +49,15 @@ class PkgOrganizer(Processor):
 
         if pkg_path.endswith('.exe'):
           pkg_os = 'win'
-          pkg_name = NAME + '-' + str(version) + '.exe'
-        elif pkg_path.endswith('.pkg'):
-          pkg_name = NAME + '-' + str(version) + '.pkg'
-        elif pkg_path.endswith('.dmg'):
-          pkg_name = NAME + '-' + str(version) + '.dmg'
+#          pkg_name = NAME + '-' + str(version) + '.exe'
+        elif pkg_path.endswith('NA'):
+          return
         else:
-            return
+          pass
+#        elif pkg_path.endswith('.dmg'):
+#          pkg_name = NAME + '-' + str(version) + '.dmg'
+#        else:
+#            return
 
         if fnmatch.fnmatch(pkg_path, '*.download.Win.*'):
           dest_foldername = 'win.downloads'
@@ -68,12 +71,18 @@ class PkgOrganizer(Processor):
         dest_folder_path = os.path.join(Pkgs_folder, dest_foldername)
         dest_path = os.path.join(dest_folder_path, pkg_name)
 
-        if os.path.exists(dest_path):
-            pass
-        else:
-            if not os.path.exists(dest_folder_path):
-                os.makedirs(dest_folder_path)
-            shutil.copyfile(pkg_path, dest_path)
+#        if os.path.exists(dest_path):
+#            pass
+#        else:
+        if not os.path.exists(dest_folder_path):
+            os.makedirs(dest_folder_path)
+#            shutil.copyfile(pkg_path, dest_path)
+        cmd = ['rsync', '-c', pkg_path, dest_path)
+
+        proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        (stdout, stderr) = proc.communicate()
+
 
 if __name__ == '__main__':
     processor = PkgOrganizer()
+    processor.execute_shell()
