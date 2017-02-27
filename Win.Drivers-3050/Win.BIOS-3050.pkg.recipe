@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Creates an 3040 BIOS installer.</string>
+	<string>Creates an 3050 BIOS installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.BIOS-3040</string>
+	<string>com.github.jeremylarose.pkg.Win.BIOS-3050</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>3040</string>
+		<string>3050</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.BIOS-3040</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-3050</string>
 	<key>Process</key>
 	<array>
 		<dict>
