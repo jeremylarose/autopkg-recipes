@@ -76,7 +76,7 @@ class PkgOrganizer(Processor):
         else:
             if not os.path.exists(dest_folder_path):
                 os.makedirs(dest_folder_path)
-            shutil.copy(pkg_path, dest_folder_path)
+            shutil.copyfile(pkg_path, dest_path)
 
 if __name__ == '__main__':
     processor = PkgOrganizer()
