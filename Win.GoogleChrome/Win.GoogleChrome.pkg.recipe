@@ -31,7 +31,7 @@ cls
 echo --------------------------------------------------------
 echo .
 echo .
-echo .         Installing GoogleChrome - Please Wait
+echo .        Installing Google Chrome - Please Wait
 echo .           Window will close once installed
 echo .
 echo .
@@ -41,7 +41,7 @@ echo --------------------------------------------------------
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 
 pushd "%~dp0"
-msiexec.exe /i %NAME%-%date%-x64.msi /qn /norestart
+msiexec /i %NAME%-%date%-x64.msi /qn /norestart
 popd
 EXIT
 
@@ -64,6 +64,17 @@ EXIT
 				<string>%NAME%-%date%.exe</string>
 			</dict>
     </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
