@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest GoogleChrome x86 and x64 and creates silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.GoogleChrome</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GoogleChrome</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.GoogleChrome</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .         Installing GoogleChrome - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+::Install 64-bit for 64-Bit systems and 32-Bit for 32-Bit Systems
+IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
+
+pushd "%~dp0"
+msiexec.exe /i %NAME%-checkmsiforversion-x64.msi /qn /norestart
+popd
+EXIT
+
+:x86install
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/qn /norestart</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-checkmsiforversion-x64.msi</string>
+				<key>pkg_name</key>
+				<string>%NAME%-checkmsiforversion.exe</string>
+			</dict>
+    </dict>
+	</array>
+</dict>
+</plist>
