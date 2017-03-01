@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://en.wikipedia.org/wiki/Chrome_OS</string>
 						<key>re_pattern</key>
-						<string>Windows, macOS, Linux[\S][\n][\S]>(?P&lt;version&gt;[\d\.]+)</string>
+						<string>Windows, macOS, Linux[\S][\n][\S](?P&lt;version&gt;[\d\.]+)</string>
 				</dict>
 		</dict>
 		<dict>
