@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of GoogleChrome x86 and x64 Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.GoogleChrome</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GoogleChrome</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://en.wikipedia.org/wiki/Chrome_OS</string>
+						<key>re_pattern</key>
+						<string>Windows, macOS, Linux</th>
+<td>(?P&lt;version&gt;[\d\.]+)</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-x64.exe</string>
+				<key>url</key>
+				<string>https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%-x86.exe</string>
+				<key>url</key>
+				<string>https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
