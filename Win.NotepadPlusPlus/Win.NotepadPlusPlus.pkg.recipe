@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of NotepadPlusPlus and creates a silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.NotepadPlusPlus</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>NotepadPlusPlus</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.hansen-m.download.NotepadPlusPlus-Win</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+:: quit installer if application is running....
+tasklist.exe /FI "IMAGENAME eq notepad++.exe" 2>NUL | find /I /N "notepad++.exe" || goto continue
+EXIT
+:continue
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .          Installing Notepad++ - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+::uninstall any other versions
+IF EXIST "C:\Program Files (x86)\Notepad++\uninstall.exe" "C:\Program Files (x86)\Notepad++\uninstall.exe" /S
+IF EXIST "C:\Program Files\Notepad++\uninstall.exe" "C:\Program Files\Notepad++\uninstall.exe" /S
+
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/S</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%.exe</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
