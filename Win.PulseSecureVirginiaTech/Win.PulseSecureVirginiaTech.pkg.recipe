@@ -18,26 +18,13 @@
 	<key>Process</key>
 	<array>
 		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>http://www.caltech.edu/master-calendar/day</string>
-						<key>re_pattern</key>
-						<string>og:title"[\s]content="(?P&lt;date&gt;[\d\-]+)</string>
-				</dict>
-		</dict>
-                <dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
 				<string>/s</string>
-			        <key>pkg_name</key>
-				<string>%NAME%-%date%.exe</string>
-                        </dict>
+			</dict>
     </dict>
 	</array>
 </dict>
