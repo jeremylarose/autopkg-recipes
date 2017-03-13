@@ -19,17 +19,6 @@
 	<array>
 		<dict>
 				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>http://www.caltech.edu/master-calendar/day</string>
-						<key>re_pattern</key>
-						<string>og:title"[\s]content="(?P&lt;date&gt;[\d\-]+)</string>
-				</dict>
-		</dict>
-		<dict>
-				<key>Processor</key>
 				<string>FileCreator</string>
 				<key>Arguments</key>
 				<dict>
@@ -72,7 +61,7 @@ EXIT
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-x64.msi</string>
 				<key>pkg_name</key>
-				<string>%NAME%-%date%.exe</string>
+				<string>%NAME%.exe</string>
 			</dict>
     </dict>
 		<dict>
