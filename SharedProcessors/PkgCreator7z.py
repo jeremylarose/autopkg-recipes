@@ -18,6 +18,7 @@ import os
 import subprocess
 import shutil
 import stat
+import datetime
 
 from autopkglib import Processor, ProcessorError
 
@@ -76,7 +77,13 @@ class PkgCreator7z(Processor):
         pkgroot = self.env.get('pkgroot', RECIPE_CACHE_DIR)
         pkg_path = os.path.join(pkgroot, pkg_name)
         self.env["pkg_path"] = pkg_path
-
+        today_date = datetime.date.today()
+        try:
+            mtime = os.path.getmtime(source_path)
+        except OSError:
+            mtime = 0
+        source_path_modified_date = datetime.fromtimestamp(mtime)
+        
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
         PkgCreator7zr = os.path.join(PkgCreator7z_dir, '7zr')
@@ -98,7 +105,10 @@ class PkgCreator7z(Processor):
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
 
+
         if os.path.exists(pkg_path):
+            pass
+        elif source_path_modified_date != today_date:
             pass
         else:
             if not os.path.exists(pkgroot):
