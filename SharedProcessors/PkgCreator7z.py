@@ -82,7 +82,7 @@ class PkgCreator7z(Processor):
             mtime = os.path.getmtime(source_path)
         except OSError:
             mtime = 0
-        source_path_modified_date = datetime.datetime.fromtimestamp(mtime)
+        source_path_modified_date = datetime.date.fromtimestamp(mtime)
         
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
