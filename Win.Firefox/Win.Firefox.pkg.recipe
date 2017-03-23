@@ -27,10 +27,6 @@
 						<key>file_content</key>
 						<string>@echo off
 
-:: quit installer if application is running, else continue....
-tasklist.exe /FI "IMAGENAME eq firefox.exe" 2>NUL | find /I /N "firefox.exe" || goto notrunning
-EXIT
-:notrunning
 
 cls
 echo --------------------------------------------------------
