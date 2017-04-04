@@ -83,7 +83,7 @@ class PkgCreator7z(Processor):
         except OSError:
             mtime = 0
         source_path_modified_date = datetime.date.fromtimestamp(mtime)
-
+        
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
         PkgCreator7zr = os.path.join(PkgCreator7z_dir, '7zr')
@@ -98,8 +98,13 @@ class PkgCreator7z(Processor):
             install = 'msiexec /i ' + source_filename
         elif source_filename.endswith('.msp'):
             install = 'msiexec /p ' + source_filename
-        else:
+        elif source_filename.endswith('.exe'):
             install = source_filename
+        elif source_filename.endswith('.EXE'):
+            install = source_filename
+        else:
+            self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
+
 
         if os.path.exists(pkg_path):
             pass
