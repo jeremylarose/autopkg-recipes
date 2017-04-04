@@ -77,7 +77,7 @@ echo --------------------------------------------------------
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
 msiexec /i %NAME%-%version%\x64\AppleApplicationSupport64.msi /qn /norestart
-msiexec /i %NAME%-%version%\x64\iTunes6464.msi /qn /norestart
+msiexec /i %NAME%-%version%\x64\iTunes64.msi /qn /norestart
 msiexec /i %NAME%-%version%\x64\AppleMobileDeviceSupport6464.msi /qn /norestart
 msiexec /i %NAME%-%version%\x64\Bonjour64.msi /qn /norestart
 popd
