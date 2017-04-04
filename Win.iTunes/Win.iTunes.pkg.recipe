@@ -18,6 +18,17 @@
 	<key>Process</key>
 	<array>
 		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/downloads/nop.exe</string>
+						<key>file_content</key>
+						<string>nothing to see here</string>
+				</dict>
+		</dict>
+		<dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/Unarchiver7z</string>
 			<key>Arguments</key>
@@ -78,6 +89,7 @@ pushd "%~dp0"
 msiexec /i %NAME%-%version%\AppleApplicationSupport.msi /qn /norestart
 msiexec /i %NAME%-%version%\iTunes.msi /qn /norestart
 msiexec /i %NAME%-%version%\AppleMobileDeviceSupport.msi /qn /norestart
+msiexec /i %NAME%-%version%\Bonjour.msi /qn /norestart
 popd
 						</string>
 				</dict>
@@ -88,7 +100,7 @@ popd
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/qn /norestart</string>
+				<string>REM</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
@@ -96,7 +108,7 @@ popd
 				<key>pkg_name</key>
 				<string>%NAME%-%version%.exe</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%/Bonjour.msi</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/nop.exe</string>
 			</dict>
     </dict>
 		<dict>
@@ -118,6 +130,17 @@ popd
 						<key>path_list</key>
 						<array>
 								<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%</string>
+						</array>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/downloads/nop.exe</string>
 						</array>
 				</dict>
 		</dict>
