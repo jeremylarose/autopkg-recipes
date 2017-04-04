@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Creates an E7250 and 7250 BIOS installer.</string>
+	<string>Creates an E7250 BIOS installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.BIOS-E7250_7250</string>
+	<string>com.github.jeremylarose.pkg.Win.BIOS-E7250</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>E7250_7250</string>
+		<string>E7250</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.BIOS-E7250_7250</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-E7250</string>
 	<key>Process</key>
 	<array>
 		<dict>

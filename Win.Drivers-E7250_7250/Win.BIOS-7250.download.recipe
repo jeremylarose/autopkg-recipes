@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest E7250 and 7250 BIOS Update.</string>
+	<string>Downloads the latest 7250 BIOS Update.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.BIOS-E7250_7250</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-7250</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>E7250_7250</string>
+		<string>7250</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
