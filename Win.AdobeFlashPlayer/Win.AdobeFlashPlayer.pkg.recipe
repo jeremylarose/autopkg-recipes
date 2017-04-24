@@ -40,10 +40,6 @@ echo --------------------------------------------------------
 %~dp0%major_version%.%v2%.%v3%.%v4%\AdobeFlashPlayer-NPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
 %~dp0%major_version%.%v2%.%v3%.%v4%\AdobeFlashPlayer-PPAPI-%major_version%.%v2%.%v3%.%v4%.exe -install
 
-:: do not install ActiveX if OS is Windows 10, else install ActiveX....
-wmic os get caption^,version /format:csv | findstr " 10 ">nul || goto notwin10
-EXIT
-:notwin10
 						</string>
 				</dict>
 		</dict>
