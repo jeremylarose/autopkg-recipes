@@ -34,14 +34,14 @@
 						<key>url</key>
 						<string>http://snappy-driver-installer.org/downloads.html</string>
 						<key>re_pattern</key>
-						<string>SDI_(?P&lt;sdi_version&gt;[\S]+).zip</string>
+						<string>SDIO_(?P&lt;sdi_version&gt;[\S]+).zip</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://snappy-driver-installer.org/downloads/SDI_%sdi_version%.zip</string>
+				<string>http://snappy-driver-installer.org/downloads/SDIO_%sdi_version%.zip</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
