@@ -34,14 +34,14 @@
 						<key>url</key>
 						<string>http://snappy-driver-installer.org/downloads.html</string>
 						<key>re_pattern</key>
-						<string>SDI_(?P&lt;sdi_version&gt;[\S]+).zip</string>
+						<string>SDIO_(?P&lt;sdi_version&gt;[\S]+).zip</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://snappy-driver-installer.org/downloads/SDI_%sdi_version%.zip</string>
+				<string>http://snappy-driver-installer.org/downloads/SDIO_%sdi_version%.zip</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -70,7 +70,7 @@
 				<key>install_flags</key>
 				<string>-nogui -license -norestorepnt -nosnapshot -nologfile -keepunpackedindex -autoinstall -autoclose -PATH .</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/SDI_%sdi_version%/SDI_x64_%sdi_version%.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/SDIO_%sdi_version%/SDIO_x64_%sdi_version%.exe</string>
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%/%NAME%/win10/x64</string>
 				<key>pkg_name</key>
