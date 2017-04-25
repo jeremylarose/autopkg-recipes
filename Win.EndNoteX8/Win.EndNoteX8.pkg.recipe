@@ -59,6 +59,8 @@ msiexec /i %~dp0ENX8Inst.msi /qn
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/ENX8Inst.msi</string>
+				<key>pkg_name</key>
+				<string>%NAME%.%mid_version%.%minor_version%.exe</string>
 			</dict>
     </dict>
 		<dict>
