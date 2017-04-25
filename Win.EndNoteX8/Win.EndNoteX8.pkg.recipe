@@ -60,7 +60,7 @@ msiexec /i %~dp0ENX8Inst.msi /qn
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/ENX8Inst.msi</string>
 				<key>pkg_name</key>
-				<string>%NAME%.%mid_version%.%minor_version%.exe</string>
+				<string>%NAME%-8.%mid_version%.%minor_version%.exe</string>
 			</dict>
     </dict>
 		<dict>
