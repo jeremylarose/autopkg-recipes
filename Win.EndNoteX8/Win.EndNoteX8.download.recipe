@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads EndNoteX8 and the latest update.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.EndNoteX8</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>EndNoteX8</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://download.endnote.com/downloads/X8/ENX8Inst.msi</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>http://endnote.com/downloads/available-updates</string>
+						<key>re_pattern</key>
+						<string>EndNote X8.(?P&lt;mid_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+) for Windows</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>http://download.endnote.com/updates/18.%mid_version%/ENX8%mid_version%%minor_version%Update.msp</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
