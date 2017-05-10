@@ -54,7 +54,7 @@ msiexec /i %~dp0ENX8Inst.msi /qn
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/qn</string>
+				<string>/qn /norestart</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
