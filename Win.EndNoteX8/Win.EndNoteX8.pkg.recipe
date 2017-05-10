@@ -38,7 +38,7 @@ echo .
 echo ----------------------------------------------------------------
 
 :: check if installed at all, if is, go to updates
-IF EXIST "C:\Program Files (x86)\EndNote X8\EndNote.exe GOTO UPDATE
+IF EXIST "C:\Program Files (x86)\EndNote X8\EndNote.exe" GOTO UPDATE
 IF EXIST "C:\Program Files\EndNote X8\EndNote.exe" GOTO UPDATE
 
 :: install EndNoteX8
