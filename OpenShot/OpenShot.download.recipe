@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.openshot.org/download/</string>
-                <key>re_pattern</key>
-                <string>href="http://github.com/OpenShot/openshot-qt/releases/download/v(?P&lt;major_version&gt;[\d\.]+)/OpenShot-v(?P&lt;version&gt;[\d\.]+)-x86_64.dmg"</string>
+  	 		  		  <string>https://github.com/OpenShot/openshot-qt/releases</string>
+  			  		  <key>re_pattern</key>
+  						  <string>OpenShot-v(?P&lt;version&gt;[\d\.]+)-x86_64.dmg</string>
             </dict>
         </dict>
         <dict>
@@ -34,7 +34,7 @@
                 <key>filename</key>
                 <string>%NAME%-%version%.dmg</string>
                 <key>url</key>
-                <string>http://github.com/OpenShot/openshot-qt/releases/download/v%major_version%/OpenShot-v%version%-x86_64.dmg</string>
+                <string>https://github.com/OpenShot/openshot-qt/releases/download/v%version%/OpenShot-v%version%-x86_64.dmg</string>
             </dict>
         </dict>
         <dict>
