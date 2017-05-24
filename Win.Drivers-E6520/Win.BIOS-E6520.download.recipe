@@ -23,14 +23,14 @@
 						<key>url</key>
 						<string>http://www.dell.com/support/home/us/en/04/product-support/product/latitude-e6520/drivers</string>
 						<key>re_pattern</key>
-            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]%NAME%(?P&lt;version&gt;[\S]+).exe</string>
+            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]Latitude_E6520_(?P&lt;version&gt;[\S]+).exe</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://downloads.dell.com/%folder%/%number%/%NAME%%version%.exe</string>
+				<string>https://downloads.dell.com/%folder%/%number%/Latitude_E6520_%version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
