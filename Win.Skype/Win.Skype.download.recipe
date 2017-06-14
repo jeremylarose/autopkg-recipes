@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://support.skype.com/en/faq/FA34509/what-s-new-in-skype-for-windows-desktop</string>
 						<key>re_pattern</key>
-            <string>Skype[\s](?P&lt;version&gt;[\d\.]+)[\W]br[\s][\S][\S][\s][\S]em[\S]released[\s]</string>
+            <string>Skype[\s](?P&lt;version&gt;[\d\.]+)[\W]br[\s][\S][\S][\s][\S]em[\S]released</string>
 				</dict>
 		</dict>
 		<dict>
