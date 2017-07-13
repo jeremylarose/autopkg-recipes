@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>http://www.dell.com/support/home/us/en/04/product-support/product/latitude-e5540-laptop/drivers</string>
 						<key>re_pattern</key>
-            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]%NAME%[\d\.]+.exe</string>
+            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]%NAME%(?P&lt;version&gt;[\d\.]+).exe</string>
 				</dict>
 		</dict>
 		<dict>
