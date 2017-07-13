@@ -70,7 +70,7 @@
 				<key>install_flags</key>
 				<string>-nogui -license -norestorepnt -nosnapshot -nologfile -keepunpackedindex -autoinstall -autoclose -PATH .</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/SDI_%sdi_version%/SDI_x64_%sdi_version%.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/SDI_%sdi_version%/SDI_x64_R%sdi_version%.exe</string>
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%/3030 AIO/Win10/x64</string>
 				<key>pkg_name</key>
