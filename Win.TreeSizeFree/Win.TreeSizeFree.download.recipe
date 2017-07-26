@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of GetFoldersize Executables.</string>
+	<string>Downloads the latest version of TreeSizeFree Executables.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.GetFoldersize</string>
+	<string>com.github.jeremylarose.download.Win.TreeSizeFree</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>GetFoldersize</string>
+		<string>TreeSizeFree</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -21,9 +21,9 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>http://www.getfoldersize.com/en_download_getfoldersize.php</string>
+						<string>http://www.jam-software.com/treesize_free/download.shtml</string>
 						<key>re_pattern</key>
-            <string>href="/getfoldersize/en_getfoldersize_version.php">(?P&lt;version&gt;[\d\.]+)</string>
+            <string>TreeSize Free V(?P&lt;version&gt;[\d\.]+)</string>
 				</dict>
 		</dict>
 		<dict>
@@ -32,7 +32,7 @@
 				<key>filename</key>
 				<string>%NAME%-%version%.exe</string>
 				<key>url</key>
-				<string>http://www.getfoldersize.de/download/GetFoldersizeSetup.exe</string>
+				<string>http://www.jam-software.com/treesize_free/TreeSizeFreeSetup.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

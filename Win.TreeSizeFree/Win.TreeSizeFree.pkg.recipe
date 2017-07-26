@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of GetFoldersize and creates a silent installer.</string>
+	<string>Downloads the latest version of TreeSizeFree and creates a silent installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.GetFoldersize</string>
+	<string>com.github.jeremylarose.pkg.Win.TreeSizeFree</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>GetFoldersize</string>
+		<string>TreeSizeFree</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.GetFoldersize</string>
+	<string>com.github.jeremylarose.download.Win.TreeSizeFree</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -28,7 +28,7 @@
 						<string>@echo off
 
 ::check if current version is installed, if is, exit, else continue....
-reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\GetFoldersize_is1" /v DisplayVersion | findstr %version% || goto notinstalled
+reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\TreeSize Free_is1" /v DisplayVersion | findstr %version% || goto notinstalled
 EXIT
 :notinstalled
 
@@ -36,7 +36,7 @@ cls
 echo --------------------------------------------------------
 echo .
 echo .
-echo .           Installing GetGoldersize - Please Wait
+echo .           Installing TreeSizeFree - Please Wait
 echo .              Window will close once installed
 echo .
 echo .
@@ -50,7 +50,7 @@ echo --------------------------------------------------------
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/VERYSILENT /NORESTART /NOICONS /MERGETASKS="!desktopicongetfoldersize"</string>
+				<string>/VERYSILENT /NORESTART /NOICONS</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 			</dict>
