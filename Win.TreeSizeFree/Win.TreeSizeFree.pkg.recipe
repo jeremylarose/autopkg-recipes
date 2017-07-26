@@ -27,11 +27,6 @@
 						<key>file_content</key>
 						<string>@echo off
 
-::check if current version is installed, if is, exit, else continue....
-reg.exe query "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\TreeSize Free_is1" /v DisplayVersion | findstr %version% || goto notinstalled
-EXIT
-:notinstalled
-
 cls
 echo --------------------------------------------------------
 echo .
