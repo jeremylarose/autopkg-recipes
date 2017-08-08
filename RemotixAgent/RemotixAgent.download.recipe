@@ -50,7 +50,7 @@
     						<string>%pathname%</string>
     						<key>expected_authority_names</key>
     						<array>
-    								<string>Developer ID Installer: Nulana LTD</string>
+    								<string>Developer ID Installer: Nulana LTD (K293Y6CVN4)</string>
     								<string>Developer ID Certification Authority</string>
     								<string>Apple Root CA</string>
     						</array>
