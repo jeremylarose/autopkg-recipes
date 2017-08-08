@@ -26,8 +26,6 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 				<key>source_path</key>
 				<string>%pathname%</string>
-				<key>overwrite</key>
-				<string>True</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
