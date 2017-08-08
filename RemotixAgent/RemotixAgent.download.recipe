@@ -47,7 +47,7 @@
     				<key>Arguments</key>
     				<dict>
     						<key>input_path</key>
-    						<string>%pathname%/Remotix Agent.pkg</string>
+    						<string>%pathname%</string>
     						<key>expected_authority_names</key>
     						<array>
     								<string>Developer ID Installer: Nulana LTD</string>
