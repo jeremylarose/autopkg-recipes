@@ -34,7 +34,7 @@
 						<key>url</key>
 						<string>http://snappy-driver-installer.org/downloads.html</string>
 						<key>re_pattern</key>
-						<string>SDIO_(?P&lt;SDIO_version1&gt;[\d\.]{6})(?P&lt;SDIO_version&gt;[\S]+).zip</string>
+						<string>SDIO_(?P&lt;SDIO_version1&gt;[\d]+.[\d]+.[\d]+.)(?P&lt;SDIO_version&gt;[\S]+).zip</string>
 				</dict>
 		</dict>
 		<dict>
