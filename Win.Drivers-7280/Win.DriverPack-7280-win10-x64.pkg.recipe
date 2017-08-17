@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Creates a 2280 driver pack installer.</string>
+	<string>Creates a 7280 driver pack installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.DriverPack-2280-win10-x64</string>
+	<string>com.github.jeremylarose.pkg.Win.DriverPack-7280-win10-x64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>2280</string>
+		<string>7280</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.DriverPack-2280-win10</string>
+	<string>com.github.jeremylarose.download.Win.DriverPack-7280-win10</string>
 	<key>Process</key>
 	<array>
 		<dict>

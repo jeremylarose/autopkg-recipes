@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest 2280 drivers cab.</string>
+	<string>Downloads the latest 7280 drivers cab.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.DriverPack-2280-win10</string>
+	<string>com.github.jeremylarose.download.Win.DriverPack-7280-win10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>2280</string>
+		<string>7280</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
