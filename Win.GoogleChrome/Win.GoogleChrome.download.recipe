@@ -18,8 +18,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%-x64.msi</string>
 				<key>url</key>
 				<string>https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi</string>
 			</dict>
@@ -29,8 +27,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%-x86.msi</string>
 				<key>url</key>
 				<string>https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi</string>
 			</dict>
