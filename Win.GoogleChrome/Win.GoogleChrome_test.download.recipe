@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of GoogleChrome x86 and x64 Executables.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.GoogleChrome</string>
+	<string>com.github.jeremylarose.download.Win.GoogleChrome_test</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
