@@ -38,6 +38,39 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/Unarchiver7z</string>
+			<key>Arguments</key>
+			<dict>
+	  		<key>extract_path</key>
+		  	<string>%RECIPE_CACHE_DIR%/InstallerExtract</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>com.github.hansen-m.SharedProcessors/BESRelevanceProvider</string>
+				<key>Arguments</key>
+				<dict>
+						<key>bes_filepath</key>
+						<string>%pathname%</string>
+						<key>output_var_name</key>
+						<string>version</string>
+						<key>bes_relevance</key>
+						<string>preceding text of first " Copyright 2011 Google Inc." of substrings separated by "%00" whose (it ends with "Google Inc.") of lines whose (it contains "Installer") of file "%RECIPE_CACHE_DIR%/InstallerExtract/[5]SummaryInformation" as version</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/InstallerExtract</string>
+						</array>
+				</dict>
+		</dict>
+		<dict>
 				<key>Processor</key>
 				<string>EndOfCheckPhase</string>
 		</dict>
