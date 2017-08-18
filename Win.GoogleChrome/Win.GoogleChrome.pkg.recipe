@@ -52,7 +52,7 @@ echo --------------------------------------------------------
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 
 pushd "%~dp0"
-msiexec /i %filename%64.msi /qn /norestart
+msiexec /i googlechromestandaloneenterprise64.msi /qn /norestart
 popd
 EXIT
 
@@ -70,7 +70,7 @@ EXIT
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%filename%64.msi</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/googlechromestandaloneenterprise64.msi</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%date%.exe</string>
 			</dict>
