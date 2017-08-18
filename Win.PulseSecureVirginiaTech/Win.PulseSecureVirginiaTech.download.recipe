@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of PulseSecureVirginiaTech Executables.</string>
+	<string>Downloads the latest version of PulseSecureVirginiaTech Executables. Requires https://bitbucket.org/haypo/hachoir/wiki/hachoir-metadata.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.Win.PulseSecureVirginiaTech</string>
 	<key>Input</key>
