@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest GoogleChrome x86 and x64 and creates silent installer.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.GoogleChrome_test</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GoogleChrome</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.GoogleChrome</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>http://www.caltech.edu/master-calendar/day</string>
+						<key>re_pattern</key>
+						<string>og:title"[\s]content="(?P&lt;date&gt;[\d\-]+)</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .        Installing Google Chrome - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+::Install 64-bit for 64-Bit systems and 32-Bit for 32-Bit Systems
+IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
+
+pushd "%~dp0"
+msiexec /i %NAME%-x64.msi /qn /norestart
+popd
+EXIT
+
+:x86install
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/qn /norestart</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-x64.msi</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%date%.exe</string>
+			</dict>
+    </dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
