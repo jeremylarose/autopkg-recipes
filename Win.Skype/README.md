@@ -1,1 +1,1 @@
-working, but need to add extra paramaters
+Requires https://bitbucket.org/haypo/hachoir/wiki/hachoir-metadata.

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Skype Executables.</string>
+	<string>Downloads the latest version of Skype Executables. Requires https://bitbucket.org/haypo/hachoir/wiki/hachoir-metadata.</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.Win.Skype</string>
 	<key>Input</key>
@@ -16,26 +16,22 @@
 	<key>Process</key>
 	<array>
 		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>https://support.skype.com/en/faq/FA34509/what-s-new-in-skype-for-windows-desktop</string>
-						<key>re_pattern</key>
-            <string>Skype[\s](?P&lt;version&gt;[\d\.]+)[\W]br[\s][\S][\S][\s][\S]em[\S]released</string>
-				</dict>
-		</dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%-%version%.exe</string>
 				<key>url</key>
 				<string>https://www.skype.com/go/getskype-full</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>com.github.hansen-m.SharedProcessors/HachoirMetaDataProvider</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%pathname%</string>
+				</dict>
 		</dict>
 		<dict>
 				<key>Processor</key>

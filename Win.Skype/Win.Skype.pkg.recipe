@@ -24,6 +24,8 @@
 			<dict>
 				<key>install_flags</key>
 				<string>/verysilent /norestart /nolaunch</string>
+				<key>pkg_name</key>
+				<string>%NAME%-%version%.exe</string>
 			</dict>
     </dict>
 	</array>
