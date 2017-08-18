@@ -27,7 +27,7 @@
 						<key>re_pattern</key>
 						<string>og:title"[\s]content="(?P&lt;date&gt;[\d\-]+)</string>
 				</dict>
-		</dict>	
+		</dict>
 		<dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
@@ -36,7 +36,7 @@
 				<key>install_flags</key>
 				<string>/s</string>
 				<key>pkg_name</key>
-				<string>%NAME%-%date%.exe</string>
+				<string>%NAME%-%version%.exe</string>
 			</dict>
                 </dict>
 	</array>
