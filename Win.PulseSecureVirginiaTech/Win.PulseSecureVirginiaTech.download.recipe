@@ -18,8 +18,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.exe</string>
 				<key>url</key>
 				<string>http://www.cns.vt.edu/VPN/vtVpnSetup.exe</string>
 			</dict>
