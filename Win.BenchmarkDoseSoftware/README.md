@@ -1,1 +1,1 @@
-just downloads and extracts latest version
+just downloads latest version
