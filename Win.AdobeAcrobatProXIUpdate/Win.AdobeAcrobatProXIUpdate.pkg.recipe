@@ -18,12 +18,40 @@
 	<key>Process</key>
 	<array>
 		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .       Installing Adobe Acrobat XI Update- Please Wait
+echo .          Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+msiexec /p %~dp0extrafiles\AdobeAcrobatProXIUpdate-11.0.21.msp /qn /norestart
+						</string>
+				</dict>
+		</dict>
+		<dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/qn</string>
+				<string>/qn /norestart</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
 			</dict>
     </dict>
 	</array>

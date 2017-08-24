@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Acrobat Pro XI Update</string>
+	<string>Downloads the latest Acrobat Pro XI Update... update 22 and up requires update 21</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.download.AdobeAcrobatProXIUpdate</string>
 	<key>Input</key>
