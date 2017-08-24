@@ -20,6 +20,19 @@
 			<dict>
 				<key>url</key>
 				<string>https://ardownload2.adobe.com/pub/adobe/reader/win/11.x/11.0.10/en_US/AdbeRdr11010_en_US.exe</string>
+				<key>download_dir</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.0.21/misc/AdbeRdrUpd11021.msp</string>
+				<key>download_dir</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

@@ -42,12 +42,13 @@ IF EXIST "C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPD
 IF EXIST "C:\Program Files\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPDATE
 
 :: install reader
-%~dp0AdbeRdr11010_en_US.exe /sAll /rs /msi EULA_ACCEPT=YES
+%~dp0extrafiles\AdbeRdr11010_en_US.exe /sAll /rs /msi EULA_ACCEPT=YES
 
 :: disable updates
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\11.0\FeatureLockDown" /v bUpdater /t REG_DWORD /d 00000000 /f
 
 :UPDATE
+msiexec /p %~dp0extrafiles\AdobeReaderXI-11.0.21.msp /qn /norestart
 						</string>
 				</dict>
 		</dict>
@@ -61,7 +62,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\11.0\FeatureL
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/AdbeRdr11010_en_US.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
 			</dict>
     </dict>
 		<dict>
