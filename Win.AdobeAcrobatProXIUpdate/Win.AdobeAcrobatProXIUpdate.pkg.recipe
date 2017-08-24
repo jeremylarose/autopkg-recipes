@@ -37,7 +37,7 @@ echo .
 echo .
 echo --------------------------------------------------------
 
-msiexec /p %~dp0extrafiles\AdobeAcrobatProXIUpdate-11.0.21.msp /qn /norestart
+msiexec /p %~dp0extrafiles\AcrobatUpd11021.msp /qn /norestart
 						</string>
 				</dict>
 		</dict>
