@@ -37,7 +37,7 @@ echo .
 echo .
 echo --------------------------------------------------------
 
-msiexec /p %~dp0extrafiles\AcrobatUpd11021.msp /qn /norestart
+msiexec /p %~dp0AcrobatUpd11021.msp /qn /norestart
 						</string>
 				</dict>
 		</dict>
@@ -51,7 +51,7 @@ msiexec /p %~dp0extrafiles\AcrobatUpd11021.msp /qn /norestart
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles/AcrobatUpd11021.msp</string>
 			</dict>
     </dict>
 	</array>
