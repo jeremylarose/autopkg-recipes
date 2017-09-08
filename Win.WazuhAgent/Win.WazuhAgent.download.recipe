@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads and extracts the latest version of OCSInventoryNGAgent.</string>
+	<string>Downloads and extracts the latest version of WazuhAgent.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.OCSInventoryNGAgent</string>
+	<string>com.github.jeremylarose.download.Win.WazuhAgent</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>OCSInventoryNGAgent</string>
+		<string>WazuhAgent</string>
 		<key>GITHUB_REPO</key>
-		<string>OCSInventory-NG/WindowsAgent</string>
+		<string>wazuh/wazuh</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>OCSNG[\S]+.zip</string>
+				<string>wazuh[\S]+.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -31,15 +31,6 @@
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
 		</dict>
 		<dict>
 				<key>Processor</key>

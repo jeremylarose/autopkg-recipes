@@ -1,1 +1,1 @@
-just downloads and extracts latest version
+this is working
