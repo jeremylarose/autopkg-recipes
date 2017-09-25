@@ -32,14 +32,14 @@
 						<key>url</key>
 						<string>http://endnote.com/downloads/available-updates</string>
 						<key>re_pattern</key>
-						<string>EndNote X8.(?P&lt;mid_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+) for Windows</string>
+						<string>EndNote X8.(?P&lt;version&gt;[0-9]+) for Windows</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://download.endnote.com/updates/18.%mid_version%/ENX8%mid_version%%minor_version%Update.msp</string>
+        <string>http://download.endnote.com/updates/18.0/ENX81Update.msp</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
