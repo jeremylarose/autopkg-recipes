@@ -42,19 +42,15 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-				<key>Processor</key>
-				<string>CodeSignatureVerifier</string>
-				<key>Arguments</key>
-				<dict>
-						<key>input_path</key>
-						<string>%pathname%/Duplicati.app</string>
-						<key>expected_authority_names</key>
-						<array>
-								<string>Developer ID Application: Kenneth Skovhede (2S6R28R577)</string>
-								<string>Developer ID Certification Authority</string>
-								<string>Apple Root CA</string>
-						</array>
-				</dict>
+		    <key>Processor</key>
+		    <string>CodeSignatureVerifier</string>
+		    <key>Arguments</key>
+		    <dict>
+		        <key>input_path</key>
+		        <string>%pathname%/Duplicati.app</string>
+		        <key>requirement</key>
+		        <string>anchor apple generic and identifier "com.duplicati.app" and (certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "2S6R28R577")</string>
+		    </dict>
 		</dict>
 	</array>
 </dict>
