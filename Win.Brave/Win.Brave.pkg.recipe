@@ -40,7 +40,7 @@ echo --------------------------------------------------------
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
-IF EXIST "C:\Program Files (x86)" BraveSetup-x64.exe /S
+IF EXIST "C:\Program Files (x86)" %NAME%-%version%-x64.exe /S
 popd
 EXIT
 
@@ -58,7 +58,7 @@ EXIT
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/BraveSetup-x64.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%-x64.exe</string>
 			</dict>
     </dict>
 		<dict>
