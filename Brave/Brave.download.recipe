@@ -33,6 +33,17 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://github.com/brave/browser-laptop/releases</string>
+						<key>re_pattern</key>
+						<string>Brave-(?P&lt;version&gt;[\d\.]+).dmg</string>
+				</dict>
+		</dict>
+		<dict>
 		    <key>Processor</key>
 		    <string>EndOfCheckPhase</string>
 		</dict>
