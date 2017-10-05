@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/software/ix500.html</string>
+                <string>http://scansnap.fujitsu.com/global/dl/mac-ix500.html</string>
                 <key>re_pattern</key>
-                <string>mac-mg(?P&lt;dl_version&gt;[0-9]+)[\S]+[\s]+[\S]V(?P&lt;major_version&gt;[\d\.]+)L(?P&lt;minor_version&gt;[0-9]+)</string>
+                <string>m-mgr-v(?P&lt;version&gt;[\S]+).html</string>
             </dict>
         </dict>
         <dict>
@@ -32,9 +32,10 @@
             <key>Arguments</key>
             <dict>
 						  	<key>filename</key>
-						  	<string>%NAME%-%major_version%.%minor_version%.dmg</string>
+						  	<string>%NAME%-%version%.dmg</string>
 								<key>url</key>
-                <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-v%dl_version%l%minor_version%/MacScanSnapV%dl_version%L%minor_version%UpWW.dmg</string>
+                <string>http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/m-v%version%/MacScanSnap%version%UpWW.dmg</string>
+
             </dict>
         </dict>
         <dict>
@@ -47,7 +48,7 @@
     				<key>Arguments</key>
     				<dict>
     						<key>input_path</key>
-    						<string>%pathname%/MacScanSnapV%dl_version%L%minor_version%UpWW.pkg</string>
+    						<string>%pathname%/MacScanSnapV%version%UpWW.pkg</string>
     						<key>expected_authority_names</key>
     						<array>
     								<string>Developer ID Installer: PFU LIMITED (XW4U7W2E9L)</string>

@@ -23,9 +23,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%major_version%.%minor_version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 				<key>source_path</key>
-				<string>%pathname%/MacScanSnapV%dl_version%L%minor_version%UpWW.pkg</string>
+				<string>%pathname%/MacScanSnapV%version%UpWW.pkg</string>
 				<key>overwrite</key>
 				<string>True</string>
 			</dict>
