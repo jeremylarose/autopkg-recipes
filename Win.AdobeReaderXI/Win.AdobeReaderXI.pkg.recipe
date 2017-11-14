@@ -48,7 +48,6 @@ IF EXIST "C:\Program Files\Adobe\Reader 11.0\Reader\AcroRd32.exe" GOTO UPDATE
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\11.0\FeatureLockDown" /v bUpdater /t REG_DWORD /d 00000000 /f
 
 :UPDATE
-msiexec /p %~dp0extrafiles\AdbeRdrUpd11021.msp /qn /norestart
 						</string>
 				</dict>
 		</dict>
