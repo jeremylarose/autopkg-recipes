@@ -16,17 +16,6 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://ardownload2.adobe.com/pub/adobe/reader/win/11.x/11.0.10/en_US/AdbeRdr11010_en_US.exe</string>
-				<key>download_dir</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
 				<key>Processor</key>
 				<string>URLTextSearcher</string>
 				<key>Arguments</key>
@@ -44,6 +33,17 @@
 				<string>%NAME%-11.%major_version%.%minor_version%.msp</string>
 				<key>url</key>
 				<string>ftp://ftp.adobe.com/pub/adobe/reader/win/11.x/11.%major_version%.%minor_version%/misc/AdbeRdrUpd11%major_version%%minor_version%.msp</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://ardownload2.adobe.com/pub/adobe/reader/win/11.x/11.0.10/en_US/AdbeRdr11010_en_US.exe</string>
+				<key>download_dir</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

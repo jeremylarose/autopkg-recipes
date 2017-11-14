@@ -62,6 +62,8 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\11.0\FeatureL
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/extrafiles</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/AdbeRdrUpd11%major_version%%minor_version%.msp</string>
 			</dict>
     </dict>
 		<dict>
