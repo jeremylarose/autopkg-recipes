@@ -22,9 +22,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-11.%major_version%.%minor_version%_incr.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-11.%major_version%.%minor_version%.pkg</string>
 				<key>source_path</key>
-				<string>%pathname%/AdbeRdrUpd11%major_version%%minor_version%_incr.pkg</string>
+				<string>%pathname%/AdbeRdrUpd11%major_version%%minor_version%.pkg</string>
 				<key>overwrite</key>
 				<string>True</string>
 			</dict>
