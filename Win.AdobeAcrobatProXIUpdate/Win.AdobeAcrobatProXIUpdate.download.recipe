@@ -43,7 +43,7 @@
 				<key>filename</key>
 				<string>%NAME%-11.%major_version%.%minor_version%.msp</string>
 				<key>url</key>
-				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/win/11.x/11.%major_version%.%minor_version%/misc/AcrobatUpd11%major_version%%minor_version%_incr.msp</string>
+				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/win/11.x/11.%major_version%.%minor_version%/misc/AcrobatUpd11%major_version%%minor_version%.msp</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
