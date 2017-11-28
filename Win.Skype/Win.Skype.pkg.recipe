@@ -18,14 +18,60 @@
 	<key>Process</key>
 	<array>
 		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/downloads/nop.exe</string>
+						<key>file_content</key>
+						<string>nothing to see here</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .            Installing Skype - Please Wait
+echo .           Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\windows\temp\Skype-full.exe" /t REG_SZ /d "WIN7RTM" /f
+xcopy %~dp0Skype-full.exe C:\windows\temp /I /C /Y
+C:\windows\temp\Skype-full.exe /verysilent /norestart /nolaunch
+del C:\windows\temp\Skype-full.exe
+EXIT
+
+						</string>
+				</dict>
+		</dict>
+		<dict>
 		  <key>Processor</key>
 		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/verysilent /norestart /nolaunch</string>
+				<string>REM</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<key>extra_files</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-full.exe</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%version%.exe</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/nop.exe</string>
 			</dict>
     </dict>
 	</array>
