@@ -32,7 +32,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>http://snappy-driver-installer.org/downloads.html</string>
+						<string>http://www.snappy-driver-installer.org/download/</string>
 						<key>re_pattern</key>
 						<string>SDIO_(?P&lt;SDIO_version1&gt;[\d]+.[\d]+.[\d]+.)(?P&lt;SDIO_version&gt;[\S]+).zip</string>
 				</dict>
