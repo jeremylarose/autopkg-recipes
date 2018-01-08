@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Creates an E5550 driver pack installer.</string>
+	<string>Creates an E5550_5550 driver pack installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.DriverPack-E5550-win10-x64</string>
+	<string>com.github.jeremylarose.pkg.Win.DriverPack-E5550_5550-win10-x64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>E5550</string>
+		<string>E5550_5550</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.DriverPack-E5550-win10</string>
+	<string>com.github.jeremylarose.download.Win.DriverPack-E5550_5550-win10</string>
 	<key>Process</key>
 	<array>
 		<dict>

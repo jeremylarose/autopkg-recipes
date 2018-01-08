@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Creates an E5550 BIOS installer.</string>
+	<string>Creates an E5550_5550 BIOS installer.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Win.BIOS-E5550</string>
+	<string>com.github.jeremylarose.pkg.Win.BIOS-E5550_5550</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>E5550</string>
+		<string>E5550_5550</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Win.BIOS-E5550</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-E5550_5550</string>
 	<key>Process</key>
 	<array>
 		<dict>

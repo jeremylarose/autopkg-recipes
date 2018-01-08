@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest E5550 BIOS Update.</string>
+	<string>Downloads the latest E5550_5550 BIOS Update.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.BIOS-E5550</string>
+	<string>com.github.jeremylarose.download.Win.BIOS-E5550_5550</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>E5550</string>
+		<string>E5550_5550</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -21,7 +21,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>http://www.dell.com/support/home/us/en/19/product-support/product/latitude-e5550-laptop/drivers</string>
+						<string>http://www.dell.com/support/home/us/en/19/product-support/product/latitude-E5550_5550-laptop/drivers</string>
 						<key>re_pattern</key>
             <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]%NAME%(?P&lt;version&gt;[\S]+).exe</string>
 				</dict>

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest E5550 drivers cab.</string>
+	<string>Downloads the latest E5550_5550 drivers cab.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Win.DriverPack-E5550-win10</string>
+	<string>com.github.jeremylarose.download.Win.DriverPack-E5550_5550-win10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>E5550</string>
+		<string>E5550_5550</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
