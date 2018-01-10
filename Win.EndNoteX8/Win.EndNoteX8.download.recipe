@@ -39,7 +39,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-        <string>http://download.endnote.com/updates/18.0/ENX81Update.msp</string>
+        <string>http://download.endnote.com/updates/18.0/ENX8%version%Update.msp</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
