@@ -23,7 +23,7 @@
   			 	 <key>github_repo</key>
   		 		 <string>%GITHUB_REPO%</string>
            <key>asset_regex</key>
-   				<string>https://github.com/horosproject/horos/archive/[\S]+.zip</string>
+   				<string>^[\S]+.zip</string>
   			 </dict>
   			 <key>Processor</key>
   			 <string>GitHubReleasesInfoProvider</string>
