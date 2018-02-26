@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://community.spiceworks.com/support/desktop-release-notes</string>
 						<key>re_pattern</key>
-            <string>blogs/desktop-release-notes/[\S]+\"\^(?P&lt;version&gt;[\d\.]+)[\s]</string>
+            <string>blogs/desktop-release-notes/[\S]+"[?](?P&lt;version&gt;[\d\.]+)[\s]</string>
 				</dict>
 		</dict>
 		<dict>
