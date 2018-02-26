@@ -91,6 +91,7 @@ msiexec /i %NAME%-%version%\iTunes.msi /qn /norestart
 msiexec /i %NAME%-%version%\AppleMobileDeviceSupport.msi /qn /norestart
 msiexec /i %NAME%-%version%\Bonjour.msi /qn /norestart
 popd
+EXIT
 						</string>
 				</dict>
 		</dict>
