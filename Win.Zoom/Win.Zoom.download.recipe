@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://zoom.us/download</string>
 						<key>re_pattern</key>
-            <string>Version[\s](?P&lt;version&gt;[\d\.]+)</string>
+            <string>Version" "(?P&lt;version&gt;[\d\.]+)</string>
 				</dict>
 		</dict>
 		<dict>
