@@ -60,7 +60,7 @@ msiexec /i %~dp0%NAME%-%version%.msi /quiet /qn /norestart ZNoDesktopShortCut="t
 				<key>install_flags</key>
 				<string>REM</string>
 				<key>input_bat_path</key>
-				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.msi</string>
 				<key>pkg_name</key>
