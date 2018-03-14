@@ -23,6 +23,17 @@
 				<key>Arguments</key>
 				<dict>
 						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/nop.exe</string>
+						<key>file_content</key>
+						<string>nothing to see here</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
 						<string>%RECIPE_CACHE_DIR%/install.bat</string>
 						<key>file_content</key>
 						<string>@echo off
@@ -40,13 +51,15 @@ echo --------------------------------------------------------
 
 
 ::Install 64-bit for 64-Bit systems and 32-Bit for 32-Bit Systems
-IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
-pushd "%~dp0"
-IF EXIST "C:\Program Files (x86)" SyncTrayzor-%version%-x64.exe /VERYSILENT
-popd
+IF EXIST "C:\Program Files (x86)" %~dp0downloads\SyncTrayzor-%version%-x64.exe /VERYSILENT
+IF NOT EXIST "C:\Program Files (x86)" %~dp0downloads\SyncTrayzor-%version%-x86.exe /VERYSILENT
+
+:: reopen for current user
+schtasks /Create /tn startsynctrayzor /ru "Users" /sc ONEVENT /MO "*[System[Provider[@Name='Search'] and EventID=444]]" /ec Application /tr "C:\Program Files\SyncTrayzor\SyncTrayzor.exe --minimized" /f
+eventcreate /T Information /ID 444 /L Application /SO Search /D "synctrayzor started"
+schtasks /delete /tn startsynctrayzor /f
 EXIT
 
-:x86install
 						</string>
 				</dict>
 		</dict>
@@ -58,11 +71,13 @@ EXIT
 				<key>pkg_name</key>
 				<string>SyncTrayzor-%version%.exe</string>
 				<key>install_flags</key>
-				<string>/VERYSILENT</string>
+				<string>REM</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/SyncTrayzor-%version%-x64.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/nop.exe</string>
 			</dict>
     </dict>
 		<dict>
@@ -73,6 +88,17 @@ EXIT
 						<key>path_list</key>
 						<array>
 								<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						</array>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+						<key>path_list</key>
+						<array>
+								<string>%RECIPE_CACHE_DIR%/nop.exe</string>
 						</array>
 				</dict>
 		</dict>
