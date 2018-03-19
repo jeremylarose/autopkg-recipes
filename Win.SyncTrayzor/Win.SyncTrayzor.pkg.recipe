@@ -49,8 +49,6 @@ echo .
 echo .
 echo --------------------------------------------------------
 
-Taskkill.exe /F /IM "SyncTrayzor.exe"
-
 ::Install 64-bit for 64-Bit systems and 32-Bit for 32-Bit Systems
 IF EXIST "C:\Program Files (x86)" %~dp0downloads\SyncTrayzor-%version%-x64.exe /VERYSILENT
 IF NOT EXIST "C:\Program Files (x86)" %~dp0downloads\SyncTrayzor-%version%-x86.exe /VERYSILENT
