@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 					<key>cab_extract_path</key>
-					<string>%RECIPE_CACHE_DIR%/%NAME%-%platform%-%version%-%id%</string>
+					<string>%RECIPE_CACHE_DIR%/5290%202-IN-1-%platform%-%version%-%id%</string>
 			</dict>
     </dict>
 		<dict>
