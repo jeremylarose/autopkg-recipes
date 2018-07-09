@@ -23,14 +23,14 @@
 						<key>url</key>
 						<string>http://en.community.dell.com/techcenter/enterprise-client/w/wiki/12525.optiplex-7460-windows-10-driver-pack</string>
 						<key>re_pattern</key>
-            <string>downloads.dell.com[\W](?P&lt;folder&gt;[\S]+)[\W](?P&lt;number&gt;[\S]+)[\W]7460%20AIO-(?P&lt;platform&gt;[\S]+)-(?P&lt;version&gt;[\S]+)-(?P&lt;id&gt;[\S]+).CAB</string>
+            <string>https://downloads.dell.com.*?CAB</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://downloads.dell.com/%folder%/%number%/746O\%20AIO-%platform%-%version%-%id%.CAB</string>
+				<string>%match%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
