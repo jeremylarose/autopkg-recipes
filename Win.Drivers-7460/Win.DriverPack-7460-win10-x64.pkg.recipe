@@ -40,6 +40,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>filename</key>
+				<string>SDIO_%SDIO_version1%%SDIO_version%.zip</string>
 				<key>url</key>
 				<string>http://snappy-driver-installer.org/downloads/SDIO_%SDIO_version1%%SDIO_version%.zip</string>
 			</dict>
