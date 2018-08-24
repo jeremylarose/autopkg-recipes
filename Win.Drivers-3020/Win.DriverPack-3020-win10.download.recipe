@@ -23,7 +23,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://www.dell.com/support/article/us/en/19/how13362/optiplex-3020-windows-10-driver-pack</string>
+						<string>https://www.dell.com/support/article/us/en/04/how13362/optiplex-3020-windows-10-driver-pack?lang=en</string>
 						<key>request_headers</key>
 						<dict>
 										<key>user-agent</key>
