@@ -31,6 +31,11 @@
 						</dict>
 						<key>re_pattern</key>
             <string>downloads.dell.com/(?P&lt;urlstring&gt;[\S]+)-(?P&lt;platform&gt;[\S]+)-(?P&lt;version&gt;[\S]+)-(?P&lt;id&gt;[\S]+).CAB</string>
+						<key>request_headers</key>
+						<dict>
+										<key>user-agent</key>
+										<string>%USER_AGENT%</string>
+						</dict>
 				</dict>
 		</dict>
 		<dict>
