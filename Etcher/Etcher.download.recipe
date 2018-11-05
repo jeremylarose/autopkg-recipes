@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://github.com/resin-io/etcher/releases</string>
+                <string>https://github.com/balena/etcher/releases</string>
                 <key>re_pattern</key>
-                <string>/resin-io/etcher/releases/tag/v(?P&lt;version&gt;[\S]+)"</string>
+                <string>/balena/etcher/releases/tag/v(?P&lt;version&gt;[\S]+)"</string>
             </dict>
         </dict>
         <dict>
@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://github.com/resin-io/etcher/releases/download/v%version%/Etcher-%version%.dmg</string>
+                <string>https://github.com/balena/etcher/releases/download/v%version%/Etcher-%version%.dmg</string>
             </dict>
         </dict>
 
