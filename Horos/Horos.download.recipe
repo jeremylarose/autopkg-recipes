@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://horosproject.org/download/</string>
                 <key>re_pattern</key>
-                <string>Horos(?P&lt;version&gt;[\d\.]+).dmg</string>
+                <string>Horos (?P&lt;version&gt;[\d\.]+) [\S]macOS [\d\.]+</string>
             </dict>
         </dict>
         <dict>
