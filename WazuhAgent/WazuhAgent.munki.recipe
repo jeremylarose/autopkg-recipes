@@ -19,7 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Wazuh HIDS https://wazuh.com/</string>
+			<string>Open Source Host and Endpoint Security</string>
 			<key>developer</key>
 			<string>Wazuh</string>
 			<key>category</key>

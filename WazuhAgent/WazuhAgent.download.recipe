@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest WazuhAgent disk image.</string>
+    <string>Downloads the latest WazuhAgent disk pkg.</string>
     <key>Identifier</key>
     <string>com.github.jeremylarose.download.WazuhAgent</string>
     <key>Input</key>
@@ -17,25 +17,30 @@
     <string>0.5.2</string>
     <key>Process</key>
     <array>
-  		<dict>
-  			<key>Arguments</key>
-  			<dict>
-  				<key>asset_regex</key>
-  				<string>[\S]+.pkg</string>
-  				<key>github_repo</key>
-  				<string>%GITHUB_REPO%</string>
-  			</dict>
-  			<key>Processor</key>
-  			<string>GitHubReleasesInfoProvider</string>
-  		</dict>
-  		<dict>
-  			<key>Processor</key>
-  			<string>URLDownloader</string>
-  		</dict>
-  		<dict>
-  			<key>Processor</key>
-  			<string>EndOfCheckPhase</string>
-  		</dict>
+      <dict>
+          <key>Processor</key>
+          <string>URLTextSearcher</string>
+          <key>Arguments</key>
+          <dict>
+              <key>url</key>
+              <string>https://documentation.wazuh.com/current/installation-guide/packages-list/index.html</string>
+              <key>re_pattern</key>
+              <string>wazuh-agent-(?P&lt;v1&gt;[0-9]+).(?P&lt;v2&gt;[0-9]+).(?P&lt;v3&gt;[0-9]+)-(?P&lt;v4&gt;[0-9]+).pkg</string>
+          </dict>
+      </dict>
+      <dict>
+          <key>Processor</key>
+          <string>URLDownloader</string>
+          <key>Arguments</key>
+          <dict>
+              <key>url</key>
+              <string>https://packages.wazuh.com/%v1%.x/osx/wazuh-agent-%v1%.%v2%.%v3%-%v4%.pkg</string>
+          </dict>
+      </dict>
+      <dict>
+          <key>Processor</key>
+          <string>EndOfCheckPhase</string>
+      </dict>
   	</array>
 </dict>
 </plist>

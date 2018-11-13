@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>io.resin.WazuhAgent</string>
+		<string>wazuh.WazuhAgent</string>
 		<key>NAME</key>
 		<string>WazuhAgent</string>
 	</dict>
@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%v1%.%v2%.%v3%-%v4%.pkg</string>
 				<key>source_path</key>
 				<string>%pathname%</string>
 			</dict>
