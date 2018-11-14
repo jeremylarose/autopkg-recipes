@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>install_flags</key>
-				<string>/S</string>
+				<string>/qn /norestart</string>
 			</dict>
     </dict>
 	</array>
