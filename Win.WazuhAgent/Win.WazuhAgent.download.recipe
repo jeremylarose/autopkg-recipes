@@ -34,7 +34,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://packages.wazuh.com/%v1%.x/osx/wazuh-agent-%v1%.%v2%.%v3%-%v4%.msi</string>
+						<string>https://packages.wazuh.com/%v1%.x/windows/wazuh-agent-%v1%.%v2%.%v3%-%v4%.msi</string>
 				</dict>
 		</dict>
 		<dict>
