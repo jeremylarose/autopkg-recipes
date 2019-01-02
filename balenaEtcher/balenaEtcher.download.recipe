@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Etcher disk image.</string>
+    <string>Downloads the latest balenaEtcher disk image.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.download.Etcher</string>
+    <string>com.github.jeremylarose.download.balenaEtcher</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Etcher</string>
+        <string>balenaEtcher</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.2</string>

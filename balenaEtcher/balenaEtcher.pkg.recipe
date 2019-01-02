@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Etcher and creates a package.</string>
+	<string>Downloads the latest version of balenaEtcher and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Etcher</string>
+	<string>com.github.jeremylarose.pkg.balenaEtcher</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>io.resin.etcher</string>
+		<string>io.balena.etcher</string>
 		<key>NAME</key>
-		<string>Etcher</string>
+		<string>balenaEtcher</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Etcher</string>
+	<string>com.github.jeremylarose.download.balenaEtcher</string>
 	<key>Process</key>
 	<array>
 		<dict>

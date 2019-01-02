@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Etcher and imports it into Munki.</string>
+	<string>Downloads the latest version of balenaEtcher and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.munki.Etcher</string>
+	<string>com.github.jeremylarose.munki.balenaEtcher</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Etcher</string>
+		<string>balenaEtcher</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -23,11 +23,11 @@
 			<key>description</key>
 			<string>Burn images to SD cards and USB drives, safe and easy.</string>
 			<key>developer</key>
-			<string>resin.io</string>
+			<string>balena.io</string>
 			<key>category</key>
 			<string>Media</string>
 			<key>display_name</key>
-			<string>Etcher</string>
+			<string>balenaEtcher</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Etcher</string>
+	<string>com.github.jeremylarose.download.balenaEtcher</string>
 	<key>Process</key>
 	<array>
 		<dict>
