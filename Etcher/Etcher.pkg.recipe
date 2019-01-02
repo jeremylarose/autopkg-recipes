@@ -37,9 +37,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/Etcher.app</string>
+				<string>%pkgroot%/Applications/balenaEtcher.app</string>
 				<key>source_path</key>
-				<string>%pathname%/Etcher.app</string>
+				<string>%pathname%/balenaEtcher.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
