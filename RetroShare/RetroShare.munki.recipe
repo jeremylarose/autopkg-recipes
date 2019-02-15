@@ -19,7 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Retroshare creates encrypted connections to your friends. Nobody can spy on you. Retroshare is completely decentralized. This means there are no central servers. It is entirely Open-Source and free. </string>
+			<string>RetroShare is a Free and Open Source cross-platform, Friend-2-Friend and secure decentralised communication platform. https://retroshare.cc/ </string>
 			<key>category</key>
 			<string>Communication</string>
 			<key>developer</key>
