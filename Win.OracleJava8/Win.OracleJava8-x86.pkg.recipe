@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hansen-m.download.OracleJava8-Win</string>
+	<string>com.github.jeremylarose.download.Win.OracleJava8-x86</string>
 	<key>Process</key>
 	<array>
 		<dict>
