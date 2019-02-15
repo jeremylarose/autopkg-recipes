@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>Retroshare-[\S]+.exe</string>
+				<string>RetroShare-[\S]+.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
