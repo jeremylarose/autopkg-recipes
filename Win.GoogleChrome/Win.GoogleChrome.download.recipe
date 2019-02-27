@@ -34,15 +34,6 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
-		  <key>Processor</key>
-		  <string>com.github.jeremylarose.SharedProcessors/Unarchiver7z</string>
-			<key>Arguments</key>
-			<dict>
-	  		<key>extract_path</key>
-		  	<string>%RECIPE_CACHE_DIR%/InstallerExtract</string>
-			</dict>
-    </dict>
-		<dict>
 				<key>Processor</key>
 				<string>com.github.hansen-m.SharedProcessors/GoogleChromeWinVersioner</string>
 				<key>Arguments</key>
