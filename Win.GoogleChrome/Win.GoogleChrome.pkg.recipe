@@ -61,7 +61,7 @@ EXIT
 				<key>extra_files</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/googlechromestandaloneenterprise64.msi</string>
 				<key>pkg_name</key>
-				<string>%NAME%-%msiversion%.exe</string>
+				<string>%NAME%-%version%.exe</string>
 			</dict>
     </dict>
 		<dict>
