@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://downloads.remotixcloud.com/rxagentmacqc/RemotixQC.zip</string>
+		<string>https://downloads.remotixcloud.com/qc-mac/RemotixQC.zip</string>
 		<key>NAME</key>
 		<string>Remotix QC</string>
 	</dict>
