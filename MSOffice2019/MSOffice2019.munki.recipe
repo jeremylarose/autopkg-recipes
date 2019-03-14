@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>MSOffice2019</string>
         <key>PRODUCTID</key>
-        <string>525137</string>
+        <string>525133</string>
         <key>DOWNLOADURL</key>
         <string>https://go.microsoft.com/fwlink/?linkid=%PRODUCTID%</string>
         <key>MUNKI_REPO_SUBDIR</key>
