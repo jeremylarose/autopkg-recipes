@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://github.com/balena-io/etcher/releases</string>
                 <key>re_pattern</key>
-                <string>/balena-io/etcher/releases/tag/v(?P&lt;version&gt;[\S]+)"</string>
+                <string>balenaEtcher-(?P&lt;version&gt;[\d\.]+).dmg</string>
             </dict>
         </dict>
         <dict>
