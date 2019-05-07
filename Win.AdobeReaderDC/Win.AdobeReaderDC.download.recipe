@@ -21,7 +21,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>url</key>
-						<string>https://supportdownloads.adobe.com/product.jsp?product=10&amp&platform=Windows</string>
+						<string>https://supportdownloads.adobe.com/product.jsp?product=10&amp;platform=Windows</string>
 						<key>re_pattern</key>
 						<string>Version[\s]20(?P&lt;major_version&gt;[0-9]+).(?P&lt;mid_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)</string>
 				</dict>
