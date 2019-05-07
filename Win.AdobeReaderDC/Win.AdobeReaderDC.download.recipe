@@ -29,8 +29,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%-%major_version%.%mid_version%.%minor_version%.exe</string>
 				<key>url</key>
 				<string>http://ardownload.adobe.com/pub/adobe/reader/win/AcrobatDC/%major_version%%mid_version%%minor_version%/AcroRdrDC%major_version%%mid_version%%minor_version%_en_US.exe</string>
 				<key>download_dir</key>
