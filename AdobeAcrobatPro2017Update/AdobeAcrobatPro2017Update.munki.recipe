@@ -30,6 +30,8 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>blocking_applications</key>
+			<string>Adobe Acrobat</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
