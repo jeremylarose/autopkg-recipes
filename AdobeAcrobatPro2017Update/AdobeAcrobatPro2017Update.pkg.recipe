@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of AdobeAcrobatPro2017Update and creates a package.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.AdobeAcrobatPro2017Update</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeAcrobatPro2017Update</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.AdobeAcrobatPro2017Update</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-17.%mid_version%.%version%.pkg</string>
+				<key>source_path</key>
+				<string>%pathname%/Acrobat2017Upd17%mid_version%%version%.pkg</string>
+				<key>overwrite</key>
+				<string>True</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
