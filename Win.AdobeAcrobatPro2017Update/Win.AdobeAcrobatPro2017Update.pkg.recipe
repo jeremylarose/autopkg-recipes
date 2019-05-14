@@ -48,7 +48,7 @@ echo --------------------------------------------------------
 				<key>install_flags</key>
 				<string>/qn /norestart</string>
 				<key>pkg_name</key>
-				<string>%NAME%-17.%mid_version%.%minor_version%.exe</string>
+				<string>%NAME%-%version%.exe</string>
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 			</dict>
