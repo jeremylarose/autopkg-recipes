@@ -31,6 +31,12 @@
 			<dict>
 				<key>url</key>
 				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/win/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.msp</string>
+				<key>curl_opts</key>
+				<array>
+						<string>--retry 10</string>
+						<string>--retry-delay 2</string>
+						<string>--retry-max-time 40</string>
+				</array>
 				<key>request_headers</key>
 				<dict>
 								<key>user-agent</key>

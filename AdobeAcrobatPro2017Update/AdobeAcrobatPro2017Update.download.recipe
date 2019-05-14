@@ -33,6 +33,12 @@
 				<string>%NAME%-17.%mid_version%.%version%.dmg</string>
 				<key>url</key>
 				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/mac/Acrobat2017/17%mid_version%%version%/Acrobat2017Upd17%mid_version%%version%.dmg</string>
+				<key>curl_opts</key>
+				<array>
+						<string>--retry 10</string>
+						<string>--retry-delay 2</string>
+						<string>--retry-max-time 40</string>
+				</array>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
