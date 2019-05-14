@@ -31,6 +31,11 @@
 			<dict>
 				<key>url</key>
 				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/win/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.msp</string>
+				<key>request_headers</key>
+				<dict>
+								<key>user-agent</key>
+								<string>Mozilla/5.0 (Windows NT 10.0; Win64; x64)</string>
+				</dict>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
