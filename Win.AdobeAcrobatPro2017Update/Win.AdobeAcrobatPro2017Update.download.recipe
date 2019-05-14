@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest Acrobat Pro 2017 Update</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.Win.AdobeAcrobatPro2017Update</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeAcrobatPro2017Update</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html</string>
+						<key>re_pattern</key>
+            <string>dcclassic17.(?P&lt;mid_version&gt;[0-9]+)[\S]+[\s]target="_blank"[\s][\S]+17.(?P&lt;mid_version&gt;[0-9]+).(?P&lt;minor_version&gt;[0-9]+)</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/win/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.msp</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
