@@ -28,7 +28,7 @@
 										<string>Mozilla/5.0 (Windows NT 10.0; Win64; x64)</string>
 						</dict>
 						<key>re_pattern</key>
-            <string>Version[\s](?P&lt;version&gt;[\d\.]+)[\s]</string>
+            <string>Version[\s](?P&lt;version&gt;[\d\.]+)[\S]</string>
 				</dict>
 		</dict>
 		<dict>
