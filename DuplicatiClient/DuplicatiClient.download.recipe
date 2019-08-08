@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of DuplicatiClient.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.download.DuplicatiClient</string>
+	<key>Input</key>
+	<dict>
+		<key>GITHUB_REPO</key>
+		<string>Pectojin/duplicati-client</string>
+		<key>NAME</key>
+		<string>DuplicatiClient</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://github.com/Pectojin/duplicati-client/releases</string>
+						<key>re_pattern</key>
+						<string>duplicati_client_(?P&lt;version&gt;[\d\.]+)_macos.zip</string>
+				</dict>
+		</dict>
+		<dict>
+				<key>Processor</key>
+				<string>URLDownloader</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>https://github.com/Pectojin/duplicati-client/releases/download/%version%_beta/duplicati_client_%version&_macos.zip</string>
+				</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
