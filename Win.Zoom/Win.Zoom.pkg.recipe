@@ -63,7 +63,7 @@ EXIT
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.msi</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version_major%.%version_minor%.msi</string>
 				<key>pkg_name</key>
 				<string>%NAME%-%version%.exe</string>
 				<key>source_path</key>
