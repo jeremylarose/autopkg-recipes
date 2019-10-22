@@ -48,7 +48,7 @@ echo .
 echo .
 echo --------------------------------------------------------
 
-msiexec /i %~dp0%NAME%-%version%.msi /quiet /qn /norestart ZNoDesktopShortCut="true"
+msiexec /i %~dp0%NAME%-%version_major%.%version_minor%.msi /quiet /qn /norestart ZNoDesktopShortCut="true"
 EXIT
 						</string>
 				</dict>

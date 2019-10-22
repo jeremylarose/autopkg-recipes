@@ -28,14 +28,14 @@
 										<string>Mozilla/5.0 (Windows NT 10.0; Win64; x64)</string>
 						</dict>
 						<key>re_pattern</key>
-            <string>Version[\s](?P&lt;version&gt;[\d\.]+)[\S]</string>
+            <string>Version[\s](?P&lt;version_major&gt;[\d\.]+)[\s][\S](?P&lt;version_minor&gt;[\d\.]+)[\S]</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%.msi</string>
+				<string>%NAME%-%version_major%.%version_minor%.msi</string>
 				<key>url</key>
 				<string>https://www.zoom.us/client/latest/ZoomInstallerFull.msi</string>
 				<key>request_headers</key>
