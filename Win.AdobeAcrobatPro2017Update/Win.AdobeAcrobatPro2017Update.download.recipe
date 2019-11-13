@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html</string>
 						<key>re_pattern</key>
-            <string>dcclassic17.(?P&lt;mid_version&gt;[0-9]+)[\S]+em[\W]17.[0-9]+.(?P&lt;minor_version&gt;[0-9]+)[\s][\W]+[\s]update,[\s][\W]+[\s][0-9]+,[\s][0-9]+[\S]</string>
+            <string>dcclassic17.(?P&lt;mid_version&gt;[0-9]+)[\S]+em[\W]17.[0-9]+.(?P&lt;minor_version&gt;[0-9]+)[\s][\w]+[\s]update,[\s][\w]+[\s][0-9]+,[\s][0-9]+[\S]</string>
 				</dict>
 		</dict>
 		<dict>
