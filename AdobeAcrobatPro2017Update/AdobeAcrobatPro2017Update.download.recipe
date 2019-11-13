@@ -26,8 +26,6 @@
             <string>dcclassic17.(?P&lt;mid_version&gt;[0-9]+)[\S]+[\s]target="_blank"[\s]data-disable-query="false"[\s][\S]+17.[0-9]+.(?P&lt;minor_version&gt;[0-9]+)</string>
 				</dict>
 		</dict>
-		<key>version</key>
-		<string>17.%mid_version%.%minor_version%</string>
 		<dict>
 			<key>Arguments</key>
 			<dict>
