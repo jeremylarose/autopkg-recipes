@@ -23,16 +23,18 @@
 						<key>url</key>
 						<string>https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html</string>
 						<key>re_pattern</key>
-            <string>dcclassic17.(?P&lt;mid_version&gt;[0-9]+)[\S]+[\s]target="_blank"[\s]data-disable-query="false"[\s][\S]+17.[0-9]+.(?P&lt;version&gt;[0-9]+)</string>
+            <string>dcclassic17.(?P&lt;mid_version&gt;[0-9]+)[\S]+[\s]target="_blank"[\s]data-disable-query="false"[\s][\S]+17.[0-9]+.(?P&lt;minor_version&gt;[0-9]+)</string>
+						<key>version</key>
+						<string>17.%mid_version%.%minor_version%</string>
 				</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-17.%mid_version%.%version%.dmg</string>
+				<string>%NAME%-17.%mid_version%.%minor_version%.dmg</string>
 				<key>url</key>
-				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/mac/Acrobat2017/17%mid_version%%version%/Acrobat2017Upd17%mid_version%%version%.dmg</string>
+				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/mac/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -47,7 +49,7 @@
 				<key>Arguments</key>
 				<dict>
 						<key>input_path</key>
-						<string>%pathname%/Acrobat2017Upd17%mid_version%%version%.pkg</string>
+						<string>%pathname%/Acrobat2017Upd17%mid_version%%minor_version%.pkg</string>
 						<key>expected_authority_names</key>
 						<array>
 								<string>Developer ID Installer: Adobe Systems, Inc. (JQ525L2MZD)</string>
