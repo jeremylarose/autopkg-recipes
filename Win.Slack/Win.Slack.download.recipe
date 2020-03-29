@@ -23,7 +23,7 @@
 						<key>url</key>
 						<string>https://slack.com/release-notes/windows/rss</string>
 						<key>re_pattern</key>
-						<string>https://downloads.slack-edge.com/releases/slack-standalone-(?P&lt;version&gt;[0-9]+).msi</string>
+						<string>https://downloads.slack-edge.com/releases/slack-standalone-(?P&lt;version&gt;[\d\.]+).msi</string>
 				</dict>
 		</dict>
 		<dict>
