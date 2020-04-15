@@ -36,10 +36,21 @@
 				</dict>
 		</dict>
 		<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+						<key>url</key>
+						<string>http://endnote.com/downloads/available-updates</string>
+						<key>re_pattern</key>
+						<string>EndNote X9.(?P&lt;midversion&gt;[0-9]+).(?P&lt;minorversion&gt;[0-9]+) for Windows</string>
+				</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-        <string>http://download.endnote.com/updates/19.0/ENX9%version%Update.msp</string>
+        <string>http://download.endnote.com/updates/19.0/ENX9%midversion%%minorversion%Update.msp</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
