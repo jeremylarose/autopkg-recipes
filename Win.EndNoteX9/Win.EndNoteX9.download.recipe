@@ -32,7 +32,7 @@
 						<key>url</key>
 						<string>http://endnote.com/downloads/available-updates</string>
 						<key>re_pattern</key>
-						<string>EndNote X9.(?P&lt;version&gt;[0-9]+) for Windows</string>
+						<string>EndNote X9.(?P&lt;version&gt;[\d\.]+) for Windows</string>
 				</dict>
 		</dict>
 		<dict>
