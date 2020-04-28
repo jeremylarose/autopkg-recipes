@@ -45,7 +45,7 @@
 						<key>url</key>
 						<string>https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html</string>
 						<key>re_pattern</key>
-            <string>dcclassic17.%mid_version%[\s][\S]+disablelinktracking[\D]+(?P&lt;version&gt;[\d\.]+)</string>
+            <string>dcclassic17.%mid_version%[\S]+[\s][\S]+disablelinktracking[\D]+(?P&lt;version&gt;[\d\.]+)</string>
 				</dict>
 		</dict>
 		<dict>
