@@ -37,10 +37,8 @@
             <string>17.%mid_version%.(?P&lt;minor_version&gt;[0-9]+)[\D]</string>
 				</dict>
 		</dict>
-		<dict>
-			<key>version</key>
-			<string>17.%mid_version%.%minor_version%</string>
-		</dict>
+    <key>version</key>
+		<string>17.%mid_version%.%minor_version%</string>
 		<dict>
 			<key>Arguments</key>
 			<dict>
