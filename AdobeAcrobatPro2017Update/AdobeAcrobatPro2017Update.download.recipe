@@ -44,7 +44,7 @@
 				<string>17.%mid_version%.%minor_version%</string>
 			</dict>
 			<key>Processor</key>
-			<string>SET_VERSION</string>
+			<string>Versioner</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
