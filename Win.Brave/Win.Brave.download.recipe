@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Brave</string>
 		<key>GITHUB_REPO</key>
-		<string>bbrave/brave-browser</string>
+		<string>brave/brave-browser</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
