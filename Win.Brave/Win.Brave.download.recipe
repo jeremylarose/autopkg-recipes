@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Brave</string>
 		<key>GITHUB_REPO</key>
-		<string>brave/browser-laptop</string>
+		<string>bbrave/brave-browser</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>BraveSetup-x64.exe</string>
+				<string>BraveBrowserSilentSetup.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%-x64.exe</string>
+				<string>BraveBrowserSilentSetup-%version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -41,7 +41,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>BraveSetup-ia32.exe</string>
+				<string>BraveBrowserSilentSetup32.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -52,7 +52,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%-%version%-ia32.exe</string>
+				<string>BraveBrowserSilentSetup32-%version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
