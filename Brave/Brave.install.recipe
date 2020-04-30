@@ -28,7 +28,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>Brave.app</string>
+						<string>Brave Browser.app</string>
 					</dict>
 				</array>
 			</dict>

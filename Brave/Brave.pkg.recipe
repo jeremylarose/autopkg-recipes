@@ -37,9 +37,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/Brave.app</string>
+				<string>%pkgroot%/Applications/Brave Browser.app</string>
 				<key>source_path</key>
-				<string>%pathname%/Brave.app</string>
+				<string>%pathname%/Brave Browser.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
