@@ -40,7 +40,7 @@ echo --------------------------------------------------------
 ::Install new version
 IF NOT EXIST "C:\Program Files (x86)" GOTO x86install
 pushd "%~dp0"
-IF EXIST "C:\Program Files (x86)" BraveBrowserSilentSetup-%version%.exe /S
+IF EXIST "C:\Program Files (x86)" BraveBrowserSetup-%version%.exe /S
 popd
 EXIT
 
@@ -60,7 +60,7 @@ EXIT
 				<key>input_bat_path</key>
 				<string>%RECIPE_CACHE_DIR%/install.bat</string>
 				<key>extra_files</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/BraveBrowserSilentSetup-%version%.exe</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/BraveBrowserSetup-%version%.exe</string>
 			</dict>
     </dict>
 		<dict>

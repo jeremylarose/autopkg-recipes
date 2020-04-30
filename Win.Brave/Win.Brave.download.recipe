@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>BraveBrowserSilentSetup.exe</string>
+				<string>BraveBrowserSetup.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>BraveBrowserSilentSetup-%version%.exe</string>
+				<string>BraveBrowserSetup-%version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -41,7 +41,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>BraveBrowserSilentSetup32.exe</string>
+				<string>BraveBrowserSetup32.exe</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
@@ -52,7 +52,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>BraveBrowserSilentSetup32-%version%.exe</string>
+				<string>BraveBrowserSetup32-%version%.exe</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
