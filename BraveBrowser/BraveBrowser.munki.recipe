@@ -14,6 +14,11 @@
 		<string>BraveBrowser</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>blocking_applications</key>
+			<array>
+					<string>Brave</string>
+					<string>Brave Browser</string>
+			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
