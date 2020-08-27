@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Installs the latest version of Brave</string>
+	<string>Installs the latest version of Brave Browser</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.install.Brave</string>
+	<string>com.github.jeremylarose.install.BraveBrowser</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Brave</string>
+	<string>com.github.jeremylarose.download.BraveBrowser</string>
 	<key>Process</key>
 	<array>
 		<dict>

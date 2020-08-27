@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Brave.</string>
+	<string>Downloads the latest version of Brave Browser.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.download.Brave</string>
+	<string>com.github.jeremylarose.download.BraveBrowser</string>
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>

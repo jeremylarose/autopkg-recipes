@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Brave and creates a package.</string>
+	<string>Downloads the latest version of Brave Browser and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Brave</string>
+	<string>com.github.jeremylarose.pkg.BraveBrowser</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Downloads the latest version of Brave and imports it into Munki</string>
+	<string>Downloads the latest version of Brave Browser and imports it into Munki</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.munki.Brave</string>
+	<string>com.github.jeremylarose.munki.BraveBrowser</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -23,9 +23,9 @@
 			<key>category</key>
 			<string>Internet</string>
 			<key>developer</key>
-			<string>Brave</string>
+			<string>BraveBrowser</string>
 			<key>display_name</key>
-			<string>Brave</string>
+			<string>Brave Browser</string>
 			<key>minimum_os_version</key>
 			<string>10.9</string>
 			<key>name</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.pkg.Brave</string>
+	<string>com.github.jeremylarose.pkg.BraveBrowser</string>
     <key>Process</key>
     <array>
         <dict>
