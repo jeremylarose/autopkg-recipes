@@ -14,11 +14,20 @@
 		<string>BraveBrowser</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>2.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jeremylarose.download.BraveBrowser</string>
 	<key>Process</key>
 	<array>
+		<dict>
+				<key>Processor</key>
+				<string>AppDmgVersioner</string>
+				<key>Arguments</key>
+				<dict>
+						<key>dmg_path</key>
+						<string>%pathname%</string>
+				</dict>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
