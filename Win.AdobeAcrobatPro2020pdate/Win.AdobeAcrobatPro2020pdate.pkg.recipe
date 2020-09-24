@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of AdobeAcrobatPro2020Update Executables.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.Win.AdobeAcrobatPro2020Update</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdobeAcrobatPro2020Update</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Win.AdobeAcrobatPro2020Update</string>
+	<key>Process</key>
+	<array>
+		<dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+						<key>file_path</key>
+						<string>%RECIPE_CACHE_DIR%/install.bat</string>
+						<key>file_content</key>
+						<string>@echo off
+
+cls
+echo --------------------------------------------------------
+echo .
+echo .
+echo .       Installing Adobe Acrobat 2020 Update- Please Wait
+echo .          Window will close once installed
+echo .
+echo .
+echo --------------------------------------------------------
+
+						</string>
+				</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+		  <string>com.github.jeremylarose.SharedProcessors/PkgCreator7z</string>
+			<key>Arguments</key>
+			<dict>
+				<key>install_flags</key>
+				<string>/qn /norestart</string>
+				<key>pkg_name</key>
+				<string>%NAME%-20.%mid_version%.%minor_version%.exe</string>
+				<key>input_bat_path</key>
+				<string>%RECIPE_CACHE_DIR%/install.bat</string>
+			</dict>
+    </dict>
+	</array>
+</dict>
+</plist>
