@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -13,7 +12,7 @@
 		<string>AdobeAcrobatPro2017Update</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>2.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jeremylarose.download.AdobeAcrobatPro2017Update</string>
 	<key>Process</key>
@@ -22,9 +21,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-17.%mid_version%.%minor_version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-20.%mid_version%.%minor_version%.pkg</string>
 				<key>source_path</key>
-				<string>%pathname%/Acrobat2017Upd17%mid_version%%minor_version%.pkg</string>
+				<string>%pathname%/Acrobat2020Upd20%mid_version%%minor_version%.pkg</string>
 				<key>overwrite</key>
 				<string>True</string>
 			</dict>
