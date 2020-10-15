@@ -58,7 +58,7 @@
     			<key>Arguments</key>
     			<dict>
     					<key>dmg_path</key>
-    					<string>%pathname%/Download/MacSSHomeInstaller_%major%%_%minor%_%latest%.dmg</string>
+    					<string>%pathname%/Download/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg</string>
     					<key>items_to_copy</key>
     					<array>
     							<dict>
