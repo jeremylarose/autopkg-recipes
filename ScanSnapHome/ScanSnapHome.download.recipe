@@ -38,6 +38,10 @@
             </dict>
         </dict>
         <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
     		    <key>Processor</key>
     		    <string>CodeSignatureVerifier</string>
     		    <key>Arguments</key>
@@ -62,14 +66,12 @@
     									<string>ScanSnap Home.pkg</string>
     									<key>destination_path</key>
     									<string>%RECIPE_CACHE_DIR%/%NAME%-%major%.%minor%.%latest%.pkg</string>
+                      <key>download_changed</key>
+    									<string>True</string>
     							</dict>
     					</array>
     			</dict>
     		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
     </array>
 </dict>
 </plist>
