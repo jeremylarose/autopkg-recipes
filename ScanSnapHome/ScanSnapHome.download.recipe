@@ -35,7 +35,6 @@
 						  	<string>%NAME%-%major%.%minor%.%latest%.dmg</string>
 								<key>url</key>
                 <string>https://origin.pfultd.com/downloads/ss/sshinst/m-%major%%minor%%latest%/MacSSHOfflineInstaller_%major%%_%minor%_%latest%.dmg</string>
-
             </dict>
         </dict>
         <dict>
