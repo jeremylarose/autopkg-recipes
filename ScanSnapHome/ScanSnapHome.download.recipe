@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest ScanSnapHome disk image.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.download.ScanSnapHome</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>ScanSnapHome</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://scansnap.fujitsu.com/global/dl/mac-sshoffline.html</string>
+                <key>re_pattern</key>
+                <string>ScanSnap Home Offline Installer (?P&lt;major&gt;[0-9]).(?P&lt;minor&gt;[0-9]).(?P&lt;latest&gt;[0-9]+)</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+						  	<key>filename</key>
+						  	<string>%NAME%-%major%.%minor%.%latest%.dmg</string>
+								<key>url</key>
+                <string>https://origin.pfultd.com/downloads/ss/sshinst/m-%major%%minor%%latest%/MacSSHOfflineInstaller_%major%%_%minor%_%latest%.dmg</string>
+
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+    		    <key>Processor</key>
+    		    <string>CodeSignatureVerifier</string>
+    		    <key>Arguments</key>
+    		    <dict>
+    		        <key>input_path</key>
+    		        <string>%pathname%/SSHDownloadInstaller.app</string>
+    		        <key>requirement</key>
+    		        <string>anchor apple generic and identifier "com.fujitsu.pfu.scansnap.Home.DLInstall" and (certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = XW4U7W2E9L)</string>
+    		    </dict>
+    		</dict>
+    </array>
+</dict>
+</plist>
