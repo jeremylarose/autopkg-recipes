@@ -59,7 +59,7 @@
             <dict>
 						  	<key>filename</key>
 						  	<string>%NAME%-%major%.%minor%.%latest%-Installer.dmg</string>
-								<key>PKG</key>
+								<key>url</key>
                 <string>%pathname%/Download/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg</string>
             </dict>
         </dict>
