@@ -53,25 +53,16 @@
     		    </dict>
     		</dict>
         <dict>
-    			<key>Processor</key>
-    			<string>InstallFromDMG</string>
-    			<key>Arguments</key>
-    			<dict>
-    					<key>dmg_path</key>
-    					<string>%pathname%/Download/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg</string>
-    					<key>items_to_copy</key>
-    					<array>
-    							<dict>
-    									<key>source_item</key>
-    									<string>ScanSnap Home.pkg</string>
-    									<key>destination_path</key>
-    									<string>%RECIPE_CACHE_DIR%/%NAME%-%major%.%minor%.%latest%.pkg</string>
-                      <key>download_changed</key>
-    									<string>True</string>
-    							</dict>
-    					</array>
-    			</dict>
-    		</dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+						  	<key>filename</key>
+						  	<string>%NAME%-%major%.%minor%.%latest%-Installer.dmg</string>
+								<key>PKG</key>
+                <string>%pathname%/Download/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg</string>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
