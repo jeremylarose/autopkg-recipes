@@ -25,7 +25,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%major%.%minor%.%latest%.pkg</string>
 				<key>source_path</key>
-				<string>%pathname%/ScanSnap Manager.pkg</string>
+				<string>%pathname%/ScanSnap Home.pkg</string>
 				<key>overwrite</key>
 				<string>True</string>
 			</dict>
