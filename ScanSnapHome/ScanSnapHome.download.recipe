@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>http://scansnap.fujitsu.com/global/dl/mac-sshoffline.html</string>
                 <key>re_pattern</key>
-                <string>ScanSnap Home Offline Installer (?P&lt;major&gt;[0-9]).(?P&lt;minor&gt;[0-9]).(?P&lt;latest&gt;[0-9]+)</string>
+                <string>ScanSnap[\s]Home[\s]Offline[\s]Installer[\s](?P&lt;major&gt;[0-9]).(?P&lt;minor&gt;[0-9]).(?P&lt;latest&gt;[0-9])</string>
             </dict>
         </dict>
         <dict>
