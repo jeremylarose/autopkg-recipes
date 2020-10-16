@@ -52,17 +52,6 @@
     		        <string>anchor apple generic and identifier "com.fujitsu.pfu.scansnap.Home.DLInstall" and (certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = XW4U7W2E9L)</string>
     		    </dict>
     		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-						  	<key>filename</key>
-						  	<string>%NAME%-%major%.%minor%.%latest%-Installer.dmg</string>
-								<key>url</key>
-                <string>%pathname%/Download/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg</string>
-            </dict>
-        </dict>
     </array>
 </dict>
 </plist>
