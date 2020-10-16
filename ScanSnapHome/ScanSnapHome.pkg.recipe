@@ -25,9 +25,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%major%.%minor%.%latest%.pkg</string>
 				<key>source_path</key>
-				<string>%pathname%/Download/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg/ScanSnap Home.pkg</string>
-				<key>overwrite</key>
-				<string>True</string>
+				<string>%RECIPE_CACHE_DIR%/MacSSHomeInstaller_%major%_%minor%_%latest%.dmg/ScanSnap Home.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>

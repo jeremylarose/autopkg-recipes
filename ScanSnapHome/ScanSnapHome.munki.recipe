@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.ScanSnapHome</string>
+	<string>com.github.jeremylarose.pkg.ScanSnapHome</string>
     <key>Process</key>
     <array>
         <dict>
