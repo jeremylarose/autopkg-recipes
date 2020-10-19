@@ -79,8 +79,8 @@ class PkgCreator7z(Processor):
 
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
-        PkgCreator7zr = os.path.join(PkgCreator7z_dir, b'7zr')
-        PkgCreator7z_Sfx = os.path.join(PkgCreator7z_dir, b'7zSD.sfx')
+        PkgCreator7zr = os.path.join(PkgCreator7z_dir, '7zr')
+        PkgCreator7z_Sfx = os.path.join(PkgCreator7z_dir, '7zSD.sfx')
         PkgCreator7z_config = os.path.join(PkgCreator7z_dir, '7zconfig.txt')
         PkgCreator7z_bat = os.path.join(PkgCreator7z_dir, 'install.bat')
         PkgCreator7z_archive = os.path.join(PkgCreator7z_dir, 'archive.7z')
