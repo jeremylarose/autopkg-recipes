@@ -45,7 +45,7 @@
 				<key>version</key>
 				<string>17.%mid_version%.%minor_version%</string>
 				<key>url</key>
-				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/mac/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.dmg</string>
+				<string>https://ardownload2.adobe.com/pub/adobe/acrobat/mac/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

@@ -41,7 +41,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>ftp://ftp.adobe.com/pub/adobe/acrobat/win/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.msp</string>
+        <string>https://ardownload2.adobe.com/pub/adobe/acrobat/win/Acrobat2017/17%mid_version%%minor_version%/Acrobat2017Upd17%mid_version%%minor_version%.msp</string>
 				<key>request_headers</key>
 				<dict>
 								<key>user-agent</key>
