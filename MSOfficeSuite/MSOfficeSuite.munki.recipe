@@ -40,7 +40,7 @@
       			<key>developer</key>
       			<string>Microsoft</string>
             <key>display_name</key>
-            <string>Office Suite</string>
+            <string>Office Suite 2021</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
