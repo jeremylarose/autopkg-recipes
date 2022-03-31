@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://repo.saltproject.io/</string>
                 <key>re_pattern</key>
-                <string>href="https://repo.saltproject.io/osx/salt-(?P&lt;version&gt;[\d\.]+)-py3-x86_64.pkg"</string>
+                <string>href="https://repo.saltproject.io/osx/salt-(?P&lt;version&gt;[\d\.]+)-(?P&lt;version2&gt;[\d\.]+)-py3-x86_64.pkg"</string>
             </dict>
         </dict>
         <dict>
@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://repo.saltproject.io/osx/salt-%version%-py3-x86_64.pkg</string>
+                <string>https://repo.saltproject.io/osx/salt-%version%-%version2%-py3-x86_64.pkg</string>
             </dict>
         </dict>
         <dict>
