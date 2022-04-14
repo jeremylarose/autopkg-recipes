@@ -30,7 +30,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/%major_version%%mid_version%%minor_version%/AcroRdrDC%major_version%%mid_version%%minor_version%_en_US.exe</string>
+				<string>http://ardownload.adobe.com/pub/adobe/reader/win/AcrobatDC/%major_version%%mid_version%%minor_version%/AcroRdrDC%major_version%%mid_version%%minor_version%_en_US.exe</string>
 				<key>download_dir</key>
 				<string>%RECIPE_CACHE_DIR%/downloads</string>
 			</dict>
