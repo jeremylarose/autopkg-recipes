@@ -5,16 +5,16 @@
     <key>Description</key>
     <string>Downloads the latest version of Adobe Acrobat 2017 (Classic) and extracts a PKG.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.pkg.AdobeAcrobat2017</string>
+    <string>com.github.jeremylarose.pkg.AdobeAcrobat2017Classic</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>AdobeAcrobat2017</string>
+        <string>AdobeAcrobat2017Classic</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.jeremylarose.download.AdobeAcrobat2017</string>
+    <string>com.github.jeremylarose.download.AdobeAcrobat2017Classic</string>
     <key>Process</key>
     <array>
         <dict>

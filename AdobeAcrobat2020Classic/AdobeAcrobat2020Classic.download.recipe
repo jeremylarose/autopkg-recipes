@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Adobe Acrobat 2017 (Classic).</string>
+    <string>Downloads the latest version of Adobe Acrobat 2020 (Classic).</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.download.AdobeAcrobat2017</string>
+    <string>com.github.jeremylarose.download.AdobeAcrobat2020Classic</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>AdobeAcrobat2017</string>
+        <string>AdobeAcrobat2020Classic</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
@@ -21,7 +21,7 @@
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
                 <key>url</key>
-                <string>https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_2017_Web_WWMUI.dmg</string>
+                <string>https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_2020_Web_WWMUI.dmg</string>
             </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
