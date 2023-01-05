@@ -103,7 +103,7 @@ class PkgCreator7z(Processor):
             pass
         else:
             if not os.path.exists(pkgroot):
-                os.makedirs(pkgroot)
+                os.makedirs(pkgroot, exist_ok=True)
 
             shutil.copytree(PkgCreator7z, PkgCreator7z_dir, symlinks=True)
 
