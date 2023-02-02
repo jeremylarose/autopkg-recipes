@@ -1,0 +1,23 @@
+Description: Downloads the latest EndNote 20 updates and imports it into Munki.
+Identifier: com.github.jeremylarose.munki.EndNote20Updates
+ParentRecipe: com.github.jeremylarose.pkg.EndNote20Updates
+MinimumVersion: '2.3'
+
+Input:
+  NAME: EndNote20Updates
+  MUNKI_REPO_SUBDIR: apps/%NAME%-%ARCHITECTURE%
+  pkginfo:
+    catalogs:
+      - testing
+    description: Bibliographic management app updates.
+    developer: Thomson Reuters
+    display_name: EndNote 20 Updates
+    name: '%NAME%-%ARCHITECTURE%'
+    unattended_install: true
+    supported_architectures: '%ARCHITECTURE%'
+
+Process:
+  - Processor: MunkiImporter
+    Arguments:
+      pkg_path: '%pathname%'
+      repo_subdirectory: '%MUNKI_REPO_SUBDIR%'
