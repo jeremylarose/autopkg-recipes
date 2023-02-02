@@ -112,7 +112,7 @@ Process:
       pkg_request:
         id: com.endnote.EndNote%MAJOR_VERSION%
         options: purge_ds_store
-        pkgname: "%NAME%%MAJOR_VERSION%-updater-%version%"
+        pkgname: "%NAME%-%version%"
         pkgroot: pkgroot
         scripts: Scripts
 

@@ -22,5 +22,5 @@ Input:
 Process:
   - Processor: MunkiImporter
     Arguments:
-      pkg_path: '%RECIPE_CACHE_DIR%/%NAME%-%MAJOR_VERSION%-updater-%version%.pkg'
+      pkg_path: '%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg'
       repo_subdirectory: '%MUNKI_REPO_SUBDIR%'
