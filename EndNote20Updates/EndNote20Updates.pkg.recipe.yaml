@@ -5,7 +5,7 @@ ParentRecipe: com.github.jeremylarose.download.EndNote20Updates
 Input:
   NAME: EndNote
   INT_VERSION: "20"
-  MAJOR_VERSION: 20
+  MAJOR_VERSION: "20"
 
 Process:
   - Processor: PkgRootCreator
