@@ -7,17 +7,20 @@ Input:
   NAME: EndNote20Updates
   MUNKI_REPO_SUBDIR: apps/%NAME%-%ARCHITECTURE%
   pkginfo:
+    blocking_applications:
+      - Microsoft Word
+      - EndNote 20
     catalogs:
       - testing
+    category: reference
     description: Bibliographic management app updates.
     developer: Thomson Reuters
     display_name: EndNote 20 Updates
-    name: '%NAME%-%ARCHITECTURE%'
+    name: '%NAME%'
     unattended_install: true
-    supported_architectures: '%ARCHITECTURE%'
 
 Process:
   - Processor: MunkiImporter
     Arguments:
-      pkg_path: '%pathname%'
+      pkg_path: '%RECIPE_CACHE_DIR%/%NAME%-%MAJOR_VERSION%-updater-%version%.pkg'
       repo_subdirectory: '%MUNKI_REPO_SUBDIR%'
