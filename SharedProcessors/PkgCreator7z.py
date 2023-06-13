@@ -79,7 +79,7 @@ class PkgCreator7z(Processor):
 
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
-        PkgCreator7zr = os.path.join(PkgCreator7z_dir, '7zr')
+        PkgCreator7zz = os.path.join(PkgCreator7z_dir, '7zz')
         PkgCreator7z_Sfx = os.path.join(PkgCreator7z_dir, '7zSD.sfx')
         PkgCreator7z_config = os.path.join(PkgCreator7z_dir, '7zconfig.txt')
         PkgCreator7z_bat = os.path.join(PkgCreator7z_dir, 'install.bat')
@@ -111,9 +111,9 @@ class PkgCreator7z(Processor):
                 for batarg in bat_append:
                     myfile.write(str(batarg))
 
-            os.chmod(PkgCreator7zr, stat.S_IEXEC)
+            os.chmod(PkgCreator7zz, stat.S_IEXEC)
 
-            cmd = [PkgCreator7zr, 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
+            cmd = [PkgCreator7zz, 'a', '-t7z', PkgCreator7z_archive, bat_path, source_path, extra_files, '-r']
 
             proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             (stdout, stderr) = proc.communicate()
