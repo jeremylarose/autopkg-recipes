@@ -98,8 +98,14 @@ class PkgCreator7z(Processor):
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
 
-        if os.path.exists(pkg_path):
-            print(isExist)
+        #This is the test code to try and patch - Ty
+        isExist = os.path.exists(path)
+        print(isExist)
+        
+       
+    #This is the original code
+    #if os.path.exists(pkg_path):
+            #print(isExist)
         else:
             if not os.path.exists(pkgroot):
                 os.makedirs(pkgroot, exist_ok=True)
