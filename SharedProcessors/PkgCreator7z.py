@@ -99,8 +99,7 @@ class PkgCreator7z(Processor):
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
 
         #This is the test code to try and patch - Ty
-        isExist = os.path.exists(path)
-        print(isExist)
+        os.path.exists(pkg_path)
         
        
     #This is the original code
