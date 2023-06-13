@@ -80,7 +80,7 @@ class PkgCreator7z(Processor):
         PkgCreator7z = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'PkgCreator7z')
         PkgCreator7z_dir = os.path.join(pkgroot, 'PkgCreator7z')
         PkgCreator7zz = os.path.join(PkgCreator7z_dir, '7zz')
-        PkgCreator7z_Sfx = os.path.join(PkgCreator7z_dir, '7zSD.sfx')
+        # PkgCreator7z_Sfx = os.path.join(PkgCreator7z_dir, '7zSD.sfx')
         PkgCreator7z_config = os.path.join(PkgCreator7z_dir, '7zconfig.txt')
         PkgCreator7z_bat = os.path.join(PkgCreator7z_dir, 'install.bat')
         PkgCreator7z_archive = os.path.join(PkgCreator7z_dir, 'archive.7z')
@@ -117,8 +117,9 @@ class PkgCreator7z(Processor):
 
             proc = subprocess.Popen(cmd,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             (stdout, stderr) = proc.communicate()
-
-            PkgCreator7z_files = [PkgCreator7z_Sfx, PkgCreator7z_config, PkgCreator7z_archive]
+            
+            #old PkgCreator7z_files = [PkgCreator7z_Sfx, PkgCreator7z_config, PkgCreator7z_archive]
+            PkgCreator7z_files = [PkgCreator7z_config, PkgCreator7z_archive]
             with open(pkg_path, 'w') as outfile:
                 for fname in PkgCreator7z_files:
                     with open(fname) as infile:
