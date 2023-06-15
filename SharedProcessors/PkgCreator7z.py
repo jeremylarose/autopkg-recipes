@@ -18,7 +18,7 @@ import os
 import subprocess
 import shutil
 import stat
-
+#Environment is importing autopkglib
 from autopkglib import Processor, ProcessorError
 
 
@@ -98,13 +98,16 @@ class PkgCreator7z(Processor):
         else:
             self.output('source_filename does not have a currently supported extension... msi, exe, or msp')
 
-        #This is the test code to try and patch - Ty
-        os.path.exists(pkg_path)
         
        
     #This is the original code
-    #if os.path.exists(pkg_path):
-            #print(isExist)
+        #if os.path.exists(pkg_path):
+            #print(isExists)
+
+        #this is the revised code
+        if os.path.exists(pkg_path):
+            print(pkg_path)
+
         else:
             if not os.path.exists(pkgroot):
                 os.makedirs(pkgroot, exist_ok=True)
