@@ -18,7 +18,7 @@ import os
 import subprocess
 import shutil
 import stat
-#Environment is importing autopkglib
+#Environment isn't importing autopkglib
 from autopkglib import Processor, ProcessorError
 
 
