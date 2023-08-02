@@ -20,6 +20,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Tools</string>
 			<key>description</key>
 			<string>vPOP PRO is a state-of-the-art veterinary preoperative orthopaedic planning tool that lets you work more efficiently.</string>
 			<key>developer</key>
