@@ -37,7 +37,7 @@
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.davidbpirie.download.DYMOConnect</string>
+    <string>com.github.davidbpirie.pkg.DYMOConnect</string>
     <key>Process</key>
     <array>
         <dict>
