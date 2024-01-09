@@ -27,7 +27,7 @@
             <key>category</key>
             <string>Printer and Scanner Software</string>
             <key>description</key>
-            <string>DYMO Connect for Desktop Software</string>
+            <string>DYMO Connect for Desktop software allows you to quickly create and print labels to your DYMO Label printer.</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
