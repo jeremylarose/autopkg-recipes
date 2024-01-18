@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of WazuhAgent-arm64 and creates a package.</string>
+	<key>Identifier</key>
+	<string>com.github.jeremylarose.pkg.WazuhAgent-arm64</string>
+	<key>Input</key>
+	<dict>
+		<key>BUNDLE_ID</key>
+		<string>wazuh.WazuhAgent-arm64</string>
+		<key>NAME</key>
+		<string>WazuhAgent-arm64</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.WazuhAgent-arm64</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%v1%.%v2%.%v3%-%v4%.pkg</string>
+				<key>source_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
