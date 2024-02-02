@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%-%version2%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 				<key>source_path</key>
 				<string>%pathname%</string>
 			</dict>
