@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Geneious Prime as configured in com.github.jeremylarose.GeneiousPrime.download.
-
-NOTE: R6,7,8 requires Java 6. See https://support.geneious.com/entries/22070732-Minimum-system-requirements-for-running-Geneious</string>
+	<string>Downloads the latest version of Geneious Prime as configured in com.github.jeremylarose.GeneiousPrime.download</string>
 	<key>Identifier</key>
 	<string>com.github.jeremylarose.GeneiousPrime.munki</string>
 	<key>ParentRecipe</key>
