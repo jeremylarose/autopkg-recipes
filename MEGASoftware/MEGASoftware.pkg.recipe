@@ -9,9 +9,11 @@
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>org.saltstack.saltminion</string>
+		<string>com.igem.pkg.MEGA</string>
 		<key>NAME</key>
 		<string>MEGASoftware</string>
+		<key>VERSION</key>
+		<string>%version%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
