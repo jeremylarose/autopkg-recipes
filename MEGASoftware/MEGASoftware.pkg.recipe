@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Mega and creates a package.</string>
+	<string>Downloads the latest version of MEGASoftware and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.Mega</string>
+	<string>com.github.jeremylarose.pkg.MEGASoftware</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
 		<string>org.saltstack.saltminion</string>
 		<key>NAME</key>
-		<string>Mega</string>
+		<string>MEGASoftware</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.Mega</string>
+	<string>com.github.jeremylarose.download.MEGASoftware</string>
 	<key>Process</key>
 	<array>
 		<dict>

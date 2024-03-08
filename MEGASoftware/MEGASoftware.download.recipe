@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Mega package.</string>
+    <string>Downloads the latest MEGASoftware package.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.download.Mega</string>
+    <string>com.github.jeremylarose.download.MEGASoftware</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Mega</string>
+        <string>MEGASoftware</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.2</string>

@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Downloads the latest version of Mega and imports it into Munki</string>
+	<string>Downloads the latest version of MEGASoftware and imports it into Munki</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.munki.Mega</string>
+	<string>com.github.jeremylarose.munki.MEGASoftware</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Mega</string>
+		<string>MEGASoftware</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.pkg.Mega</string>
+	<string>com.github.jeremylarose.pkg.MEGASoftware</string>
     <key>Process</key>
     <array>
         <dict>
