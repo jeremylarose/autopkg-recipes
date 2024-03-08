@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>com.igem.pkg.MEGA</string>
+		<string>com.igem.pkg.MEGA11</string>
 		<key>NAME</key>
 		<string>MEGASoftware</string>
 		<key>VERSION</key>
