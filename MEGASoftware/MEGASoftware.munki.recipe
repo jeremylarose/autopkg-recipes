@@ -20,6 +20,10 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>blocking_applications</key>
+			<array>
+				<string>MEGA11</string>
+			</array>
 			<key>description</key>
 			<string>Sophisticated and user-friendly software suite for analyzing DNA and protein sequence data from species and populations.</string>
 			<key>category</key>
