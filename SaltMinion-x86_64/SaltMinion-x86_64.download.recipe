@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html</string>
+                <string>https://docs.saltproject.io/salt/install-guide/en/3006/topics/install-by-operating-system/macos.html</string>
                 <key>re_pattern</key>
-                <string>href="https://repo.saltproject.io/salt/py3/macos/latest/salt-(?P&lt;version&gt;[\d\.]+)-py3-x86_64.pkg"</string>
+                <string>href="https://repo.saltproject.io/salt/py3/macos/3006/salt-(?P&lt;version&gt;[\d\.]+)-py3-x86_64.pkg"</string>
             </dict>
         </dict>
         <dict>
@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://repo.saltproject.io/salt/py3/macos/latest/salt-%version%-py3-x86_64.pkg</string>
+                <string>https://repo.saltproject.io/salt/py3/macos/3006/salt-%version%-py3-x86_64.pkg</string>
             </dict>
         </dict>
         <dict>
