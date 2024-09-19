@@ -28,13 +28,26 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://vpop-pro.com/#download</string>
+                <key>re_pattern</key>
+                <string>"https://vpop-([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)/app-updates/vpop-%version%.dmg"</string>
+                <key>result_output_var_name</key>
+                <string>vpop_download_link</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
                 <string>%NAME%-%version%.dmg</string>
                 <key>url</key>
-                <string>https://vpop-pro.com/app-updates/vpop-%version%.dmg</string>
+                <string>https://vpop-%vpop_download_link%/app-updates/vpop-%version%.dmg</string>
             </dict>
         </dict>
         <dict>
