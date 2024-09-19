@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://vpop-pro.com/#download</string>
                 <key>re_pattern</key>
-                <string>"/app-updates/vpop-(?P&lt;version&gt;[\d\.]+).dmg</string>
+                <string>/app-updates/vpop-(?P&lt;version&gt;[\d\.]+).dmg</string>
             </dict>
         </dict>
         <dict>
