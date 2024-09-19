@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest verison of Mendeley Reference Manager</string>
     <key>Identifier</key>
-    <string>com.github.joshua-d-miller.download.mendeleyreferencemanager</string>
+    <string>com.github.jeremylarose.download.MendeleyReferenceManager</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
