@@ -37,7 +37,7 @@
     <key>MinimumVersion</key>
     <string>0.3.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.grahampugh.recipes.download.MendeleyReferenceManager</string>
+    <string>com.github.jeremylarose.download.MendeleyReferenceManager</string>
     <key>Process</key>
     <array>
         <dict>
