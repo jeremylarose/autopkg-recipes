@@ -5,13 +5,13 @@
       <key>Description</key>
       <string>Downloads the latest Windows App installer package.</string>
       <key>Identifier</key>
-      <string>com.github.jeremylarose.download.WindowsApp</string>
+      <string>com.github.jeremylarose.download.MSWindowsApp</string>
       <key>MinimumVersion</key>
       <string>1.0.0</string>
       <key>Input</key>
       <dict>
          <key>NAME</key>
-         <string>WindowsApp</string>
+         <string>MSWindowsApp</string>
          <key>PRODUCTID</key>
          <string>868963</string>
          <key>DOWNLOADURL</key>
