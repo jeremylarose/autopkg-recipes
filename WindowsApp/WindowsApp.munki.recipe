@@ -50,30 +50,20 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.jeremylarose.pkg.WindowsApp</string>
+    <string>com.github.jeremylarose.download.WindowsApp</string>
     <key>Process</key>
     <array>
         <dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-            <key>Arguments</key>
-            <dict>
-                <key>additional_pkginfo</key>
-                <dict>
-                    <key>minimum_os_version</key>
-                    <string>%MINIMUM_OS_VERSION%</string>
-                </dict>
-            </dict>
-        </dict>
-        <dict>
+            <key>Comment</key>
+            <string>Import the pkg into Munki!</string>
             <key>Processor</key>
             <string>MunkiImporter</string>
             <key>Arguments</key>
             <dict>
-                <key>pkg_path</key>
-                <string>%pkg_path%</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
+								<key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
             </dict>
         </dict>
     </array>
