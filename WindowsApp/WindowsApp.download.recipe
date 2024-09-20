@@ -26,8 +26,6 @@
             <dict>
                <key>url</key>
                <string>%DOWNLOADURL%</string>
-               <key>filename</key>
-               <string>%NAME%.pkg</string>
             </dict>
          </dict>
          <dict>
