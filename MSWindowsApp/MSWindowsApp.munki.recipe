@@ -22,7 +22,7 @@
         <dict>
             <key>blocking_applications</key>
             <array>
-                <string>MSWindowsApp</string>
+                <string>WindowsApp</string>
                 <string>Microsoft Remote Desktop</string>
                 <string>Microsoft Error Reporting</string>
                 <string>Microsoft AutoUpdate</string>
