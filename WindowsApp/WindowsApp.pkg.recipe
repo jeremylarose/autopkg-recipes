@@ -5,16 +5,16 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Windows App and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.jeremylarose.pkg.MSWindowsApp</string>
+	<string>com.github.jeremylarose.pkg.WindowsApp</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>MSWindowsApp</string>
+		<string>WindowsApp</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.download.MSWindowsApp</string>
+	<string>com.github.jeremylarose.download.WindowsApp</string>
 	<key>Process</key>
       <array>
          <dict>
