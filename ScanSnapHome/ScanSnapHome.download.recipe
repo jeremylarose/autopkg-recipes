@@ -12,8 +12,6 @@
 		<string>ScanSnap Home</string>
 		<key>SEARCH_URL</key>
 		<string>https://www.pfu.ricoh.com/global/scanners/scansnap/dl/mac-sshoffline.html</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.0.0</string>
@@ -26,11 +24,6 @@
             <dict>
                 <key>url</key>
                 <string>%SEARCH_URL%</string>
-                <key>request_headers</key>
-                <dict>
-                        <key>user-agent</key>
-                        <string>%USER_AGENT%</string>
-                </dict>
                 <key>re_pattern</key>
                 <string>ScanSnap Home Offline Installer (?P&lt;major&gt;[\d])\.(?P&lt;minor&gt;[\d])\.(?P&lt;patch&gt;[\d]+)</string>
             </dict>
