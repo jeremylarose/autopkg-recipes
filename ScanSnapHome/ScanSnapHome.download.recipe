@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>ScanSnap Home</string>
 		<key>SEARCH_URL</key>
-		<string>https://www.pfu.ricoh.com/global/scanners/scansnap/dl/mac-1400-ix1600.html</string>
+		<string>https://www.pfu.ricoh.com/imaging/ss_hist/en/mac/index.html</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.0.0</string>
@@ -25,7 +25,7 @@
                 <key>url</key>
                 <string>%SEARCH_URL%</string>
                 <key>re_pattern</key>
-                <string>ScanSnap Home Download Installer (?P&lt;major&gt;[\d])\.(?P&lt;minor&gt;[\d])\.(?P&lt;patch&gt;[\d]+)</string>
+                <string>ScanSnap Home Dfor Mac (?P&lt;major&gt;[\d])\.(?P&lt;minor&gt;[\d])\.(?P&lt;patch&gt;[\d]+)</string>
             </dict>
         </dict>
         <dict>
