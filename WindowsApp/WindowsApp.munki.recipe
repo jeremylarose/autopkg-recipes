@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Download and add Windows App to Munki</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.munki.MSWindowsApp</string>
+    <string>com.github.jeremylarose.munki.WindowsApp</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MSWindowsApp</string>
+        <string>WindowsApp</string>
         <key>PRODUCTID</key>
         <string>868963</string>
         <key>DOWNLOADURL</key>
@@ -17,12 +17,12 @@
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/%NAME%</string>
         <key>MINIMUM_OS_VERSION</key>
-        <string>10.12.0</string>
+        <string>12.0</string>
         <key>pkginfo</key>
         <dict>
             <key>blocking_applications</key>
             <array>
-                <string>MSWindowsApp</string>
+                <string>Windows App</string>
                 <string>Microsoft Remote Desktop</string>
                 <string>Microsoft Error Reporting</string>
                 <string>Microsoft AutoUpdate</string>
@@ -50,7 +50,7 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.jeremylarose.pkg.MSWindowsApp</string>
+    <string>com.github.jeremylarose.pkg.WindowsApp</string>
     <key>Process</key>
     <array>
         <dict>
