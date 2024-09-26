@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download the latest version of DYMO Connect Software and imports it into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.jeremylarose.munki.dymoconnect</string>
+    <string>com.github.jeremylarose.munki.DYMOConnect</string>
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>
@@ -37,7 +37,7 @@
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.davidbpirie.pkg.DYMOConnect</string>
+    <string>com.github.jeremylarose.pkg.DYMOConnect</string>
     <key>Process</key>
     <array>
         <dict>
