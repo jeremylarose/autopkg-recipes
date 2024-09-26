@@ -32,6 +32,30 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+            <key>postinstall_script</key>
+      			<string>#!/bin/zsh
+              # cleanup
+              if [ -e "/Library/LaunchDaemons/com.dymo.pnpd.plist" ]; then
+                  launchctl unload -w /Library/LaunchDaemons/com.dymo.pnpd.plist
+                  rm -f /Library/LaunchDaemons/com.dymo.pnpd.plist
+              fi
+              if [ -e "/Library/LaunchAgents/com.dymo.dcd.webservice.plist" ]; then
+                  launchctl unload -w /Library/LaunchAgents/com.dymo.dcd.webservice.plist
+                  rm -f /Library/LaunchAgents/com.dymo.dcd.webservice.plist
+              fi
+              if [ -d "/Applications/DYMO Connect Support Tool.app" ]; then
+                  rm -rf "/Applications/DYMO Connect Support Tool.app"
+              fi
+              if [ -d "/Applications/DYMO.WebApi.Mac.Host.app" ]; then
+                  rm -rf "/Applications/DYMO.WebApi.Mac.Host.app"
+              fi
+
+              # add privileged helper tool file
+              touch /Library/PrivilegedHelperTools/com.dymo.dymo-connect.helper
+
+              # optional allow standard users to install printers
+              #/usr/sbin/dseditgroup -o edit -n /Local/Default -a everyone -t group _lpadmin
+      			</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
