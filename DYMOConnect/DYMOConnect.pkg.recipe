@@ -42,7 +42,7 @@
     <dict>
         <key>Arguments</key>
         <dict>
-            <key>inf_path</key>
+            <key>info_path</key>
             <string>%RECIPE_CACHE_DIR%/payload/Applications/DYMO Connect.app/Contents/Info.plist</string>
             <key>plist_keys</key>
             <dict>
