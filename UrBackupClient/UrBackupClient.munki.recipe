@@ -16,7 +16,7 @@
 		<dict>
 			<key>catalogs</key>
 			<array>
-				<string>testing</string>
+				<string>development</string>
 			</array>
 			<key>description</key>
 			<string>client for UrBackup https://urbackup.org/</string>
