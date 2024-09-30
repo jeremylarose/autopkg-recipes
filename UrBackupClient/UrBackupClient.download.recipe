@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://forums.urbackup.org/t/macos-client-2022/10887</string>
                 <key>re_pattern</key>
-                <string>UrBackup%20Client%20(?P&lt;version&gt;2.4[\d\.]+).pkg</string>
+                <string>UrBackup%20Client%20(?P&lt;version&gt;2.4.[\d\.]+).pkg</string>
             </dict>
         </dict>
         <dict>
