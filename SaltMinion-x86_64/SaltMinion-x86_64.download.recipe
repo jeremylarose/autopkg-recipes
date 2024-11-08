@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html</string>
                 <key>re_pattern</key>
-                <string>href="https://packages\.broadcom\.com/artifactory/saltproject-generic/macos/[0-9]*\.[0-9]+/salt-(?P&lt;version&gt;[\d\.]+)-py3-x86_64\.pkg"</string>
+                <string>href="https://packages\.broadcom\.com/artifactory/saltproject-generic/macos/[\d\.]+/salt-(?P&lt;version&gt;[\d\.]+)-py3-x86_64\.pkg"</string>
             </dict>
         </dict>
         <dict>
