@@ -36,8 +36,6 @@
             <array>
                 <string>arm64</string>
             </array>
-            <key>installable_condition</key>
-			<string>NOT arch BEGINSWITH "arm"</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
