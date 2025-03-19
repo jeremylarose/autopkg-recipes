@@ -37,7 +37,7 @@
                 <string>x86_64</string>
             </array>
             <key>installable_condition</key>
-			<string>NOT arch BEGINSWITH "arm"</string>
+		      	<string>NOT arch BEGINSWITH "arm"</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
