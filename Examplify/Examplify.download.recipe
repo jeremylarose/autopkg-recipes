@@ -26,8 +26,7 @@
             <string>%SEARCH_URL%</string>
             <key>curl_opts</key>
             <array>
-              <string>–data-binary</string>
-              <string>-i</string>
+              <string>-X HEAD -I</string>
             </array>
             <key>re_pattern</key>
             <string>releases.examsoft.com/Examplify/(?P&lt;version&gt;[\d\.]+)/Examplify_</string>
