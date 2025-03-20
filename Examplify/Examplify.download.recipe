@@ -10,33 +10,18 @@
 	<dict>
 		<key>NAME</key>
 		<string>Examplify</string>
-		<key>SEARCH_URL</key>
-		<string>https://support.examsoft.com/hc/en-us/articles/11146797283469-Examplify-Download-the-Installers-for-Windows-Mac</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.0.0</string>
 	<key>Process</key>
 	<array>
         <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%SEARCH_URL%</string>
-                <key>re_pattern</key>
-                <string>Examplify_(?P&lt;version&gt;[\d\.]+)-arm64.dmg</string>
-            </dict>
-        </dict>
-        <dict>
         	<key>Processor</key>
         	<string>URLDownloader</string>
         	<key>Arguments</key>
         	<dict>
         	   <key>url</key>
-        	   <string>https://releases.examsoft.com/Examplify/%version%/Examplify_%version%-arm64.dmg</string>
-        	   <key>filename</key>
-        	   <string>%NAME%-%version%.dmg</string>
+        	   <string>https://releases.examsoft.com/Examplify/Examplify_LATEST_mac.dmg</string>
         	</dict>
         </dict>
 		<dict>
@@ -49,7 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.dmg/Examplify_SIGNED.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/Examplify_(?P&lt;version&gt;[\d\.]+).dmg/Examplify_SIGNED.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
             </dict>
