@@ -24,6 +24,8 @@
         <dict>
             <key>url</key>
             <string>%SEARCH_CURL%</string>
+            <string>request_headers</string>
+            <true/>
             <key>re_pattern</key>
             <string>releases.examsoft.com/Examplify/(?P&lt;version&gt;[\d\.]+)/Examplify_</string>
         </dict>
