@@ -28,13 +28,6 @@
             <array>
               <string>-I</string>
             </array>
-            <key>request_headers</key>
-            <dict>
-              <key>content-type</key>
-              <string>application/json</string>
-              <key>user-agent</key>
-              <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15</string>
-            </dict>
             <key>re_pattern</key>
             <string>releases.examsoft.com/Examplify/(?P&lt;version&gt;[\d\.]+)/Examplify_</string>
         </dict>
