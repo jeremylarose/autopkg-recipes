@@ -28,6 +28,7 @@
             <array>
               <string>-I</string>
             </array>
+            <key>request_headers</key>
             <dict>
               <key>content-type</key>
               <string>application/json</string>
