@@ -28,6 +28,12 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+            <key>supported_architectures</key>
+            <array>
+                <string>x86_64</string>
+            </array>
+            <key>installable_condition</key>
+		      	<string>NOT arch BEGINSWITH "arm"</string>
             <key>category</key>
             <string>%MUNKI_CATEGORY%</string>
             <key>developer</key>
