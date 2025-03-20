@@ -48,6 +48,10 @@
          <string>https://releases.examsoft.com/Examplify/%version%/Examplify_%version%-arm64.dmg</string>
          <key>filename</key>
          <string>%NAME%-%version%.dmg</string>
+         <key>curl_opts</key>
+         <array>
+           <string>-v</string>
+         </array>
          <key>request_headers</key>
          <dict>
            <key>content-type</key>
