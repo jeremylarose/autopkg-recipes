@@ -10,7 +10,7 @@
 	<dict>
 		<key>NAME</key>
 		<string>Examplify</string>
-    <key>SEARCH_CURL</key>
+    <key>SEARCH_URL</key>
     <string>https://releases.examsoft.com/Examplify/Examplify_LATEST_mac.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
@@ -19,13 +19,14 @@
 	<array>
     <dict>
         <key>Processor</key>
-        <string>CURLTextSearcher</string>
+        <string>URLTextSearcher</string>
         <key>Arguments</key>
         <dict>
             <key>url</key>
-            <string>%SEARCH_CURL%</string>
+            <string>%SEARCH_URL%</string>
             <key>curl_opts</key>
             <array>
+              <string>–data-binary</string>
               <string>-i</string>
             </array>
             <key>re_pattern</key>
