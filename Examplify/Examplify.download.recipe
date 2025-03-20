@@ -33,7 +33,7 @@
               <key>content-type</key>
               <string>application/json</string>
               <key>user-agent</key>
-              <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15</string>              
+              <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15</string>
             </dict>
             <key>re_pattern</key>
             <string>releases.examsoft.com/Examplify/(?P&lt;version&gt;[\d\.]+)/Examplify_</string>
@@ -60,7 +60,7 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/Examplify_(?P&lt;version&gt;[\d\.]+).dmg/Examplify_SIGNED.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/Examplify_%version%.dmg/Examplify_SIGNED.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
             </dict>
