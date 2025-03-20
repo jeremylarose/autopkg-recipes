@@ -10,20 +10,35 @@
 	<dict>
 		<key>NAME</key>
 		<string>Examplify</string>
+    <key>SEARCH_CURL</key>
+    <string>https://releases.examsoft.com/Examplify/Examplify_LATEST_mac.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.0.0</string>
 	<key>Process</key>
 	<array>
+    <dict>
+        <key>Processor</key>
+        <string>CURLTextSearcher</string>
+        <key>Arguments</key>
         <dict>
-        	<key>Processor</key>
-        	<string>URLDownloader</string>
-        	<key>Arguments</key>
-        	<dict>
-        	   <key>url</key>
-        	   <string>https://releases.examsoft.com/Examplify/Examplify_LATEST_mac.dmg</string>
-        	</dict>
+            <key>url</key>
+            <string>%SEARCH_CURL%</string>
+            <key>re_pattern</key>
+            <string>releases.examsoft.com/Examplify/(?P&lt;version&gt;[\d\.]+)/Examplify_</string>
         </dict>
+    </dict>
+    <dict>
+      <key>Processor</key>
+      <string>URLDownloader</string>
+      <key>Arguments</key>
+      <dict>
+         <key>url</key>
+         <string>https://releases.examsoft.com/Examplify/%version%/Examplify_%version%-arm64.dmg</string>
+         <key>filename</key>
+         <string>%NAME%-%version%.dmg</string>
+      </dict>
+    </dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
