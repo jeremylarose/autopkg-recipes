@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of Examplify-intel and imports into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.jeremylarose.munki.Examplify-intel</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Examplify-intel</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/Examplify</string>
+        <key>MUNKI_CATEGORY</key>
+        <string>Tools</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+          	<string>To prepare to take exams on your device, you need to download, install, and register Examplify.</string>
+            <key>display_name</key>
+            <string>Examplify</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>category</key>
+            <string>%MUNKI_CATEGORY%</string>
+            <key>developer</key>
+            <string>Examsoft</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>2.0.0</string>
+    <key>ParentRecipe</key>
+	<string>com.github.jeremylarose.download.Examplify-intel</string>
+    <key>Process</key>
+	<array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
