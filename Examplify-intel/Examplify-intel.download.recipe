@@ -10,35 +10,43 @@
 	<dict>
 		<key>NAME</key>
 		<string>Examplify-intel</string>
-		<key>SEARCH_URL</key>
-		<string>https://support.examsoft.com/hc/en-us/articles/11146797283469-Examplify-Download-the-Installers-for-Windows-Mac</string>
+    <key>SEARCH_URL</key>
+    <string>https://releases.examsoft.com/Examplify/Examplify_LATEST_mac.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.0.0</string>
 	<key>Process</key>
 	<array>
+    <dict>
+        <key>Processor</key>
+        <string>URLTextSearcher</string>
+        <key>Arguments</key>
         <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%SEARCH_URL%</string>
-                <key>re_pattern</key>
-                <string>Examplify_(?P&lt;version&gt;[\d\.]+).dmg</string>
-            </dict>
+            <key>url</key>
+            <string>%SEARCH_URL%</string>
+            <key>curl_opts</key>
+            <array>
+              <string>-I</string>
+            </array>
+            <key>re_pattern</key>
+            <string>releases.examsoft.com/Examplify/(?P&lt;version&gt;[\d\.]+)/Examplify_</string>
         </dict>
-        <dict>
-        	<key>Processor</key>
-        	<string>URLDownloader</string>
-        	<key>Arguments</key>
-        	<dict>
-        	   <key>url</key>
-        	   <string>https://releases.examsoft.com/Examplify/%version%/Examplify_%version%.dmg</string>
-        	   <key>filename</key>
-        	   <string>%NAME%-%version%.dmg</string>
-        	</dict>
-        </dict>
+    </dict>
+    <dict>
+      <key>Processor</key>
+      <string>URLDownloader</string>
+      <key>Arguments</key>
+      <dict>
+         <key>url</key>
+         <string>https://releases.examsoft.com/Examplify/%version%/Examplify_%version%.dmg</string>
+         <key>filename</key>
+         <string>%NAME%-%version%.dmg</string>
+         <key>curl_opts</key>
+         <array>
+           <string>-v</string>
+         </array>
+      </dict>
+    </dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
@@ -49,7 +57,7 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.dmg/Examplify_SIGNED.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.dmg/Examplify_SIGNED.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
             </dict>
@@ -67,7 +75,7 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
                 <key>expected_authority_names</key>
                 <array>
-                    <string>ExamSoft Worldwide, Inc. (5P9D4ESR3W)</string>
+                    <string>Developer ID Installer: ExamSoft Worldwide, Inc. (5P9D4ESR3W)</string>
                     <string>Developer ID Certification Authority</string>
                     <string>Apple Root CA</string>
                 </array>
