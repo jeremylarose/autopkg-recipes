@@ -19,9 +19,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Secure Shell (SSH) is a network protocol for secure communication between two computers. SSHFS is a FUSE file system to mount and interact with directories and files located on remote servers using the SSH File Transfer Protocol (SFTP).
-
-This package contains a universal build of SSHFS, that is based on FUSE for OS X and supports Mac OS X 10.5 and later. FUSE for OS X needs to be installed separately. The latest version can be obtained from http://osxfuse.github.io.</string>
+			<string>This is a filesystem client based on the SSH File Transfer Protocol. https://github.com/macfuse/macfuse/wiki/File-Systems-%E2%80%90-SSHFS</string>
 			<key>category</key>
 			<string>System</string>
 			<key>developer</key>
