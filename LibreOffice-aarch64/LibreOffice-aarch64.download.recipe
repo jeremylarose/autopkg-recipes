@@ -27,8 +27,6 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 		<dict>
 			<key>Comment</key>
 			<string>LibreOffice uses both x86_64 AND x86-64 in the download path. Here we build the x86-64 or aarch64 part.</string>
-			<key>Processor</key>
-			<string>CreateLibreOfficeAuxArchName</string>
 			<key>Arguments</key>
 			<dict>
 				<key>arch_name</key>
