@@ -27,7 +27,7 @@
             <key>display_name</key>
             <string>OpenJDK - aarch64</string>
             <key>name</key>
-            <string>OpenJDK</string>
+            <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
             <key>unattended_uninstall</key>
