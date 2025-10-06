@@ -9,7 +9,7 @@
       <key>Input</key>
       <dict>
          <key>NAME</key>
-         <string>OpenJDK-aarch64</string>
+         <string>OpenJDK</string>
       </dict>
       <key>ParentRecipe</key>
       <string>com.github.jeremylarose.download.OpenJDK-aarch64</string>

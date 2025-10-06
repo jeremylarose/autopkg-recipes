@@ -11,7 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>OpenJDK-aarch64</string>
+        <string>OpenJDK</string>
         <key>ARCHITECTURE</key>
         <string>aarch64</string>
     </dict>
