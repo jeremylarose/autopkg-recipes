@@ -29,7 +29,7 @@ The MAJOR_VERSION input variable can be overridden to select the major version o
 			<key>developer</key>
 			<string>Thorsten Lemke</string>
 			<key>display_name</key>
-			<string>Graphic Converter 12</string>
+			<string>GraphicConverter 12</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
