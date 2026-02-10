@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://beta.urbackup.org/macos/UrBackup%20Client%20%version%.pkg</string>
+                <string>https://hndl.urbackup.org/Client/%version%/UrBackup%20Client%20%version%.pkg</string>
             </dict>
         </dict>
         <dict>
