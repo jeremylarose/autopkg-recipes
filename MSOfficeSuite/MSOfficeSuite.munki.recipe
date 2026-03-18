@@ -64,6 +64,8 @@
                 <dict>
                     <key>minimum_os_version</key>
                     <string>%MINIMUM_OS_VERSION%</string>
+                    <key>version</key>
+          					<string>%version%</string>
                 </dict>
             </dict>
         </dict>
