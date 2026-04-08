@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jeremylarose.pkg.Kdenlive</string>
+	<string>com.github.jeremylarose.download.Kdenlive</string>
 	<key>Process</key>
 	<array>
 		<dict>
