@@ -39,7 +39,7 @@ Values for ARCH include:
                 <key>Arguments</key>
                 <dict>
                     <key>filename</key>
-                    <string>%NAME%-%version%-%ARCH%.tgz</string>
+                    <string>%NAME%-%version%.tgz</string>
                 </dict>
                 <key>Processor</key>
                 <string>URLDownloader</string>
