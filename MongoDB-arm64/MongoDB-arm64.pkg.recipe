@@ -45,7 +45,7 @@
                 <key>Arguments</key>
                 <dict>
                     <key>archive_path</key>
-                    <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.tgz</string>
+                    <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.tgz</string>
                     <key>destination_path</key>
                     <string>%RECIPE_CACHE_DIR%/%NAME%/Source</string>
                     <key>purge_destination</key>
