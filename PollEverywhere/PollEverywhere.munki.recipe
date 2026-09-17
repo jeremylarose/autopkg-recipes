@@ -39,7 +39,7 @@
     <key>MinimumVersion</key>
     <string>0.1.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.jeremylarose.download.PollEverywhere<</string>
+    <string>com.github.jeremylarose.download.PollEverywhere</string>
     <key>Process</key>
     <array>
         <dict>

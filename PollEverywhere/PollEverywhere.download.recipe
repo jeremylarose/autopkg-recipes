@@ -21,7 +21,7 @@
 				<key>re_pattern</key>
 				<string>https://polleverywhere-app\.s3\.amazonaws\.com/mac-stable/([0-9]+(\.[0-9]+)+)/pollev\.dmg</string>
 				<key>url</key>
-				<string>https://www.polleverywhere.com/app/releases/mac/string>
+				<string>https://www.polleverywhere.com/app/releases/mac</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
