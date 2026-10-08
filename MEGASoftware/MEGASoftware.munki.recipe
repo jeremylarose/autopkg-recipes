@@ -60,7 +60,20 @@
 				<true/>
 			</dict>
 		</dict>
-        <dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>PKGID</key>
+				<string>%PKGID%</string>
+				<key>VERSION</key>
+				<string>%version%</string>
+				<key>unpacked_path</key>
+				<string>%RECIPE_CACHE_DIR%/expanded</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.n8felton.shared/PkgInfoVersioner</string>
+		</dict>
+		<dict>
             <key>Processor</key>
             <string>FlatPkgPacker</string>
             <key>Arguments</key>
