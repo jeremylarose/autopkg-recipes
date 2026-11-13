@@ -25,7 +25,7 @@
                 <key>url</key>
                 <string>https://github.com/ThalesMMS/IsiX-DICOM-Viewer-macOS/releases</string>
                 <key>re_pattern</key>
-                <string>IsiX-DICOM-Viewer-(?P&lt;version&gt;[\d\.]+)-Apple-Silicon-Macs.zip</string>
+                <string>IsiX DICOM Viewer (?P&lt;version&gt;[\d\.]+)</string>
             </dict>
         </dict>
 		<dict>
